@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DiscoverViewController: UIViewController {
+class DiscoverViewController: BaseViewController {
 
     var presenter: DiscoverPresenterProtocol?
     

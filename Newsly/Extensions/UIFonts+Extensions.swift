@@ -111,6 +111,10 @@ extension UIFont {
         UIFont.boldItalic(with: 18.0)
     }
     
+    public class var boldItalic48: UIFont {
+        UIFont.boldItalic(with: 48.0)
+    }
+    
     
     // MARK: - Black
     public class var black16: UIFont {
