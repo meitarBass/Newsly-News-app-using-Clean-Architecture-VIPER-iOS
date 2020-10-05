@@ -43,6 +43,7 @@
 		B2173C38252BBC86000FA911 /* EBGaramond-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1A252BBC5F000FA911 /* EBGaramond-SemiBold.ttf */; };
 		B2173C3A252BBC8A000FA911 /* EBGaramond-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C20252BBC60000FA911 /* EBGaramond-SemiBoldItalic.ttf */; };
 		B2173C3C252BBC8D000FA911 /* EBGaramond-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1B252BBC5F000FA911 /* EBGaramond-VariableFont_wght.ttf */; };
+		B2173C3F252BBD8C000FA911 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C3E252BBD8C000FA911 /* Constants.swift */; };
 		FEC196E875ECBCD449BB6AF0 /* Pods_Newsly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		B2173C23252BBC60000FA911 /* EBGaramond-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		B2173C24252BBC60000FA911 /* EBGaramond-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-Italic.ttf"; sourceTree = "<group>"; };
 		B2173C25252BBC60000FA911 /* EBGaramond-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-Bold.ttf"; sourceTree = "<group>"; };
+		B2173C3E252BBD8C000FA911 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newsly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 		B2173B9B252B7864000FA911 = {
 			isa = PBXGroup;
 			children = (
+				B2173C3E252BBD8C000FA911 /* Constants.swift */,
 				B2173BA6252B7864000FA911 /* Newsly */,
 				B2173BA5252B7864000FA911 /* Products */,
 				9B19BFE54FC32539C099CAFB /* Pods */,
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */,
+				B2173C3F252BBD8C000FA911 /* Constants.swift in Sources */,
 				B2173BED252B92D0000FA911 /* DiscoverInteractorInput.swift in Sources */,
 				B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */,
 				B2173C12252BA8B2000FA911 /* ArticleEndPoints.swift in Sources */,
