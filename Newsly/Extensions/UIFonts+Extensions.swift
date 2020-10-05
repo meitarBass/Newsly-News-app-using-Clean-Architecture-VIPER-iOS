@@ -147,13 +147,21 @@ extension UIFont {
     
     // MARK: - Private helpers
     private enum FontStyle: String {
-        case black = "EBGaramond-Black"
-        case blackItalic = "EBGaramond-BlackItalic"
-        case bold = "EBGaramond-Bold"
-        case boldItalic = "EBGaramond-BoldItalic"
-        case regular = "EBGaramond-Regular"
-        case semibold = "EBGaramond-SemiBold"
-        case semiboldItalic = "EBGaramond-SemiBoldItalic"
+//        case black = "EBGaramond-Black"
+//        case blackItalic = "EBGaramond-BlackItalic"
+//        case bold = "EBGaramond-Bold"
+//        case boldItalic = "EBGaramond-BoldItalic"
+//        case regular = "EBGaramond-Regular"
+//        case semibold = "EBGaramond-SemiBold"
+//        case semiboldItalic = "EBGaramond-SemiBoldItalic"
+        
+        case black = "Montserrat-Black"
+        case blackItalic = "Montserrat-BlackItalic"
+        case bold = "Montserrat-Bold"
+        case boldItalic = "Montserrat-BoldItalic"
+        case regular = "Montserrat-Regular"
+        case semibold = "Montserrat-SemiBold"
+        case semiboldItalic = "Montserrat-SemiBoldItalic"
     }
 
     private static func black(with size: CGFloat) -> UIFont {
