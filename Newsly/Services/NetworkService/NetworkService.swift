@@ -9,8 +9,8 @@ import Foundation
 
 struct NetworkServices {
     
-//    static let shared = NetworkServices()
-//    private init() {}
+    static let shared = NetworkServices()
+    private init() {}
     
     func networkRequest<T: Codable> (url: String, modelType: T.Type, completion: @escaping (Result<T, Error>) -> ()) {
         guard let url = URL(string: "\(url)") else {

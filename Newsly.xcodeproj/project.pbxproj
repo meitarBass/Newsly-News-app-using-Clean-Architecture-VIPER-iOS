@@ -31,6 +31,18 @@
 		B2173C12252BA8B2000FA911 /* ArticleEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C11252BA8B2000FA911 /* ArticleEndPoints.swift */; };
 		B2173C15252BA8EA000FA911 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C14252BA8EA000FA911 /* EndPointProtocol.swift */; };
 		B2173C18252BACD5000FA911 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C17252BACD5000FA911 /* Secrets.swift */; };
+		B2173C26252BBC67000FA911 /* EBGaramond-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C25252BBC60000FA911 /* EBGaramond-Bold.ttf */; };
+		B2173C28252BBC6C000FA911 /* EBGaramond-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1E252BBC60000FA911 /* EBGaramond-BoldItalic.ttf */; };
+		B2173C2A252BBC6F000FA911 /* EBGaramond-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1C252BBC5F000FA911 /* EBGaramond-ExtraBold.ttf */; };
+		B2173C2C252BBC73000FA911 /* EBGaramond-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C23252BBC60000FA911 /* EBGaramond-ExtraBoldItalic.ttf */; };
+		B2173C2E252BBC76000FA911 /* EBGaramond-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1D252BBC60000FA911 /* EBGaramond-Italic-VariableFont_wght.ttf */; };
+		B2173C30252BBC7A000FA911 /* EBGaramond-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C24252BBC60000FA911 /* EBGaramond-Italic.ttf */; };
+		B2173C32252BBC7D000FA911 /* EBGaramond-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1F252BBC60000FA911 /* EBGaramond-Medium.ttf */; };
+		B2173C34252BBC80000FA911 /* EBGaramond-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C21252BBC60000FA911 /* EBGaramond-MediumItalic.ttf */; };
+		B2173C36252BBC83000FA911 /* EBGaramond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C22252BBC60000FA911 /* EBGaramond-Regular.ttf */; };
+		B2173C38252BBC86000FA911 /* EBGaramond-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1A252BBC5F000FA911 /* EBGaramond-SemiBold.ttf */; };
+		B2173C3A252BBC8A000FA911 /* EBGaramond-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C20252BBC60000FA911 /* EBGaramond-SemiBoldItalic.ttf */; };
+		B2173C3C252BBC8D000FA911 /* EBGaramond-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1B252BBC5F000FA911 /* EBGaramond-VariableFont_wght.ttf */; };
 		FEC196E875ECBCD449BB6AF0 /* Pods_Newsly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +75,18 @@
 		B2173C11252BA8B2000FA911 /* ArticleEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEndPoints.swift; sourceTree = "<group>"; };
 		B2173C14252BA8EA000FA911 /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
 		B2173C17252BACD5000FA911 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		B2173C1A252BBC5F000FA911 /* EBGaramond-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-SemiBold.ttf"; sourceTree = "<group>"; };
+		B2173C1B252BBC5F000FA911 /* EBGaramond-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		B2173C1C252BBC5F000FA911 /* EBGaramond-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-ExtraBold.ttf"; sourceTree = "<group>"; };
+		B2173C1D252BBC60000FA911 /* EBGaramond-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		B2173C1E252BBC60000FA911 /* EBGaramond-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-BoldItalic.ttf"; sourceTree = "<group>"; };
+		B2173C1F252BBC60000FA911 /* EBGaramond-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-Medium.ttf"; sourceTree = "<group>"; };
+		B2173C20252BBC60000FA911 /* EBGaramond-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B2173C21252BBC60000FA911 /* EBGaramond-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-MediumItalic.ttf"; sourceTree = "<group>"; };
+		B2173C22252BBC60000FA911 /* EBGaramond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-Regular.ttf"; sourceTree = "<group>"; };
+		B2173C23252BBC60000FA911 /* EBGaramond-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		B2173C24252BBC60000FA911 /* EBGaramond-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-Italic.ttf"; sourceTree = "<group>"; };
+		B2173C25252BBC60000FA911 /* EBGaramond-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-Bold.ttf"; sourceTree = "<group>"; };
 		FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newsly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +168,18 @@
 		B2173BC1252B7E7E000FA911 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B2173C25252BBC60000FA911 /* EBGaramond-Bold.ttf */,
+				B2173C1E252BBC60000FA911 /* EBGaramond-BoldItalic.ttf */,
+				B2173C1C252BBC5F000FA911 /* EBGaramond-ExtraBold.ttf */,
+				B2173C23252BBC60000FA911 /* EBGaramond-ExtraBoldItalic.ttf */,
+				B2173C1D252BBC60000FA911 /* EBGaramond-Italic-VariableFont_wght.ttf */,
+				B2173C24252BBC60000FA911 /* EBGaramond-Italic.ttf */,
+				B2173C1F252BBC60000FA911 /* EBGaramond-Medium.ttf */,
+				B2173C21252BBC60000FA911 /* EBGaramond-MediumItalic.ttf */,
+				B2173C22252BBC60000FA911 /* EBGaramond-Regular.ttf */,
+				B2173C1A252BBC5F000FA911 /* EBGaramond-SemiBold.ttf */,
+				B2173C20252BBC60000FA911 /* EBGaramond-SemiBoldItalic.ttf */,
+				B2173C1B252BBC5F000FA911 /* EBGaramond-VariableFont_wght.ttf */,
 				B2173BC2252B7E91000FA911 /* EB_Garamond */,
 			);
 			path = Fonts;
@@ -316,9 +352,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2173C2C252BBC73000FA911 /* EBGaramond-ExtraBoldItalic.ttf in Resources */,
+				B2173C30252BBC7A000FA911 /* EBGaramond-Italic.ttf in Resources */,
+				B2173C2E252BBC76000FA911 /* EBGaramond-Italic-VariableFont_wght.ttf in Resources */,
 				B2173BB4252B7866000FA911 /* LaunchScreen.storyboard in Resources */,
+				B2173C26252BBC67000FA911 /* EBGaramond-Bold.ttf in Resources */,
+				B2173C34252BBC80000FA911 /* EBGaramond-MediumItalic.ttf in Resources */,
+				B2173C32252BBC7D000FA911 /* EBGaramond-Medium.ttf in Resources */,
+				B2173C2A252BBC6F000FA911 /* EBGaramond-ExtraBold.ttf in Resources */,
+				B2173C3C252BBC8D000FA911 /* EBGaramond-VariableFont_wght.ttf in Resources */,
 				B2173BC3252B7E91000FA911 /* EB_Garamond in Resources */,
+				B2173C36252BBC83000FA911 /* EBGaramond-Regular.ttf in Resources */,
+				B2173C38252BBC86000FA911 /* EBGaramond-SemiBold.ttf in Resources */,
 				B2173BB1252B7866000FA911 /* Assets.xcassets in Resources */,
+				B2173C28252BBC6C000FA911 /* EBGaramond-BoldItalic.ttf in Resources */,
+				B2173C3A252BBC8A000FA911 /* EBGaramond-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

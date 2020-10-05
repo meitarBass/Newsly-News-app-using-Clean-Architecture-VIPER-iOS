@@ -14,11 +14,7 @@ protocol EndPointProtocol {
     
     var region: String { get }
     
-//    var baseURL: String { get }
-    
     var completeURL: String { get }
-    
-//    var params: String { get }
     
     var APIKey: String { get }
 

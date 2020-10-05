@@ -115,12 +115,6 @@ extension UIFont {
         UIFont.boldItalic(with: 48.0)
     }
     
-    
-    // MARK: - Black
-    public class var black16: UIFont {
-        UIFont.black(with: 16.0)
-    }
-    
     // MARK: - Semibold
     
     public class var semibold15: UIFont {
@@ -147,29 +141,12 @@ extension UIFont {
     
     // MARK: - Private helpers
     private enum FontStyle: String {
-//        case black = "EBGaramond-Black"
-//        case blackItalic = "EBGaramond-BlackItalic"
-//        case bold = "EBGaramond-Bold"
-//        case boldItalic = "EBGaramond-BoldItalic"
-//        case regular = "EBGaramond-Regular"
-//        case semibold = "EBGaramond-SemiBold"
-//        case semiboldItalic = "EBGaramond-SemiBoldItalic"
+        case bold = "EBGaramond-Bold"
+        case boldItalic = "EBGaramond-BoldItalic"
+        case regular = "EBGaramond-Regular"
+        case semibold = "EBGaramond-SemiBold"
+        case semiboldItalic = "EBGaramond-SemiBoldItalic"
         
-        case black = "Montserrat-Black"
-        case blackItalic = "Montserrat-BlackItalic"
-        case bold = "Montserrat-Bold"
-        case boldItalic = "Montserrat-BoldItalic"
-        case regular = "Montserrat-Regular"
-        case semibold = "Montserrat-SemiBold"
-        case semiboldItalic = "Montserrat-SemiBoldItalic"
-    }
-
-    private static func black(with size: CGFloat) -> UIFont {
-        self.font(with: .black, size: size)
-    }
-    
-    private static func blackItalic(with size: CGFloat) -> UIFont {
-        self.font(with: .blackItalic, size: size)
     }
     
     private static func bold(with size: CGFloat) -> UIFont {
