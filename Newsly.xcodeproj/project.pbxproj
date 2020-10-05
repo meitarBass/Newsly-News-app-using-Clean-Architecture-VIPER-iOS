@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA7252B7864000FA911 /* AppDelegate.swift */; };
 		B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA9252B7864000FA911 /* SceneDelegate.swift */; };
-		B2173BAC252B7864000FA911 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BAB252B7864000FA911 /* ViewController.swift */; };
-		B2173BAF252B7864000FA911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2173BAD252B7864000FA911 /* Main.storyboard */; };
 		B2173BB1252B7866000FA911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2173BB0252B7866000FA911 /* Assets.xcassets */; };
 		B2173BB4252B7866000FA911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2173BB2252B7866000FA911 /* LaunchScreen.storyboard */; };
+		B2173BC3252B7E91000FA911 /* EB_Garamond in Resources */ = {isa = PBXBuildFile; fileRef = B2173BC2252B7E91000FA911 /* EB_Garamond */; };
+		B2173BC7252B7FDE000FA911 /* UIFonts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BC6252B7FDE000FA911 /* UIFonts+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B2173BA4252B7864000FA911 /* Newsly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2173BA7252B7864000FA911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2173BA9252B7864000FA911 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B2173BAB252B7864000FA911 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2173BAE252B7864000FA911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2173BB0252B7866000FA911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2173BB3252B7866000FA911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2173BB5252B7866000FA911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2173BC2252B7E91000FA911 /* EB_Garamond */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EB_Garamond; sourceTree = "<group>"; };
+		B2173BC6252B7FDE000FA911 /* UIFonts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFonts+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		B2173BA6252B7864000FA911 /* Newsly */ = {
 			isa = PBXGroup;
 			children = (
-				B2173BA7252B7864000FA911 /* AppDelegate.swift */,
-				B2173BA9252B7864000FA911 /* SceneDelegate.swift */,
-				B2173BAB252B7864000FA911 /* ViewController.swift */,
-				B2173BAD252B7864000FA911 /* Main.storyboard */,
+				B2173BC5252B7FC4000FA911 /* Extensions */,
+				B2173BBF252B7902000FA911 /* App */,
 				B2173BB0252B7866000FA911 /* Assets.xcassets */,
+				B2173BC1252B7E7E000FA911 /* Fonts */,
 				B2173BB2252B7866000FA911 /* LaunchScreen.storyboard */,
 				B2173BB5252B7866000FA911 /* Info.plist */,
 			);
 			path = Newsly;
+			sourceTree = "<group>";
+		};
+		B2173BBF252B7902000FA911 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BA7252B7864000FA911 /* AppDelegate.swift */,
+				B2173BA9252B7864000FA911 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B2173BC1252B7E7E000FA911 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BC2252B7E91000FA911 /* EB_Garamond */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B2173BC5252B7FC4000FA911 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BC6252B7FDE000FA911 /* UIFonts+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2173BB4252B7866000FA911 /* LaunchScreen.storyboard in Resources */,
+				B2173BC3252B7E91000FA911 /* EB_Garamond in Resources */,
 				B2173BB1252B7866000FA911 /* Assets.xcassets in Resources */,
-				B2173BAF252B7864000FA911 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +161,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2173BAC252B7864000FA911 /* ViewController.swift in Sources */,
 				B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */,
 				B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */,
+				B2173BC7252B7FDE000FA911 /* UIFonts+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B2173BAD252B7864000FA911 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2173BAE252B7864000FA911 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2173BB2252B7866000FA911 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
