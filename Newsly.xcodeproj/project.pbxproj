@@ -13,6 +13,18 @@
 		B2173BB4252B7866000FA911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2173BB2252B7866000FA911 /* LaunchScreen.storyboard */; };
 		B2173BC3252B7E91000FA911 /* EB_Garamond in Resources */ = {isa = PBXBuildFile; fileRef = B2173BC2252B7E91000FA911 /* EB_Garamond */; };
 		B2173BC7252B7FDE000FA911 /* UIFonts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BC6252B7FDE000FA911 /* UIFonts+Extensions.swift */; };
+		B2173BCB252B8F14000FA911 /* AppInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BCA252B8F14000FA911 /* AppInteractor.swift */; };
+		B2173BCE252B8FE0000FA911 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BCD252B8FE0000FA911 /* AppCoordinator.swift */; };
+		B2173BDD252B919A000FA911 /* DiscoverViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BDC252B919A000FA911 /* DiscoverViewInput.swift */; };
+		B2173BE1252B91AC000FA911 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BE0252B91AC000FA911 /* DiscoverViewController.swift */; };
+		B2173BE4252B91BE000FA911 /* DiscoverCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BE3252B91BE000FA911 /* DiscoverCollectionViewManager.swift */; };
+		B2173BE7252B91E4000FA911 /* DiscoverPresenterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BE6252B91E4000FA911 /* DiscoverPresenterProtocols.swift */; };
+		B2173BEA252B9278000FA911 /* DiscoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BE9252B9278000FA911 /* DiscoverPresenter.swift */; };
+		B2173BED252B92D0000FA911 /* DiscoverInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BEC252B92D0000FA911 /* DiscoverInteractorInput.swift */; };
+		B2173BF0252B92DF000FA911 /* DiscoverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BEF252B92DF000FA911 /* DiscoverInteractor.swift */; };
+		B2173BF3252B92EF000FA911 /* DiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BF2252B92EF000FA911 /* DiscoverRouter.swift */; };
+		B2173BF6252B9308000FA911 /* DiscoverAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BF5252B9308000FA911 /* DiscoverAssembly.swift */; };
+		B2173BF9252B9A97000FA911 /* UIImages+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BF8252B9A97000FA911 /* UIImages+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		B2173BB5252B7866000FA911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2173BC2252B7E91000FA911 /* EB_Garamond */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EB_Garamond; sourceTree = "<group>"; };
 		B2173BC6252B7FDE000FA911 /* UIFonts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFonts+Extensions.swift"; sourceTree = "<group>"; };
+		B2173BCA252B8F14000FA911 /* AppInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInteractor.swift; sourceTree = "<group>"; };
+		B2173BCD252B8FE0000FA911 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B2173BDC252B919A000FA911 /* DiscoverViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewInput.swift; sourceTree = "<group>"; };
+		B2173BE0252B91AC000FA911 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		B2173BE3252B91BE000FA911 /* DiscoverCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewManager.swift; sourceTree = "<group>"; };
+		B2173BE6252B91E4000FA911 /* DiscoverPresenterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPresenterProtocols.swift; sourceTree = "<group>"; };
+		B2173BE9252B9278000FA911 /* DiscoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPresenter.swift; sourceTree = "<group>"; };
+		B2173BEC252B92D0000FA911 /* DiscoverInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverInteractorInput.swift; sourceTree = "<group>"; };
+		B2173BEF252B92DF000FA911 /* DiscoverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverInteractor.swift; sourceTree = "<group>"; };
+		B2173BF2252B92EF000FA911 /* DiscoverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRouter.swift; sourceTree = "<group>"; };
+		B2173BF5252B9308000FA911 /* DiscoverAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverAssembly.swift; sourceTree = "<group>"; };
+		B2173BF8252B9A97000FA911 /* UIImages+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImages+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,7 @@
 			children = (
 				B2173BC5252B7FC4000FA911 /* Extensions */,
 				B2173BBF252B7902000FA911 /* App */,
+				B2173BD0252B9096000FA911 /* Modules */,
 				B2173BB0252B7866000FA911 /* Assets.xcassets */,
 				B2173BC1252B7E7E000FA911 /* Fonts */,
 				B2173BB2252B7866000FA911 /* LaunchScreen.storyboard */,
@@ -71,6 +96,8 @@
 			children = (
 				B2173BA7252B7864000FA911 /* AppDelegate.swift */,
 				B2173BA9252B7864000FA911 /* SceneDelegate.swift */,
+				B2173BCA252B8F14000FA911 /* AppInteractor.swift */,
+				B2173BCD252B8FE0000FA911 /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -87,8 +114,81 @@
 			isa = PBXGroup;
 			children = (
 				B2173BC6252B7FDE000FA911 /* UIFonts+Extensions.swift */,
+				B2173BF8252B9A97000FA911 /* UIImages+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B2173BD0252B9096000FA911 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BD1252B90B3000FA911 /* Discover */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B2173BD1252B90B3000FA911 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BD2252B90BF000FA911 /* View */,
+				B2173BD4252B90D7000FA911 /* Managers */,
+				B2173BD3252B90C8000FA911 /* Presenter */,
+				B2173BD5252B90FC000FA911 /* Interactor */,
+				B2173BD6252B910A000FA911 /* Router */,
+				B2173BDB252B915E000FA911 /* Assembly */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		B2173BD2252B90BF000FA911 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BDC252B919A000FA911 /* DiscoverViewInput.swift */,
+				B2173BE0252B91AC000FA911 /* DiscoverViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2173BD3252B90C8000FA911 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BE6252B91E4000FA911 /* DiscoverPresenterProtocols.swift */,
+				B2173BE9252B9278000FA911 /* DiscoverPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B2173BD4252B90D7000FA911 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BE3252B91BE000FA911 /* DiscoverCollectionViewManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B2173BD5252B90FC000FA911 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BEC252B92D0000FA911 /* DiscoverInteractorInput.swift */,
+				B2173BEF252B92DF000FA911 /* DiscoverInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B2173BD6252B910A000FA911 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BF2252B92EF000FA911 /* DiscoverRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B2173BDB252B915E000FA911 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BF5252B9308000FA911 /* DiscoverAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +262,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */,
+				B2173BED252B92D0000FA911 /* DiscoverInteractorInput.swift in Sources */,
 				B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */,
+				B2173BE1252B91AC000FA911 /* DiscoverViewController.swift in Sources */,
+				B2173BF6252B9308000FA911 /* DiscoverAssembly.swift in Sources */,
+				B2173BDD252B919A000FA911 /* DiscoverViewInput.swift in Sources */,
+				B2173BF3252B92EF000FA911 /* DiscoverRouter.swift in Sources */,
+				B2173BCE252B8FE0000FA911 /* AppCoordinator.swift in Sources */,
+				B2173BEA252B9278000FA911 /* DiscoverPresenter.swift in Sources */,
+				B2173BF9252B9A97000FA911 /* UIImages+Extensions.swift in Sources */,
+				B2173BCB252B8F14000FA911 /* AppInteractor.swift in Sources */,
+				B2173BE7252B91E4000FA911 /* DiscoverPresenterProtocols.swift in Sources */,
+				B2173BF0252B92DF000FA911 /* DiscoverInteractor.swift in Sources */,
 				B2173BC7252B7FDE000FA911 /* UIFonts+Extensions.swift in Sources */,
+				B2173BE4252B91BE000FA911 /* DiscoverCollectionViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,6 @@ import UIKit
 
 extension UIFont {
     
-    
-    
     // MARK: - Regular
     public class var regular9: UIFont {
         UIFont.regular(with: 9.0)
@@ -185,7 +183,5 @@ extension UIFont {
     private static func font(with style: FontStyle, size: CGFloat) -> UIFont {
         UIFont(name: style.rawValue, size: size)!
     }
-    
-    
     
 }
