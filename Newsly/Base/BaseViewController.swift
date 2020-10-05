@@ -9,8 +9,6 @@ import UIKit
 import SnapKit
 
 class BaseViewController: UIViewController {
-
-  
     
     private lazy var indicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)
@@ -37,8 +35,8 @@ class BaseViewController: UIViewController {
         
         //TODO: -  fix me
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.bold11,
-            NSAttributedString.Key.foregroundColor: UIColor.systemBackground
+            NSAttributedString.Key.font: UIFont.boldItalic48,
+            NSAttributedString.Key.foregroundColor: UIColor.red
         ]
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -47,12 +45,12 @@ class BaseViewController: UIViewController {
     }
     
     
-    private func addSubViews() {
+    func addSubViews() {
         self.view.addSubview(indicatorBlurView)
         self.indicatorBlurView.contentView.addSubview(indicator)
     }
     
-    private func makeConstraints() {
+    func makeConstraints() {
         
         indicatorBlurView.snp.makeConstraints { make in
             make.edges.equalToSuperview()

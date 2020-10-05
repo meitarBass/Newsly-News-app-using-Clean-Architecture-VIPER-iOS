@@ -9,5 +9,5 @@
 
 //presenter to interactor
 protocol DiscoverInteractorInput: class {
-   
+   func fetchTrendingArticles()
 }

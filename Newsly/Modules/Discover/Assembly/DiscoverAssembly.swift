@@ -26,6 +26,7 @@ class DiscoverAssembly {
         presenter.router = router
         
         interactor.presenter = presenter
+        interactor.apiManager = NetworkService<ArticleEndpoint>()
         
         router.view = view
         

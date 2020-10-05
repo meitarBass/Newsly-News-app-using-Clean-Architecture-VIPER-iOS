@@ -33,7 +33,7 @@ enum ArticleEndpoint: EndPointProtocol {
     var completeURL: String {
         switch self {
         case .getTopHeadlines:
-            return self.absoluteURL + "Country=" + self.APIKey
+            return self.absoluteURL + "Country=" + self.region + "&ApiKey=" + self.APIKey
         case let .getArticlesFromCategory(category):
             return self.absoluteURL + "Country=" + self.region + "&Category=" + category + "&ApiKey=" + self.APIKey
         case .getSources:

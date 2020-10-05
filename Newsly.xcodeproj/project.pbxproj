@@ -30,7 +30,6 @@
 		B2173C0F252BA81D000FA911 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C0E252BA81D000FA911 /* NetworkService.swift */; };
 		B2173C12252BA8B2000FA911 /* ArticleEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C11252BA8B2000FA911 /* ArticleEndPoints.swift */; };
 		B2173C15252BA8EA000FA911 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C14252BA8EA000FA911 /* EndPointProtocol.swift */; };
-		B2173C18252BACD5000FA911 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C17252BACD5000FA911 /* Secrets.swift */; };
 		B2173C26252BBC67000FA911 /* EBGaramond-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C25252BBC60000FA911 /* EBGaramond-Bold.ttf */; };
 		B2173C28252BBC6C000FA911 /* EBGaramond-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1E252BBC60000FA911 /* EBGaramond-BoldItalic.ttf */; };
 		B2173C2A252BBC6F000FA911 /* EBGaramond-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1C252BBC5F000FA911 /* EBGaramond-ExtraBold.ttf */; };
@@ -44,6 +43,9 @@
 		B2173C3A252BBC8A000FA911 /* EBGaramond-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C20252BBC60000FA911 /* EBGaramond-SemiBoldItalic.ttf */; };
 		B2173C3C252BBC8D000FA911 /* EBGaramond-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2173C1B252BBC5F000FA911 /* EBGaramond-VariableFont_wght.ttf */; };
 		B2173C3F252BBD8C000FA911 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C3E252BBD8C000FA911 /* Constants.swift */; };
+		B2173C44252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C43252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift */; };
+		B2173C48252BC505000FA911 /* ArticlesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C47252BC505000FA911 /* ArticlesModel.swift */; };
+		B2173C4B252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */; };
 		FEC196E875ECBCD449BB6AF0 /* Pods_Newsly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +77,6 @@
 		B2173C0E252BA81D000FA911 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B2173C11252BA8B2000FA911 /* ArticleEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEndPoints.swift; sourceTree = "<group>"; };
 		B2173C14252BA8EA000FA911 /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
-		B2173C17252BACD5000FA911 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		B2173C1A252BBC5F000FA911 /* EBGaramond-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-SemiBold.ttf"; sourceTree = "<group>"; };
 		B2173C1B252BBC5F000FA911 /* EBGaramond-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		B2173C1C252BBC5F000FA911 /* EBGaramond-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -89,6 +90,9 @@
 		B2173C24252BBC60000FA911 /* EBGaramond-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-Italic.ttf"; sourceTree = "<group>"; };
 		B2173C25252BBC60000FA911 /* EBGaramond-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EBGaramond-Bold.ttf"; sourceTree = "<group>"; };
 		B2173C3E252BBD8C000FA911 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B2173C43252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
+		B2173C47252BC505000FA911 /* ArticlesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesModel.swift; sourceTree = "<group>"; };
+		B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newsly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +147,7 @@
 		B2173BA6252B7864000FA911 /* Newsly */ = {
 			isa = PBXGroup;
 			children = (
+				B2173C46252BC4A2000FA911 /* Entities */,
 				B2173C0C252BA7FB000FA911 /* Services */,
 				B2173BFE252BA054000FA911 /* Base */,
 				B2173BC5252B7FC4000FA911 /* Extensions */,
@@ -152,7 +157,6 @@
 				B2173BC1252B7E7E000FA911 /* Fonts */,
 				B2173BB2252B7866000FA911 /* LaunchScreen.storyboard */,
 				B2173BB5252B7866000FA911 /* Info.plist */,
-				B2173C17252BACD5000FA911 /* Secrets.swift */,
 			);
 			path = Newsly;
 			sourceTree = "<group>";
@@ -194,6 +198,7 @@
 				B2173BC6252B7FDE000FA911 /* UIFonts+Extensions.swift */,
 				B2173BF8252B9A97000FA911 /* UIImages+Extensions.swift */,
 				B2173BFB252B9ED3000FA911 /* UIViewController+Extensions.swift */,
+				B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				B2173BFF252BA06A000FA911 /* BaseViewController.swift */,
+				B2173C43252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -294,6 +300,14 @@
 				B2173C14252BA8EA000FA911 /* EndPointProtocol.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		B2173C46252BC4A2000FA911 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B2173C47252BC505000FA911 /* ArticlesModel.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,16 +444,18 @@
 				B2173BE1252B91AC000FA911 /* DiscoverViewController.swift in Sources */,
 				B2173C0F252BA81D000FA911 /* NetworkService.swift in Sources */,
 				B2173BF6252B9308000FA911 /* DiscoverAssembly.swift in Sources */,
+				B2173C48252BC505000FA911 /* ArticlesModel.swift in Sources */,
 				B2173BDD252B919A000FA911 /* DiscoverViewInput.swift in Sources */,
 				B2173BF3252B92EF000FA911 /* DiscoverRouter.swift in Sources */,
+				B2173C44252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift in Sources */,
 				B2173C00252BA06A000FA911 /* BaseViewController.swift in Sources */,
 				B2173BCE252B8FE0000FA911 /* AppCoordinator.swift in Sources */,
 				B2173BEA252B9278000FA911 /* DiscoverPresenter.swift in Sources */,
 				B2173C15252BA8EA000FA911 /* EndPointProtocol.swift in Sources */,
+				B2173C4B252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift in Sources */,
 				B2173BF9252B9A97000FA911 /* UIImages+Extensions.swift in Sources */,
 				B2173BCB252B8F14000FA911 /* AppInteractor.swift in Sources */,
 				B2173BE7252B91E4000FA911 /* DiscoverPresenterProtocols.swift in Sources */,
-				B2173C18252BACD5000FA911 /* Secrets.swift in Sources */,
 				B2173BFC252B9ED3000FA911 /* UIViewController+Extensions.swift in Sources */,
 				B2173BF0252B92DF000FA911 /* DiscoverInteractor.swift in Sources */,
 				B2173BC7252B7FDE000FA911 /* UIFonts+Extensions.swift in Sources */,

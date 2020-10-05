@@ -11,12 +11,14 @@ import Foundation
 // view to presenter
 protocol DiscoverPresenterProtocol: class {
     func viewDidLoad()
+    var collectionManager: DiscoverCollectionViewManagerProtocol? { get set }
     
 }
 
 //interactor to presenter
 protocol DiscoverPresenterInput: class {
-   
+    func apiFetchSuccess(articles: [Article])
+    func handleError(error: Error)
 }
 
 

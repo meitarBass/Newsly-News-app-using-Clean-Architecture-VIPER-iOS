@@ -11,9 +11,38 @@ class DiscoverViewController: BaseViewController {
 
     var presenter: DiscoverPresenterProtocol?
     
+    lazy var collectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.keyboardDismissMode = .interactive
+        collectionView.backgroundColor = .clear
+        return collectionView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.setUpUI()
+        presenter?.viewDidLoad()
+    }
+    
+    
+    override func setUpUI() {
+        super.setUpUI()
+        addSubViews()
+        makeConstraints()
+        self.presenter?.collectionManager?.setUpCollectionView(collectionView: self.collectionView)
+    }
+    
+    override func addSubViews() {
+        super.addSubViews()
+        self.view.addSubview(collectionView)
+    }
+    
+    override func makeConstraints() {
+        super.makeConstraints()
+        collectionView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
 
 }

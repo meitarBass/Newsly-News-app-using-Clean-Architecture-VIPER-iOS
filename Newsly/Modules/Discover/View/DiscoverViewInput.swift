@@ -7,7 +7,7 @@
 
 //presenter to view
 protocol DiscoverViewInput: class {
-    
+    func presentAlert(title: String, message: String, action: ActionAlertModel?)
 }
 
 
