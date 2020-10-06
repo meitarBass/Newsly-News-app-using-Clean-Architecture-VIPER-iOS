@@ -1,28 +1,27 @@
 //
-//  DiscoverAssembly.swift
+//  SourcesAssembly.swift
 //  Newsly
 //
-//  Created by Ebubechukwu Dimobi on 05.10.2020.
+//  Created by Meitar Basson on 06/10/2020.
 //
 
 import UIKit
 
-
-class DiscoverAssembly {
+class SourcesAssembly {
     static func assemble() -> UIViewController {
-        let view = DiscoverViewController()
-        let collectionManager = DiscoverCollectionViewManager()
-        let presenter = DiscoverPresenter()
-        let interactor = DiscoverInteractor()
-        let router = DiscoverRouter()
+        let view = SourcesViewController()
+        let tableViewManager = SourcesTableViewManager()
+        let presenter = SourcesPresenter()
+        let interactor = SourcesInteractor()
+        let router = SourcesRouter()
         
         view.presenter = presenter
         
-        collectionManager.delegate = presenter
+        tableViewManager.delegate = presenter
         
         presenter.view = view
         presenter.interactor = interactor
-        presenter.collectionManager = collectionManager
+        presenter.tableViewManager = tableViewManager
         presenter.router = router
         
         interactor.presenter = presenter

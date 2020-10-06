@@ -5,9 +5,6 @@
 //  Created by Ebubechukwu Dimobi on 05.10.2020.
 //
 
-import Foundation
-
-
 // view to presenter
 protocol DiscoverPresenterProtocol: class {
     func viewDidLoad()

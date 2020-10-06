@@ -24,11 +24,18 @@ class AppCoordinator {
         return UINavigationController(rootViewController: discoverViewController)
     }
     
+    private func createSourcesVC() -> UINavigationController {
+        let sourcesViewController = SourcesAssembly.assemble()
+        sourcesViewController.title = "Sources"
+        sourcesViewController.tabBarItem = UITabBarItem(title: "Sources", image: UIImage.tabBarItems.source, selectedImage: UIImage.tabBarItems.source)
+        return UINavigationController(rootViewController: sourcesViewController)
+    }
+    
     private func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
         UITabBar.appearance().tintColor = UIColor.tintColor
         //add more tabs here
-        tabBar.viewControllers = [createDiscoverVC()]
+        tabBar.viewControllers = [createDiscoverVC(), createSourcesVC()]
         return tabBar
     }
 }

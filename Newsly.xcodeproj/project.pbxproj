@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		A932C0B5252CA23D006F2960 /* UIColors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0B4252CA23C006F2960 /* UIColors+Extensions.swift */; };
+		A932C0C2252CCD39006F2960 /* SourcesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0C1252CCD39006F2960 /* SourcesViewInput.swift */; };
+		A932C0C6252CCD43006F2960 /* SourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0C5252CCD43006F2960 /* SourcesViewController.swift */; };
+		A932C0C9252CCD5B006F2960 /* SourcesTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0C8252CCD5B006F2960 /* SourcesTableViewManager.swift */; };
+		A932C0CC252CCE01006F2960 /* SourcesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0CB252CCE01006F2960 /* SourcesModel.swift */; };
+		A932C0CF252CD61E006F2960 /* SourcesPresenterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0CE252CD61E006F2960 /* SourcesPresenterProtocols.swift */; };
+		A932C0D2252CD727006F2960 /* SourcesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0D1252CD727006F2960 /* SourcesPresenter.swift */; };
+		A932C0D5252CD7C3006F2960 /* SourcesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0D4252CD7C3006F2960 /* SourcesInteractorInput.swift */; };
+		A932C0D8252CD7F7006F2960 /* SourcesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0D7252CD7F7006F2960 /* SourcesInteractor.swift */; };
+		A932C0DF252CD94C006F2960 /* SourcesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0DE252CD94C006F2960 /* SourcesRouter.swift */; };
+		A932C0E2252CD970006F2960 /* SourcesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0E1252CD970006F2960 /* SourcesAssembly.swift */; };
+		A932C0E5252CDC07006F2960 /* SourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0E4252CDC07006F2960 /* SourcesTableViewCell.swift */; };
+		A932C0E8252CE7E4006F2960 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0E7252CE7E4006F2960 /* UITableViewCell+Extensions.swift */; };
 		B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA7252B7864000FA911 /* AppDelegate.swift */; };
 		B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA9252B7864000FA911 /* SceneDelegate.swift */; };
 		B2173BB1252B7866000FA911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2173BB0252B7866000FA911 /* Assets.xcassets */; };
@@ -54,6 +66,18 @@
 		0048BEBD93DEE84F8860E2A2 /* Pods-Newsly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsly.release.xcconfig"; path = "Target Support Files/Pods-Newsly/Pods-Newsly.release.xcconfig"; sourceTree = "<group>"; };
 		3BA642893EBF286A5CE43FB7 /* Pods-Newsly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsly.debug.xcconfig"; path = "Target Support Files/Pods-Newsly/Pods-Newsly.debug.xcconfig"; sourceTree = "<group>"; };
 		A932C0B4252CA23C006F2960 /* UIColors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extensions.swift"; sourceTree = "<group>"; };
+		A932C0C1252CCD39006F2960 /* SourcesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewInput.swift; sourceTree = "<group>"; };
+		A932C0C5252CCD43006F2960 /* SourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewController.swift; sourceTree = "<group>"; };
+		A932C0C8252CCD5B006F2960 /* SourcesTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesTableViewManager.swift; sourceTree = "<group>"; };
+		A932C0CB252CCE01006F2960 /* SourcesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesModel.swift; sourceTree = "<group>"; };
+		A932C0CE252CD61E006F2960 /* SourcesPresenterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesPresenterProtocols.swift; sourceTree = "<group>"; };
+		A932C0D1252CD727006F2960 /* SourcesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesPresenter.swift; sourceTree = "<group>"; };
+		A932C0D4252CD7C3006F2960 /* SourcesInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesInteractorInput.swift; sourceTree = "<group>"; };
+		A932C0D7252CD7F7006F2960 /* SourcesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesInteractor.swift; sourceTree = "<group>"; };
+		A932C0DE252CD94C006F2960 /* SourcesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesRouter.swift; sourceTree = "<group>"; };
+		A932C0E1252CD970006F2960 /* SourcesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesAssembly.swift; sourceTree = "<group>"; };
+		A932C0E4252CDC07006F2960 /* SourcesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesTableViewCell.swift; sourceTree = "<group>"; };
+		A932C0E7252CE7E4006F2960 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		B2173BA4252B7864000FA911 /* Newsly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2173BA7252B7864000FA911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2173BA9252B7864000FA911 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +167,7 @@
 		A932C0B9252CA5B4006F2960 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				A932C0E1252CD970006F2960 /* SourcesAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -150,6 +175,7 @@
 		A932C0BB252CA5BE006F2960 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A932C0DE252CD94C006F2960 /* SourcesRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -157,6 +183,8 @@
 		A932C0BC252CA5BF006F2960 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				A932C0D4252CD7C3006F2960 /* SourcesInteractorInput.swift */,
+				A932C0D7252CD7F7006F2960 /* SourcesInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -164,6 +192,8 @@
 		A932C0BD252CA5C1006F2960 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A932C0CE252CD61E006F2960 /* SourcesPresenterProtocols.swift */,
+				A932C0D1252CD727006F2960 /* SourcesPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -171,6 +201,7 @@
 		A932C0BF252CA5CC006F2960 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A932C0C8252CCD5B006F2960 /* SourcesTableViewManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -178,8 +209,17 @@
 		A932C0C0252CA5CE006F2960 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A932C0C1252CCD39006F2960 /* SourcesViewInput.swift */,
+				A932C0C5252CCD43006F2960 /* SourcesViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A932C0EA252CEC04006F2960 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		B2173B9B252B7864000FA911 = {
@@ -257,6 +297,7 @@
 				B2173BF8252B9A97000FA911 /* UIImages+Extensions.swift */,
 				B2173BFB252B9ED3000FA911 /* UIViewController+Extensions.swift */,
 				B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */,
+				A932C0E7252CE7E4006F2960 /* UITableViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +305,7 @@
 		B2173BD0252B9096000FA911 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A932C0EA252CEC04006F2960 /* Search */,
 				A932C0B8252CA5AB006F2960 /* Sources */,
 				B2173BD1252B90B3000FA911 /* Discover */,
 			);
@@ -339,6 +381,7 @@
 			children = (
 				B2173BFF252BA06A000FA911 /* BaseViewController.swift */,
 				B2173C43252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift */,
+				A932C0E4252CDC07006F2960 /* SourcesTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -365,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				B2173C47252BC505000FA911 /* ArticlesModel.swift */,
+				A932C0CB252CCE01006F2960 /* SourcesModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -497,28 +541,40 @@
 			files = (
 				B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */,
 				B2173C3F252BBD8C000FA911 /* Constants.swift in Sources */,
+				A932C0C6252CCD43006F2960 /* SourcesViewController.swift in Sources */,
+				A932C0DF252CD94C006F2960 /* SourcesRouter.swift in Sources */,
 				B2173BED252B92D0000FA911 /* DiscoverInteractorInput.swift in Sources */,
 				B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */,
 				B2173C12252BA8B2000FA911 /* ArticleEndPoints.swift in Sources */,
+				A932C0D5252CD7C3006F2960 /* SourcesInteractorInput.swift in Sources */,
+				A932C0E5252CDC07006F2960 /* SourcesTableViewCell.swift in Sources */,
 				B2173BE1252B91AC000FA911 /* DiscoverViewController.swift in Sources */,
 				B2173C0F252BA81D000FA911 /* NetworkService.swift in Sources */,
 				B2173BF6252B9308000FA911 /* DiscoverAssembly.swift in Sources */,
+				A932C0E2252CD970006F2960 /* SourcesAssembly.swift in Sources */,
 				B2173C48252BC505000FA911 /* ArticlesModel.swift in Sources */,
 				B2173BDD252B919A000FA911 /* DiscoverViewInput.swift in Sources */,
 				B2173BF3252B92EF000FA911 /* DiscoverRouter.swift in Sources */,
 				B2173C44252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift in Sources */,
 				B2173C00252BA06A000FA911 /* BaseViewController.swift in Sources */,
+				A932C0D8252CD7F7006F2960 /* SourcesInteractor.swift in Sources */,
 				B2173BCE252B8FE0000FA911 /* AppCoordinator.swift in Sources */,
 				B2173BEA252B9278000FA911 /* DiscoverPresenter.swift in Sources */,
 				A932C0B5252CA23D006F2960 /* UIColors+Extensions.swift in Sources */,
 				B2173C15252BA8EA000FA911 /* EndPointProtocol.swift in Sources */,
 				B2173C4B252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift in Sources */,
+				A932C0CF252CD61E006F2960 /* SourcesPresenterProtocols.swift in Sources */,
 				B2173BF9252B9A97000FA911 /* UIImages+Extensions.swift in Sources */,
 				B2173BCB252B8F14000FA911 /* AppInteractor.swift in Sources */,
 				B2173BE7252B91E4000FA911 /* DiscoverPresenterProtocols.swift in Sources */,
+				A932C0D2252CD727006F2960 /* SourcesPresenter.swift in Sources */,
+				A932C0CC252CCE01006F2960 /* SourcesModel.swift in Sources */,
+				A932C0E8252CE7E4006F2960 /* UITableViewCell+Extensions.swift in Sources */,
+				A932C0C9252CCD5B006F2960 /* SourcesTableViewManager.swift in Sources */,
 				B2173BFC252B9ED3000FA911 /* UIViewController+Extensions.swift in Sources */,
 				B2173BF0252B92DF000FA911 /* DiscoverInteractor.swift in Sources */,
 				B2173BC7252B7FDE000FA911 /* UIFonts+Extensions.swift in Sources */,
+				A932C0C2252CCD39006F2960 /* SourcesViewInput.swift in Sources */,
 				B2173BE4252B91BE000FA911 /* DiscoverCollectionViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
