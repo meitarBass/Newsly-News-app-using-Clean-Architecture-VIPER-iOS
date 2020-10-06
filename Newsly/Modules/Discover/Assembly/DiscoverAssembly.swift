@@ -28,6 +28,7 @@ class DiscoverAssembly {
         interactor.presenter = presenter
         interactor.apiManager = NetworkService<ArticleEndpoint>()
         
+        // MARK: - What this line does
         router.view = view
         
         return view

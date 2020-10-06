@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A932C0B5252CA23D006F2960 /* UIColors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0B4252CA23C006F2960 /* UIColors+Extensions.swift */; };
 		B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA7252B7864000FA911 /* AppDelegate.swift */; };
 		B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA9252B7864000FA911 /* SceneDelegate.swift */; };
 		B2173BB1252B7866000FA911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2173BB0252B7866000FA911 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		0048BEBD93DEE84F8860E2A2 /* Pods-Newsly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsly.release.xcconfig"; path = "Target Support Files/Pods-Newsly/Pods-Newsly.release.xcconfig"; sourceTree = "<group>"; };
 		3BA642893EBF286A5CE43FB7 /* Pods-Newsly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsly.debug.xcconfig"; path = "Target Support Files/Pods-Newsly/Pods-Newsly.debug.xcconfig"; sourceTree = "<group>"; };
+		A932C0B4252CA23C006F2960 /* UIColors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extensions.swift"; sourceTree = "<group>"; };
 		B2173BA4252B7864000FA911 /* Newsly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2173BA7252B7864000FA911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2173BA9252B7864000FA911 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,61 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A932C0B8252CA5AB006F2960 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A932C0C0252CA5CE006F2960 /* View */,
+				A932C0BF252CA5CC006F2960 /* Managers */,
+				A932C0BD252CA5C1006F2960 /* Presenter */,
+				A932C0BC252CA5BF006F2960 /* Interactor */,
+				A932C0BB252CA5BE006F2960 /* Router */,
+				A932C0B9252CA5B4006F2960 /* Assembly */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A932C0B9252CA5B4006F2960 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		A932C0BB252CA5BE006F2960 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A932C0BC252CA5BF006F2960 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A932C0BD252CA5C1006F2960 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A932C0BF252CA5CC006F2960 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A932C0C0252CA5CE006F2960 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B2173B9B252B7864000FA911 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				B2173BC6252B7FDE000FA911 /* UIFonts+Extensions.swift */,
+				A932C0B4252CA23C006F2960 /* UIColors+Extensions.swift */,
 				B2173BF8252B9A97000FA911 /* UIImages+Extensions.swift */,
 				B2173BFB252B9ED3000FA911 /* UIViewController+Extensions.swift */,
 				B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */,
@@ -206,6 +264,7 @@
 		B2173BD0252B9096000FA911 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A932C0B8252CA5AB006F2960 /* Sources */,
 				B2173BD1252B90B3000FA911 /* Discover */,
 			);
 			path = Modules;
@@ -451,6 +510,7 @@
 				B2173C00252BA06A000FA911 /* BaseViewController.swift in Sources */,
 				B2173BCE252B8FE0000FA911 /* AppCoordinator.swift in Sources */,
 				B2173BEA252B9278000FA911 /* DiscoverPresenter.swift in Sources */,
+				A932C0B5252CA23D006F2960 /* UIColors+Extensions.swift in Sources */,
 				B2173C15252BA8EA000FA911 /* EndPointProtocol.swift in Sources */,
 				B2173C4B252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift in Sources */,
 				B2173BF9252B9A97000FA911 /* UIImages+Extensions.swift in Sources */,

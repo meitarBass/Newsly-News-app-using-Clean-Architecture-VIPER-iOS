@@ -26,7 +26,7 @@ class AppCoordinator {
     
     private func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
-        UITabBar.appearance().tintColor = .blue
+        UITabBar.appearance().tintColor = UIColor.tintColor
         //add more tabs here
         tabBar.viewControllers = [createDiscoverVC()]
         return tabBar

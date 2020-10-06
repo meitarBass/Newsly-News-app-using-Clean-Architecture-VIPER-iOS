@@ -9,7 +9,8 @@ import UIKit
 
 extension DiscoverCollectionViewManager {
     struct Appearance {
-        let imageHeight: CGFloat = 150.0
+        let imageHeight: CGFloat = 250.0
+        let insets: CGFloat = 10.0
         let titleFont: UIFont = UIFont.boldItalic18
         let descriptionFont: UIFont = UIFont.semibold15
     }
@@ -29,7 +30,6 @@ class DiscoverCollectionViewManager: NSObject {
     weak var collectionView: UICollectionView?
     
     private var articles: [Article]?
-    
     private let appearance = Appearance()
     
     
@@ -42,9 +42,7 @@ class DiscoverCollectionViewManager: NSObject {
         
         return CGSize(width: collectionView.frame.size.width,
                       height: titleHeight + descriptionHeight + self.appearance.imageHeight)
-        
     }
-    
     
     private func getTitleHeight(at row: Int) -> CGFloat {
         guard
@@ -71,7 +69,6 @@ class DiscoverCollectionViewManager: NSObject {
         
         return descriptionSize.height
     }
-    
 }
 
 
@@ -86,11 +83,11 @@ extension DiscoverCollectionViewManager: DiscoverCollectionViewManagerProtocol {
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         self.collectionView?.register(TopHeadlinesCollectionViewCell.self, forCellWithReuseIdentifier: TopHeadlinesCollectionViewCell.reuseIdentifier)
+        self.collectionView?.contentInset = UIEdgeInsets(top: appearance.insets, left: appearance.insets, bottom: appearance.insets, right: appearance.insets)
     }
     
     
 }
-
 
 extension DiscoverCollectionViewManager: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -107,15 +104,10 @@ extension DiscoverCollectionViewManager: UICollectionViewDataSource {
         cell.viewModel = cellViewModel
         return cell
     }
-    
-    
 }
 
 
-extension DiscoverCollectionViewManager: UICollectionViewDelegate {
-    
-    
-}
+extension DiscoverCollectionViewManager: UICollectionViewDelegate {}
 
 extension DiscoverCollectionViewManager: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

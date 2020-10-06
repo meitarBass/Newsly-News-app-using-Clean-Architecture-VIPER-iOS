@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 
 struct HeadlinesCellViewModel {
@@ -17,7 +18,8 @@ struct HeadlinesCellViewModel {
 
 extension TopHeadlinesCollectionViewCell {
     struct Appearance {
-        let imageHeight: CGFloat = 150.0
+        let imageHeight: CGFloat = 250.0
+        let seperatorHeight: CGFloat = 2.0
         let titleFont: UIFont = UIFont.boldItalic18
         let descriptionFont: UIFont = UIFont.semibold15
     }
@@ -41,6 +43,8 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
             }
             
             //use kingfisher
+            setCellImage(imageUrl: viewModel.article?.urlToImage)
+            
         }
     }
     
@@ -70,6 +74,7 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
     private lazy var image: UIImageView = {
        let image =  UIImageView(frame: .zero)
         image.contentMode = .scaleAspectFill
+//        clipsToBounds = true
         
         image.snp.makeConstraints { make in
             make.height.equalTo(self.appearance.imageHeight)
@@ -77,8 +82,17 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
         return image
     }()
     
+    private lazy var seperator: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = .tintColor
+        view.snp.makeConstraints { (make) in
+            make.height.equalTo(self.appearance.seperatorHeight)
+        }
+        return view
+    }()
+    
     private lazy var contentStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, image])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, image, seperator])
         stackView.distribution = .equalSpacing
         stackView.spacing = 5
         stackView.axis = .vertical
@@ -109,6 +123,20 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
     private func makeConstraints() {
         contentStackView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+    }
+    
+    private func setCellImage(imageUrl: String?) {
+        guard let imageUrl = imageUrl else { return }
+        if let imageUrl = URL(string: imageUrl) {
+            image.kf.indicatorType = .activity
+            image.kf.setImage(
+                with: imageUrl,
+                options: [
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(0.5)),
+                    .cacheOriginalImage
+            ])
         }
     }
 }
