@@ -73,9 +73,7 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
     
     private lazy var image: UIImageView = {
        let image =  UIImageView(frame: .zero)
-        image.contentMode = .scaleAspectFill
-//        clipsToBounds = true
-        
+        image.contentMode = .scaleAspectFill        
         image.snp.makeConstraints { make in
             make.height.equalTo(self.appearance.imageHeight)
         }

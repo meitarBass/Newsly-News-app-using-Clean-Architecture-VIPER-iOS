@@ -27,19 +27,6 @@ class SourcesTableViewCell: UITableViewCell {
         didSet {
             guard let viewModel = viewModel else { return }
             sourceNameLabel.text = viewModel.sources?.name
-//            descriptionLabel.text = viewModel.article?.description
-            
-//            titleLabel.snp.updateConstraints { make in
-//                make.height.equalTo(viewModel.titleHeight)
-//            }
-//
-//            descriptionLabel.snp.updateConstraints { make in
-//                make.height.equalTo(viewModel.descriptionHeight)
-//            }
-//
-//            //use kingfisher
-//            setCellImage(imageUrl: viewModel.article?.urlToImage)
-            
         }
     }
     

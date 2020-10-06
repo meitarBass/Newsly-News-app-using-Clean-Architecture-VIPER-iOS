@@ -31,11 +31,18 @@ class AppCoordinator {
         return UINavigationController(rootViewController: sourcesViewController)
     }
     
+    private func createSearchVC() -> UINavigationController {
+        let searchViewController = SearchAssembly.assemble()
+        searchViewController.title = "Search"
+        searchViewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage.tabBarItems.search, selectedImage: UIImage.tabBarItems.search)
+        return UINavigationController(rootViewController: searchViewController)
+    }
+    
     private func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
         UITabBar.appearance().tintColor = UIColor.tintColor
         //add more tabs here
-        tabBar.viewControllers = [createDiscoverVC(), createSourcesVC()]
+        tabBar.viewControllers = [createDiscoverVC(), createSourcesVC(), createSearchVC()]
         return tabBar
     }
 }

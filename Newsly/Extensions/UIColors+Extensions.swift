@@ -18,4 +18,8 @@ extension UIColor {
         #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
     }
     
+    public class var darkBackground: UIColor {
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75)
+    }
+    
 }
