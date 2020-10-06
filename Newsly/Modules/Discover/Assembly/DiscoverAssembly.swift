@@ -9,7 +9,7 @@ import UIKit
 
 
 class DiscoverAssembly {
-    static func assemble() -> UIViewController {
+    static func assemble(endpoint: ArticleEndpoint) -> UIViewController {
         let view = DiscoverViewController()
         let collectionManager = DiscoverCollectionViewManager()
         let presenter = DiscoverPresenter()
@@ -27,6 +27,7 @@ class DiscoverAssembly {
         
         interactor.presenter = presenter
         interactor.apiManager = NetworkService<ArticleEndpoint>()
+        interactor.endpoint = endpoint
         
         router.view = view
         

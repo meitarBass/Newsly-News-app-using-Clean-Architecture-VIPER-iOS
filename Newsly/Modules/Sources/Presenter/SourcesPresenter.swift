@@ -13,6 +13,7 @@ class SourcesPresenter {
     var interactor: SourcesInteractorInput?
     var router: SourcesRouterProtocol?
     var tableViewManager: SourcesTableViewManagerProtocol?
+    var sources: [Sources]?
     
 }
 
@@ -27,6 +28,7 @@ extension SourcesPresenter: SourcesPresenterProtocol {
 //MARK: - SourcesPresenterInput
 extension SourcesPresenter: SourcesPresenterInput {
     func apiFetchSuccess(sources: [Sources]) {
+        self.sources = sources
         self.tableViewManager?.setUpCells(sources: sources)
     }
     
@@ -40,5 +42,11 @@ extension SourcesPresenter: SourcesPresenterInput {
 
 //MARK: - SourcesCollectionViewManagerDelegate
 extension SourcesPresenter: SourcesTableViewManagerDelegate {
+    func sourceSelected(at row: Int) {
+        guard let sourceName = sources?[row].name else { return }
+        let textToSearch = sourceName.replacingOccurrences(of: " ", with: "-")
+        self.router?.createDiscoverSources(sourceName: textToSearch)
+    }
+    
     
 }

@@ -17,7 +17,7 @@ class AppCoordinator {
     var window: UIWindow?
     
     private func createDiscoverVC() -> UINavigationController {
-        let discoverViewController = DiscoverAssembly.assemble()
+        let discoverViewController = DiscoverAssembly.assemble(endpoint: .getTopHeadlines)
         discoverViewController.title = "Discover"
         discoverViewController.tabBarItem = UITabBarItem(title: "Discover", image: UIImage.tabBarItems.discover, selectedImage:  UIImage.tabBarItems.discover)
         

@@ -42,9 +42,16 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
                 make.height.equalTo(viewModel.descriptionHeight)
             }
             
-            //use kingfisher
-            setCellImage(imageUrl: viewModel.article?.urlToImage)
-            
+            if let imageURL = viewModel.article?.urlToImage {
+                
+                if imageURL == "null" {
+                    imageView.image = UIImage.tabBarItems.source
+                } else {
+                    setCellImage(imageUrl: imageURL)
+                }
+            } else {
+                imageView.image = UIImage.tabBarItems.source
+            }
         }
     }
     
@@ -71,7 +78,7 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var image: UIImageView = {
+    private lazy var imageView: UIImageView = {
        let image =  UIImageView(frame: .zero)
         image.contentMode = .scaleAspectFill        
         image.snp.makeConstraints { make in
@@ -90,7 +97,7 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
     }()
     
     private lazy var contentStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, image, seperator])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, imageView, seperator])
         stackView.distribution = .equalSpacing
         stackView.spacing = 5
         stackView.axis = .vertical
@@ -127,8 +134,8 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
     private func setCellImage(imageUrl: String?) {
         guard let imageUrl = imageUrl else { return }
         if let imageUrl = URL(string: imageUrl) {
-            image.kf.indicatorType = .activity
-            image.kf.setImage(
+            imageView.kf.indicatorType = .activity
+            imageView.kf.setImage(
                 with: imageUrl,
                 options: [
                     .scaleFactor(UIScreen.main.scale),

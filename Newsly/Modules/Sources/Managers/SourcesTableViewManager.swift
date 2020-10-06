@@ -52,7 +52,8 @@ extension SourcesTableViewManager: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
+        delegate?.sourceSelected(at: indexPath.row)
     }
 }
 

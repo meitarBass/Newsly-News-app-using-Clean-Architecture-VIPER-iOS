@@ -20,5 +20,5 @@ protocol SourcesPresenterInput: class {
 
 //Manager To Presenter
 protocol SourcesTableViewManagerDelegate: class {
-    
+    func sourceSelected(at row: Int)
 }

@@ -12,9 +12,11 @@ class DiscoverInteractor: DiscoverInteractorInput {
     
     weak var presenter: DiscoverPresenterInput?
     var apiManager: NetworkService<ArticleEndpoint>?
+    var endpoint: ArticleEndpoint?
     
     func fetchTrendingArticles() {
-        apiManager?.networkRequest(from: .getTopHeadlines, modelType: ArticlesModel.self, completion: { [weak self] (result) in
+        guard let endpoint = self.endpoint else { return }
+        apiManager?.networkRequest(from: endpoint, modelType: ArticlesModel.self, completion: { [weak self] (result) in
             DispatchQueue.main.async {[weak self] in
                 switch result {
                 case .success(let articleModel):
