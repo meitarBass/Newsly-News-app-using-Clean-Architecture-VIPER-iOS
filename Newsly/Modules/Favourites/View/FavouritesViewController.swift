@@ -1,22 +1,22 @@
 //
-//  SearchViewController.swift
+//  FavouritesViewController.swift
 //  Newsly
 //
-//  Created by Meitar Basson on 06/10/2020.
+//  Created by Meitar Basson on 07/10/2020.
 //
 
 import UIKit
 import SnapKit
 
-extension SearchViewController {
+extension FavouritesViewController {
     struct Appearance {
         let searchBarConstraint: CGFloat = 16.0
     }
 }
 
-class SearchViewController: BaseViewController {
+class FavouritesViewController: BaseViewController {
     
-    var presenter: SearchPresenterProtocol?
+    var presenter: FavouritesPresenterProtocol?
     let appearance = Appearance()
     
     lazy var collectionView: UICollectionView = {
@@ -67,6 +67,6 @@ class SearchViewController: BaseViewController {
     }
 }
 
-extension SearchViewController: SearchViewInput {
+extension FavouritesViewController: FavouritesViewInput {
     
 }

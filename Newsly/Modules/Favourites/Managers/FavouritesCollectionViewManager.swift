@@ -1,13 +1,13 @@
 //
-//  SearchCollectionViewManager.swift
+//  FavouritesCollectionViewManager.swift
 //  Newsly
 //
-//  Created by Meitar Basson on 06/10/2020.
+//  Created by Meitar Basson on 07/10/2020.
 //
 
 import UIKit
 
-extension SearchCollectionViewManager {
+extension FavouritesCollectionViewManager {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
         let collectionViewInsets: CGFloat = 0.0
@@ -17,22 +17,22 @@ extension SearchCollectionViewManager {
 }
 
 // Presenter to Manager
-protocol SearchCollectionViewManagerProtocol {
+protocol FavouritesCollectionViewManagerProtocol {
     func setUpCollectionView(collectionView: UICollectionView)
     func setUpCells(articles: [Article])
 }
 
 
-class SearchCollectionViewManager: NSObject {
+class FavouritesCollectionViewManager: NSObject {
     
-    weak var delegate: SearchCollectionViewManagerDelegate?
+    weak var delegate: FavouritesCollectionViewManagerDelegate?
     weak var collectionView: UICollectionView?
     
     let appearance = Appearance()
     var articles: [Article]?
     
     private func getCellSize(at row: Int) -> CGSize {
-        guard let collectionView = collectionView else { return CGSize.zero }        
+        guard let collectionView = collectionView else { return CGSize.zero }
         return CGSize(width: collectionView.frame.size.width,
                       height: self.appearance.imageHeight)
     }
@@ -65,7 +65,7 @@ class SearchCollectionViewManager: NSObject {
     
 }
 
-extension SearchCollectionViewManager: SearchCollectionViewManagerProtocol {
+extension FavouritesCollectionViewManager: FavouritesCollectionViewManagerProtocol {
     func setUpCollectionView(collectionView: UICollectionView) {
         self.collectionView = collectionView
         self.collectionView?.delegate = self
@@ -81,9 +81,9 @@ extension SearchCollectionViewManager: SearchCollectionViewManagerProtocol {
     }
 }
 
-extension SearchCollectionViewManager: UICollectionViewDelegate { }
+extension FavouritesCollectionViewManager: UICollectionViewDelegate { }
 
-extension SearchCollectionViewManager: UICollectionViewDataSource {
+extension FavouritesCollectionViewManager: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return articles?.count ?? 0
     }
@@ -99,7 +99,7 @@ extension SearchCollectionViewManager: UICollectionViewDataSource {
     
 }
 
-extension SearchCollectionViewManager: UICollectionViewDelegateFlowLayout {
+extension FavouritesCollectionViewManager: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         self.getCellSize(at: indexPath.row)
     }

@@ -31,6 +31,17 @@
 		A932C10F252CEFEA006F2960 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C10E252CEFEA006F2960 /* SearchPresenter.swift */; };
 		A932C112252CF69F006F2960 /* SearchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C111252CF69F006F2960 /* SearchBarManager.swift */; };
 		A932C115252CFCB7006F2960 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C114252CFCB7006F2960 /* SearchCollectionViewCell.swift */; };
+		A9681312252D38CC001DCAE9 /* FavouritesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681311252D38CB001DCAE9 /* FavouritesViewInput.swift */; };
+		A9681317252D3927001DCAE9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681316252D3927001DCAE9 /* FavouritesViewController.swift */; };
+		A968131A252D397A001DCAE9 /* FavouritesSearchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681319252D397A001DCAE9 /* FavouritesSearchBarManager.swift */; };
+		A968131E252D399A001DCAE9 /* FavouritesCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968131D252D399A001DCAE9 /* FavouritesCollectionViewManager.swift */; };
+		A9681321252D39D3001DCAE9 /* FavouritesPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681320252D39D3001DCAE9 /* FavouritesPresenterProtocol.swift */; };
+		A9681325252D39E7001DCAE9 /* FavouritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681324252D39E7001DCAE9 /* FavouritesPresenter.swift */; };
+		A9681328252D3A08001DCAE9 /* FavouritesInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681327252D3A08001DCAE9 /* FavouritesInteractorInput.swift */; };
+		A968132B252D3A23001DCAE9 /* FavouritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968132A252D3A23001DCAE9 /* FavouritesInteractor.swift */; };
+		A968132E252D3A2E001DCAE9 /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968132D252D3A2E001DCAE9 /* FavouritesRouter.swift */; };
+		A9681331252D3A36001DCAE9 /* FavouritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681330252D3A36001DCAE9 /* FavouritesAssembly.swift */; };
+		A9681334252DA358001DCAE9 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681333252DA358001DCAE9 /* Categories.swift */; };
 		B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA7252B7864000FA911 /* AppDelegate.swift */; };
 		B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA9252B7864000FA911 /* SceneDelegate.swift */; };
 		B2173BB1252B7866000FA911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2173BB0252B7866000FA911 /* Assets.xcassets */; };
@@ -100,6 +111,17 @@
 		A932C10E252CEFEA006F2960 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		A932C111252CF69F006F2960 /* SearchBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarManager.swift; sourceTree = "<group>"; };
 		A932C114252CFCB7006F2960 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		A9681311252D38CB001DCAE9 /* FavouritesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewInput.swift; sourceTree = "<group>"; };
+		A9681316252D3927001DCAE9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		A9681319252D397A001DCAE9 /* FavouritesSearchBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesSearchBarManager.swift; sourceTree = "<group>"; };
+		A968131D252D399A001DCAE9 /* FavouritesCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCollectionViewManager.swift; sourceTree = "<group>"; };
+		A9681320252D39D3001DCAE9 /* FavouritesPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPresenterProtocol.swift; sourceTree = "<group>"; };
+		A9681324252D39E7001DCAE9 /* FavouritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesPresenter.swift; sourceTree = "<group>"; };
+		A9681327252D3A08001DCAE9 /* FavouritesInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesInteractorInput.swift; sourceTree = "<group>"; };
+		A968132A252D3A23001DCAE9 /* FavouritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesInteractor.swift; sourceTree = "<group>"; };
+		A968132D252D3A2E001DCAE9 /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
+		A9681330252D3A36001DCAE9 /* FavouritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesAssembly.swift; sourceTree = "<group>"; };
+		A9681333252DA358001DCAE9 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		B2173BA4252B7864000FA911 /* Newsly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2173BA7252B7864000FA911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2173BA9252B7864000FA911 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -302,6 +324,71 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		A9681308252D23D5001DCAE9 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				A9681309252D24ED001DCAE9 /* View */,
+				A968130E252D250E001DCAE9 /* Managers */,
+				A968130D252D2509001DCAE9 /* Presenter */,
+				A968130C252D2504001DCAE9 /* Interactor */,
+				A968130A252D24F1001DCAE9 /* Router */,
+				A968130B252D24F7001DCAE9 /* Assembly */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		A9681309252D24ED001DCAE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9681311252D38CB001DCAE9 /* FavouritesViewInput.swift */,
+				A9681316252D3927001DCAE9 /* FavouritesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A968130A252D24F1001DCAE9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A968132D252D3A2E001DCAE9 /* FavouritesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A968130B252D24F7001DCAE9 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				A9681330252D3A36001DCAE9 /* FavouritesAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		A968130C252D2504001DCAE9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A9681327252D3A08001DCAE9 /* FavouritesInteractorInput.swift */,
+				A968132A252D3A23001DCAE9 /* FavouritesInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A968130D252D2509001DCAE9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A9681320252D39D3001DCAE9 /* FavouritesPresenterProtocol.swift */,
+				A9681324252D39E7001DCAE9 /* FavouritesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A968130E252D250E001DCAE9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A9681319252D397A001DCAE9 /* FavouritesSearchBarManager.swift */,
+				A968131D252D399A001DCAE9 /* FavouritesCollectionViewManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		B2173B9B252B7864000FA911 = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +472,7 @@
 		B2173BD0252B9096000FA911 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A9681308252D23D5001DCAE9 /* Favourites */,
 				A932C0EA252CEC04006F2960 /* Search */,
 				A932C0B8252CA5AB006F2960 /* Sources */,
 				B2173BD1252B90B3000FA911 /* Discover */,
@@ -490,6 +578,7 @@
 			children = (
 				B2173C47252BC505000FA911 /* ArticlesModel.swift */,
 				A932C0CB252CCE01006F2960 /* SourcesModel.swift */,
+				A9681333252DA358001DCAE9 /* Categories.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -621,11 +710,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */,
+				A968132E252D3A2E001DCAE9 /* FavouritesRouter.swift in Sources */,
 				B2173C3F252BBD8C000FA911 /* Constants.swift in Sources */,
 				A932C10F252CEFEA006F2960 /* SearchPresenter.swift in Sources */,
 				A932C0C6252CCD43006F2960 /* SourcesViewController.swift in Sources */,
 				A932C0DF252CD94C006F2960 /* SourcesRouter.swift in Sources */,
 				A932C0F9252CEE35006F2960 /* SearchCollectionViewManager.swift in Sources */,
+				A968131E252D399A001DCAE9 /* FavouritesCollectionViewManager.swift in Sources */,
 				B2173BED252B92D0000FA911 /* DiscoverInteractorInput.swift in Sources */,
 				B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */,
 				B2173C12252BA8B2000FA911 /* ArticleEndPoints.swift in Sources */,
@@ -655,18 +746,27 @@
 				B2173BCB252B8F14000FA911 /* AppInteractor.swift in Sources */,
 				B2173BE7252B91E4000FA911 /* DiscoverPresenterProtocols.swift in Sources */,
 				A932C112252CF69F006F2960 /* SearchBarManager.swift in Sources */,
+				A968131A252D397A001DCAE9 /* FavouritesSearchBarManager.swift in Sources */,
 				A932C0D2252CD727006F2960 /* SourcesPresenter.swift in Sources */,
+				A9681334252DA358001DCAE9 /* Categories.swift in Sources */,
+				A9681312252D38CC001DCAE9 /* FavouritesViewInput.swift in Sources */,
 				A932C0CC252CCE01006F2960 /* SourcesModel.swift in Sources */,
 				A932C0FD252CEE62006F2960 /* SearchPresenterProtocols.swift in Sources */,
 				A932C115252CFCB7006F2960 /* SearchCollectionViewCell.swift in Sources */,
 				A932C0E8252CE7E4006F2960 /* UITableViewCell+Extensions.swift in Sources */,
 				A932C0C9252CCD5B006F2960 /* SourcesTableViewManager.swift in Sources */,
+				A9681325252D39E7001DCAE9 /* FavouritesPresenter.swift in Sources */,
 				B2173BFC252B9ED3000FA911 /* UIViewController+Extensions.swift in Sources */,
 				A932C0F2252CEDFD006F2960 /* SearchViewInput.swift in Sources */,
 				A932C104252CEEEF006F2960 /* SearchInteractor.swift in Sources */,
+				A968132B252D3A23001DCAE9 /* FavouritesInteractor.swift in Sources */,
 				B2173BF0252B92DF000FA911 /* DiscoverInteractor.swift in Sources */,
 				B2173BC7252B7FDE000FA911 /* UIFonts+Extensions.swift in Sources */,
 				A932C0C2252CCD39006F2960 /* SourcesViewInput.swift in Sources */,
+				A9681331252D3A36001DCAE9 /* FavouritesAssembly.swift in Sources */,
+				A9681321252D39D3001DCAE9 /* FavouritesPresenterProtocol.swift in Sources */,
+				A9681317252D3927001DCAE9 /* FavouritesViewController.swift in Sources */,
+				A9681328252D3A08001DCAE9 /* FavouritesInteractorInput.swift in Sources */,
 				B2173BE4252B91BE000FA911 /* DiscoverCollectionViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

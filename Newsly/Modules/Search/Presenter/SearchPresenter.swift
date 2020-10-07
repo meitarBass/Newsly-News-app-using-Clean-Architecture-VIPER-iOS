@@ -14,12 +14,10 @@ class SearchPresenter {
     var interactor: SearchInteractorInput?
     var router: SearchRouter?
     var collectionManager: SearchCollectionViewManagerProtocol?
-//
     var searchBarManager: SearchSearchBarManagerProtocol?
-//
     var searchBarDelegate: SearchBarManagerDelegate?
 }
-//
+
 extension SearchPresenter: SearchPresenterProtocol {    
     func searchForArticles(by name: String) {
         interactor?.fetchSearchedArticles(filter: name)

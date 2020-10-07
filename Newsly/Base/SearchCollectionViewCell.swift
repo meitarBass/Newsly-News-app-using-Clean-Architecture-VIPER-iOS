@@ -19,10 +19,9 @@ extension SearchCollectionViewCell {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
         let seperatorHeight: CGFloat = 2.0
-        let titleFont: UIFont = UIFont.boldItalic18
-        let descriptionFont: UIFont = UIFont.semibold15
+        let titleFont: UIFont = .bold16
+        let descriptionFont: UIFont = .regular12
         let labelConstraints: CGFloat = 16.0
-        let cornerRadius: CGFloat = 16.0
     }
 }
 
@@ -43,7 +42,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
                 make.height.equalTo(viewModel.descriptionHeight)
             }
             
-            image.snp.makeConstraints { (make) in
+            imageView.snp.makeConstraints { (make) in
                 make.edges.equalToSuperview()
             }
             
@@ -67,17 +66,17 @@ class SearchCollectionViewCell: UICollectionViewCell {
         return description
     }()
     
-    private lazy var image: UIImageView = {
+    private lazy var imageView: UIImageView = {
         let image = UIImageView(frame: .zero)
         image.contentMode = .scaleAspectFill
-        image.layer.cornerRadius = appearance.cornerRadius
+        image.clipsToBounds = true
         return image
     }()
     
     private lazy var view: UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = .darkBackground
-        view.layer.cornerRadius = appearance.cornerRadius
+        view.clipsToBounds = true
         return view
     }()
     
@@ -87,6 +86,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
         seperator.snp.makeConstraints { (make) in
             make.height.equalTo(appearance.seperatorHeight)
         }
+        seperator.clipsToBounds = true
         return seperator
     }()
     
@@ -94,6 +94,9 @@ class SearchCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         setUpUI()
         makeConstraints()
+        
+        // MARK: Delete this line
+//        contentView.backgroundColor = .cyan
     }
     
     required init?(coder: NSCoder) {
@@ -106,8 +109,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
     }
     
     private func addSubviews() {
-        self.contentView.addSubview(image)
-        self.image.addSubview(view)
+        self.contentView.addSubview(imageView)
+        self.imageView.addSubview(view)
         view.addSubview(descriptionLabel)
         view.addSubview(titleLabel)
         view.addSubview(seperator)
@@ -139,8 +142,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
     private func setCellImage(imageUrl: String?) {
         guard let imageUrl = imageUrl else { return }
         if let imageUrl = URL(string: imageUrl) {
-            image.kf.indicatorType = .activity
-            image.kf.setImage(
+            imageView.kf.indicatorType = .activity
+            imageView.kf.setImage(
                 with: imageUrl,
                 options: [
                     .scaleFactor(UIScreen.main.scale),

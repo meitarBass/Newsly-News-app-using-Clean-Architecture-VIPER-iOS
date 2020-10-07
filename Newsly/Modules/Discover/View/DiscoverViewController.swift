@@ -30,6 +30,8 @@ class DiscoverViewController: BaseViewController {
         super.setUpUI()
         addSubViews()
         makeConstraints()
+        
+        // MARK: Uncomment the line below
         self.presenter?.collectionManager?.setUpCollectionView(collectionView: self.collectionView)
     }
     

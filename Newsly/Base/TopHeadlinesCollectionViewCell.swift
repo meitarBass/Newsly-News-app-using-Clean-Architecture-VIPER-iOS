@@ -80,10 +80,8 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
     
     private lazy var imageView: UIImageView = {
        let image =  UIImageView(frame: .zero)
-        image.contentMode = .scaleAspectFill        
-        image.snp.makeConstraints { make in
-            make.height.equalTo(self.appearance.imageHeight)
-        }
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
         return image
     }()
     
@@ -101,6 +99,7 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
         stackView.distribution = .equalSpacing
         stackView.spacing = 5
         stackView.axis = .vertical
+        stackView.clipsToBounds = true
         return stackView
         
     }()

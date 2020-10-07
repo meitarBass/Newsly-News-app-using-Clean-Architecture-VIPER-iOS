@@ -38,11 +38,18 @@ class AppCoordinator {
         return UINavigationController(rootViewController: searchViewController)
     }
     
+    private func createFavouritesVC() -> UINavigationController {
+        let favouritesViewController = SearchAssembly.assemble()
+        favouritesViewController.title = "Faourites"
+        favouritesViewController.tabBarItem = UITabBarItem(title: "Favourites", image: UIImage.tabBarItems.favourite, selectedImage: UIImage.tabBarItems.favourite)
+        return UINavigationController(rootViewController: favouritesViewController)
+    }
+    
     private func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
         UITabBar.appearance().tintColor = UIColor.tintColor
         //add more tabs here
-        tabBar.viewControllers = [createDiscoverVC(), createSourcesVC(), createSearchVC()]
+        tabBar.viewControllers = [createDiscoverVC(), createSourcesVC(), createSearchVC(), createFavouritesVC()]
         return tabBar
     }
 }
