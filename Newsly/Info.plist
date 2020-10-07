@@ -29,6 +29,7 @@
 		<string>EBGaramond-Regular.ttf</string>
 		<string>EBGaramond-MediumItalic.ttf</string>
 		<string>EBGaramond-ExtraBoldItalic.ttf</string>
+		<string>EBGaramond-Medium.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

@@ -26,9 +26,9 @@ class AppInteractor: APPInteractorProtocol {
     private func checkIfUserisAuthenticated() {
         //perform check from firebase
         
-//        coordinator?.createHomePages(scene: windowScene)
+        coordinator?.createHomePages(scene: windowScene)
         
-        coordinator?.createLandingPage(scene: windowScene)
+//        coordinator?.createLandingPage(scene: windowScene)
     }
     
 }

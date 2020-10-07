@@ -11,7 +11,7 @@ extension SourcesTableViewManager {
     struct Apperance {
         let cellHeight: CGFloat = 60.0
         let cellInsets: CGFloat = 10.0
-        let sourceNameFont: UIFont = .boldItalic16
+        let sourceNameFont: UIFont = .boldItalic18
     }
 }
 

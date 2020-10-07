@@ -19,9 +19,9 @@ struct HeadlinesCellViewModel {
 extension TopHeadlinesCollectionViewCell {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
-        let seperatorHeight: CGFloat = 2.0
+        let seperatorHeight: CGFloat = 4.5
         let titleFont: UIFont = UIFont.boldItalic18
-        let descriptionFont: UIFont = UIFont.semibold15
+        let descriptionFont: UIFont = UIFont.medium14
     }
 }
 
@@ -87,7 +87,7 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
     
     private lazy var seperator: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = .tintColor
+        view.backgroundColor = .placeHolderTextColor
         view.snp.makeConstraints { (make) in
             make.height.equalTo(self.appearance.seperatorHeight)
         }

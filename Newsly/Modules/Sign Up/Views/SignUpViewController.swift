@@ -57,7 +57,7 @@ class SignUpViewController: BaseViewController {
         let name = UILabel(frame: .zero)
         name.text = "Full Name"
         name.textColor = .black
-        name.font = .semiboldItalic20
+        name.font = .semiboldItalic22
         return name
     }()
     
@@ -65,7 +65,7 @@ class SignUpViewController: BaseViewController {
         let email = UILabel(frame: .zero)
         email.text = "Email Address"
         email.textColor = .black
-        email.font = .semiboldItalic20
+        email.font = .semiboldItalic22
         return email
     }()
     
@@ -73,7 +73,7 @@ class SignUpViewController: BaseViewController {
         let pw = UILabel(frame: .zero)
         pw.text = "Password"
         pw.textColor = .black
-        pw.font = .semiboldItalic20
+        pw.font = .semiboldItalic22
         return pw
     }()
     
@@ -124,7 +124,7 @@ class SignUpViewController: BaseViewController {
         button.backgroundColor = #colorLiteral(red: 0.06666666667, green: 0.06666666667, blue: 0.07058823529, alpha: 1)
         button.setTitle("Create Your Account", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .semibold18
+        button.titleLabel?.font = .semiboldItalic16
         button.addTarget(self, action: #selector(doneCreatingAccount), for: .touchUpInside)
         button.clipsToBounds = true
         
@@ -138,7 +138,7 @@ class SignUpViewController: BaseViewController {
         let button = UIButton(frame: .zero)
         button.setTitle("Already have an account?", for: .normal)
         button.setTitleColor(#colorLiteral(red: 0.7254901961, green: 0.7215686275, blue: 0.7215686275, alpha: 1), for: .normal)
-        button.titleLabel?.font = .semibold18
+        button.titleLabel?.font = .semiboldItalic16
         button.addTarget(self, action: #selector(alreadyHaveAccount), for: .touchUpInside)
         button.clipsToBounds = true
         return button

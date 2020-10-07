@@ -57,7 +57,7 @@ class LoginViewController: BaseViewController {
         let email = UILabel(frame: .zero)
         email.text = "Email Address"
         email.textColor = .black
-        email.font = .semiboldItalic20
+        email.font = .semiboldItalic22
         return email
     }()
     
@@ -78,7 +78,7 @@ class LoginViewController: BaseViewController {
         let pw = UILabel(frame: .zero)
         pw.text = "Password"
         pw.textColor = .black
-        pw.font = .semiboldItalic20
+        pw.font = .semiboldItalic22
         return pw
     }()
 
@@ -102,7 +102,7 @@ class LoginViewController: BaseViewController {
         button.backgroundColor = #colorLiteral(red: 0.06666666667, green: 0.06666666667, blue: 0.07058823529, alpha: 1)
         button.setTitle("Login to Your Account", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .semibold18
+        button.titleLabel?.font = .semiboldItalic16
         button.addTarget(self, action: #selector(loginToYourAccount), for: .touchUpInside)
         button.clipsToBounds = true
         
@@ -116,7 +116,7 @@ class LoginViewController: BaseViewController {
         let button = UIButton(frame: .zero)
         button.setTitle("Forgot Your Password?", for: .normal)
         button.setTitleColor(#colorLiteral(red: 0.7254901961, green: 0.7215686275, blue: 0.7215686275, alpha: 1), for: .normal)
-        button.titleLabel?.font = .semibold18
+        button.titleLabel?.font = .semiboldItalic16
         button.addTarget(self, action: #selector(forgotPasswordButtonWasClicked), for: .touchUpInside)
         button.clipsToBounds = true
         return button

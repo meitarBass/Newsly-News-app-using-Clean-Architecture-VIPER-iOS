@@ -12,7 +12,7 @@ extension DiscoverCollectionViewManager {
         let imageHeight: CGFloat = 250.0
         let insets: CGFloat = 10.0
         let titleFont: UIFont = UIFont.boldItalic18
-        let descriptionFont: UIFont = UIFont.semibold15
+        let descriptionFont: UIFont = UIFont.medium14
     }
 }
 
@@ -83,7 +83,6 @@ extension DiscoverCollectionViewManager: DiscoverCollectionViewManagerProtocol {
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         self.collectionView?.register(TopHeadlinesCollectionViewCell.self, forCellWithReuseIdentifier: TopHeadlinesCollectionViewCell.reuseIdentifier)
-        self.collectionView?.contentInset = UIEdgeInsets(top: appearance.insets, left: appearance.insets, bottom: appearance.insets, right: appearance.insets)
     }
     
     
@@ -113,4 +112,11 @@ extension DiscoverCollectionViewManager: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         self.getCellSize(at: indexPath.row)
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: appearance.insets,
+//                            left: appearance.insets,
+//                            bottom: appearance.insets,
+//                            right: appearance.insets)
+//    }
 }

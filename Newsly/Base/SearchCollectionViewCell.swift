@@ -19,8 +19,8 @@ extension SearchCollectionViewCell {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
         let seperatorHeight: CGFloat = 2.0
-        let titleFont: UIFont = .bold16
-        let descriptionFont: UIFont = .regular12
+        let titleFont: UIFont = .boldItalic18
+        let descriptionFont: UIFont = .semiboldItalic16
         let labelConstraints: CGFloat = 16.0
     }
 }

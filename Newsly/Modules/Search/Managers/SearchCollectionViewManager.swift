@@ -12,7 +12,7 @@ extension SearchCollectionViewManager {
         let imageHeight: CGFloat = 250.0
         let collectionViewInsets: CGFloat = 0.0
         let titleFont: UIFont = .boldItalic18
-        let descriptionFont: UIFont = .semibold15
+        let descriptionFont: UIFont = .semiboldItalic16
     }
 }
 
