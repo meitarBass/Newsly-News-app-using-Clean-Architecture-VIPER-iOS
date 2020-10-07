@@ -51,6 +51,25 @@
 		A9681351252DA577001DCAE9 /* CategoriesTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681350252DA577001DCAE9 /* CategoriesTableViewManager.swift */; };
 		A9681354252DA581001DCAE9 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681353252DA581001DCAE9 /* CategoriesViewController.swift */; };
 		A9681357252DA58A001DCAE9 /* CategoriesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681356252DA58A001DCAE9 /* CategoriesViewInput.swift */; };
+		A968135F252DBE5A001DCAE9 /* SignUpAassembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968135E252DBE5A001DCAE9 /* SignUpAassembly.swift */; };
+		A9681363252DBE7A001DCAE9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681362252DBE7A001DCAE9 /* SignUpViewController.swift */; };
+		A9681366252DBED1001DCAE9 /* SignUpViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681365252DBED1001DCAE9 /* SignUpViewInput.swift */; };
+		A968136E252DD73D001DCAE9 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968136D252DD73D001DCAE9 /* UITextField+Extensions.swift */; };
+		A9681375252E0E03001DCAE9 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681374252E0E03001DCAE9 /* LoginAssembly.swift */; };
+		A9681379252E0E65001DCAE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681378252E0E65001DCAE9 /* LoginViewController.swift */; };
+		A968137E252E2206001DCAE9 /* LoginViewinput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968137D252E2206001DCAE9 /* LoginViewinput.swift */; };
+		A9681382252E221B001DCAE9 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681381252E221B001DCAE9 /* LoginRouter.swift */; };
+		A968138D252E2278001DCAE9 /* LoginFormTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968138C252E2278001DCAE9 /* LoginFormTextFieldsManager.swift */; };
+		A9681391252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681390252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift */; };
+		A9681395252E22AF001DCAE9 /* SignUpPresenterProtcols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681394252E22AF001DCAE9 /* SignUpPresenterProtcols.swift */; };
+		A9681399252E22B8001DCAE9 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681398252E22B8001DCAE9 /* SignUpPresenter.swift */; };
+		A968139C252E22C2001DCAE9 /* LoginPresenterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968139B252E22C2001DCAE9 /* LoginPresenterProtocols.swift */; };
+		A968139F252E22CB001DCAE9 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968139E252E22CB001DCAE9 /* LoginPresenter.swift */; };
+		A96813A2252E22E1001DCAE9 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813A1252E22E1001DCAE9 /* SignUpInteractor.swift */; };
+		A96813A5252E22EB001DCAE9 /* SignUpInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813A4252E22EA001DCAE9 /* SignUpInteractorInput.swift */; };
+		A96813A8252E22F2001DCAE9 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813A7252E22F2001DCAE9 /* LoginInteractor.swift */; };
+		A96813AB252E22FC001DCAE9 /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */; };
+		A96813AE252E2311001DCAE9 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813AD252E2311001DCAE9 /* SignUpRouter.swift */; };
 		B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA7252B7864000FA911 /* AppDelegate.swift */; };
 		B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA9252B7864000FA911 /* SceneDelegate.swift */; };
 		B2173BB1252B7866000FA911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2173BB0252B7866000FA911 /* Assets.xcassets */; };
@@ -140,6 +159,25 @@
 		A9681350252DA577001DCAE9 /* CategoriesTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewManager.swift; sourceTree = "<group>"; };
 		A9681353252DA581001DCAE9 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		A9681356252DA58A001DCAE9 /* CategoriesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewInput.swift; sourceTree = "<group>"; };
+		A968135E252DBE5A001DCAE9 /* SignUpAassembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAassembly.swift; sourceTree = "<group>"; };
+		A9681362252DBE7A001DCAE9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A9681365252DBED1001DCAE9 /* SignUpViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewInput.swift; sourceTree = "<group>"; };
+		A968136D252DD73D001DCAE9 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		A9681374252E0E03001DCAE9 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		A9681378252E0E65001DCAE9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A968137D252E2206001DCAE9 /* LoginViewinput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewinput.swift; sourceTree = "<group>"; };
+		A9681381252E221B001DCAE9 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		A968138C252E2278001DCAE9 /* LoginFormTextFieldsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormTextFieldsManager.swift; sourceTree = "<group>"; };
+		A9681390252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormTextFieldsManager.swift; sourceTree = "<group>"; };
+		A9681394252E22AF001DCAE9 /* SignUpPresenterProtcols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterProtcols.swift; sourceTree = "<group>"; };
+		A9681398252E22B8001DCAE9 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		A968139B252E22C2001DCAE9 /* LoginPresenterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocols.swift; sourceTree = "<group>"; };
+		A968139E252E22CB001DCAE9 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		A96813A1252E22E1001DCAE9 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		A96813A4252E22EA001DCAE9 /* SignUpInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractorInput.swift; sourceTree = "<group>"; };
+		A96813A7252E22F2001DCAE9 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
+		A96813AD252E2311001DCAE9 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		B2173BA4252B7864000FA911 /* Newsly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2173BA7252B7864000FA911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2173BA9252B7864000FA911 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -471,6 +509,134 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A968135B252DBE32001DCAE9 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				A968135D252DBE4F001DCAE9 /* Views */,
+				A9681389252E2244001DCAE9 /* Manager */,
+				A968138B252E2254001DCAE9 /* Presenter */,
+				A968138A252E2249001DCAE9 /* Interactor */,
+				A968137B252E1094001DCAE9 /* Router */,
+				A968135C252DBE3E001DCAE9 /* Assembly */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		A968135C252DBE3E001DCAE9 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				A968135E252DBE5A001DCAE9 /* SignUpAassembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		A968135D252DBE4F001DCAE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A9681365252DBED1001DCAE9 /* SignUpViewInput.swift */,
+				A9681362252DBE7A001DCAE9 /* SignUpViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9681370252E0DE2001DCAE9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A9681371252E0DEB001DCAE9 /* Views */,
+				A9681388252E2237001DCAE9 /* Manager */,
+				A9681386252E2223001DCAE9 /* Presenter */,
+				A9681387252E222E001DCAE9 /* Interactor */,
+				A9681380252E220E001DCAE9 /* Router */,
+				A9681373252E0DF5001DCAE9 /* Assembly */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A9681371252E0DEB001DCAE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A9681378252E0E65001DCAE9 /* LoginViewController.swift */,
+				A968137D252E2206001DCAE9 /* LoginViewinput.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9681373252E0DF5001DCAE9 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				A9681374252E0E03001DCAE9 /* LoginAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		A968137B252E1094001DCAE9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A96813AD252E2311001DCAE9 /* SignUpRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A9681380252E220E001DCAE9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A9681381252E221B001DCAE9 /* LoginRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A9681386252E2223001DCAE9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A968139B252E22C2001DCAE9 /* LoginPresenterProtocols.swift */,
+				A968139E252E22CB001DCAE9 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A9681387252E222E001DCAE9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A96813A7252E22F2001DCAE9 /* LoginInteractor.swift */,
+				A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A9681388252E2237001DCAE9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A968138C252E2278001DCAE9 /* LoginFormTextFieldsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A9681389252E2244001DCAE9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A9681390252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A968138A252E2249001DCAE9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A96813A1252E22E1001DCAE9 /* SignUpInteractor.swift */,
+				A96813A4252E22EA001DCAE9 /* SignUpInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A968138B252E2254001DCAE9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A9681394252E22AF001DCAE9 /* SignUpPresenterProtcols.swift */,
+				A9681398252E22B8001DCAE9 /* SignUpPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		B2173B9B252B7864000FA911 = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +713,7 @@
 				B2173BFB252B9ED3000FA911 /* UIViewController+Extensions.swift */,
 				B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */,
 				A932C0E7252CE7E4006F2960 /* UITableViewCell+Extensions.swift */,
+				A968136D252DD73D001DCAE9 /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -554,6 +721,8 @@
 		B2173BD0252B9096000FA911 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A9681370252E0DE2001DCAE9 /* Login */,
+				A968135B252DBE32001DCAE9 /* Sign Up */,
 				A9681336252DA4D5001DCAE9 /* Categories */,
 				A9681308252D23D5001DCAE9 /* Favourites */,
 				A932C0EA252CEC04006F2960 /* Search */,
@@ -792,6 +961,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A968139F252E22CB001DCAE9 /* LoginPresenter.swift in Sources */,
 				B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */,
 				A968132E252D3A2E001DCAE9 /* FavouritesRouter.swift in Sources */,
 				B2173C3F252BBD8C000FA911 /* Constants.swift in Sources */,
@@ -802,9 +972,14 @@
 				A932C0F9252CEE35006F2960 /* SearchCollectionViewManager.swift in Sources */,
 				A968131E252D399A001DCAE9 /* FavouritesCollectionViewManager.swift in Sources */,
 				B2173BED252B92D0000FA911 /* DiscoverInteractorInput.swift in Sources */,
+				A96813A5252E22EB001DCAE9 /* SignUpInteractorInput.swift in Sources */,
 				B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */,
 				B2173C12252BA8B2000FA911 /* ArticleEndPoints.swift in Sources */,
 				A932C0D5252CD7C3006F2960 /* SourcesInteractorInput.swift in Sources */,
+				A9681366252DBED1001DCAE9 /* SignUpViewInput.swift in Sources */,
+				A968138D252E2278001DCAE9 /* LoginFormTextFieldsManager.swift in Sources */,
+				A9681382252E221B001DCAE9 /* LoginRouter.swift in Sources */,
+				A968135F252DBE5A001DCAE9 /* SignUpAassembly.swift in Sources */,
 				A932C0E5252CDC07006F2960 /* SourcesTableViewCell.swift in Sources */,
 				B2173BE1252B91AC000FA911 /* DiscoverViewController.swift in Sources */,
 				B2173C0F252BA81D000FA911 /* NetworkService.swift in Sources */,
@@ -814,6 +989,7 @@
 				B2173BDD252B919A000FA911 /* DiscoverViewInput.swift in Sources */,
 				B2173BF3252B92EF000FA911 /* DiscoverRouter.swift in Sources */,
 				B2173C44252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift in Sources */,
+				A9681379252E0E65001DCAE9 /* LoginViewController.swift in Sources */,
 				A9681351252DA577001DCAE9 /* CategoriesTableViewManager.swift in Sources */,
 				B2173C00252BA06A000FA911 /* BaseViewController.swift in Sources */,
 				A9681342252DA528001DCAE9 /* CategoriesRouter.swift in Sources */,
@@ -821,13 +997,16 @@
 				A9681348252DA53C001DCAE9 /* CategoriesInteractorInput.swift in Sources */,
 				B2173BCE252B8FE0000FA911 /* AppCoordinator.swift in Sources */,
 				A932C10B252CEF4C006F2960 /* SearchRouter.swift in Sources */,
+				A96813A2252E22E1001DCAE9 /* SignUpInteractor.swift in Sources */,
 				A932C100252CEED3006F2960 /* SearchInteractorInput.swift in Sources */,
 				B2173BEA252B9278000FA911 /* DiscoverPresenter.swift in Sources */,
+				A968136E252DD73D001DCAE9 /* UITextField+Extensions.swift in Sources */,
 				A932C0F6252CEE19006F2960 /* SearchViewController.swift in Sources */,
 				A932C0B5252CA23D006F2960 /* UIColors+Extensions.swift in Sources */,
 				A932C108252CEF42006F2960 /* SearchAssembly.swift in Sources */,
 				B2173C15252BA8EA000FA911 /* EndPointProtocol.swift in Sources */,
 				B2173C4B252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift in Sources */,
+				A96813AB252E22FC001DCAE9 /* LoginInteractorInput.swift in Sources */,
 				A932C0CF252CD61E006F2960 /* SourcesPresenterProtocols.swift in Sources */,
 				B2173BF9252B9A97000FA911 /* UIImages+Extensions.swift in Sources */,
 				B2173BCB252B8F14000FA911 /* AppInteractor.swift in Sources */,
@@ -839,15 +1018,20 @@
 				A9681345252DA532001DCAE9 /* CategoriesInteractor.swift in Sources */,
 				A9681312252D38CC001DCAE9 /* FavouritesViewInput.swift in Sources */,
 				A932C0CC252CCE01006F2960 /* SourcesModel.swift in Sources */,
+				A96813AE252E2311001DCAE9 /* SignUpRouter.swift in Sources */,
+				A9681375252E0E03001DCAE9 /* LoginAssembly.swift in Sources */,
 				A932C0FD252CEE62006F2960 /* SearchPresenterProtocols.swift in Sources */,
 				A932C115252CFCB7006F2960 /* SearchCollectionViewCell.swift in Sources */,
 				A932C0E8252CE7E4006F2960 /* UITableViewCell+Extensions.swift in Sources */,
 				A932C0C9252CCD5B006F2960 /* SourcesTableViewManager.swift in Sources */,
 				A968134B252DA544001DCAE9 /* CategoriesPresenter.swift in Sources */,
+				A968137E252E2206001DCAE9 /* LoginViewinput.swift in Sources */,
 				A9681325252D39E7001DCAE9 /* FavouritesPresenter.swift in Sources */,
+				A9681391252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift in Sources */,
 				B2173BFC252B9ED3000FA911 /* UIViewController+Extensions.swift in Sources */,
 				A932C0F2252CEDFD006F2960 /* SearchViewInput.swift in Sources */,
 				A932C104252CEEEF006F2960 /* SearchInteractor.swift in Sources */,
+				A96813A8252E22F2001DCAE9 /* LoginInteractor.swift in Sources */,
 				A968134E252DA551001DCAE9 /* CategoriesPresenterProtocols.swift in Sources */,
 				A968132B252D3A23001DCAE9 /* FavouritesInteractor.swift in Sources */,
 				B2173BF0252B92DF000FA911 /* DiscoverInteractor.swift in Sources */,
@@ -855,10 +1039,14 @@
 				A932C0C2252CCD39006F2960 /* SourcesViewInput.swift in Sources */,
 				A9681331252D3A36001DCAE9 /* FavouritesAssembly.swift in Sources */,
 				A9681321252D39D3001DCAE9 /* FavouritesPresenterProtocol.swift in Sources */,
+				A9681363252DBE7A001DCAE9 /* SignUpViewController.swift in Sources */,
 				A9681317252D3927001DCAE9 /* FavouritesViewController.swift in Sources */,
 				A9681354252DA581001DCAE9 /* CategoriesViewController.swift in Sources */,
 				A9681357252DA58A001DCAE9 /* CategoriesViewInput.swift in Sources */,
 				A9681328252D3A08001DCAE9 /* FavouritesInteractorInput.swift in Sources */,
+				A968139C252E22C2001DCAE9 /* LoginPresenterProtocols.swift in Sources */,
+				A9681395252E22AF001DCAE9 /* SignUpPresenterProtcols.swift in Sources */,
+				A9681399252E22B8001DCAE9 /* SignUpPresenter.swift in Sources */,
 				B2173BE4252B91BE000FA911 /* DiscoverCollectionViewManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1000,13 +1188,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QMSK8P2267;
+				DEVELOPMENT_TEAM = 9PG63NVD7U;
 				INFOPLIST_FILE = Newsly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.blazeapps.Newsly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bombapps.Newsly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1020,13 +1209,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QMSK8P2267;
+				DEVELOPMENT_TEAM = 9PG63NVD7U;
 				INFOPLIST_FILE = Newsly/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.blazeapps.Newsly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bombapps.Newsly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

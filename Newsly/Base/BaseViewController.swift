@@ -32,11 +32,12 @@ class BaseViewController: UIViewController {
     }
     
     func setUpUI() {
+        self.view.backgroundColor = .background
         
         //TODO: -  fix me
         self.navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldItalic48,
-            NSAttributedString.Key.foregroundColor: UIColor.red
+            NSAttributedString.Key.font: UIFont.boldItalic18,
+            NSAttributedString.Key.foregroundColor: UIColor.white
         ]
         
         self.navigationController?.navigationBar.prefersLargeTitles = true

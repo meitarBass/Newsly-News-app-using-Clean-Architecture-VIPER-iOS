@@ -15,7 +15,10 @@ protocol AppCoordinatorProtocol {
 
 class AppCoordinator {
     var window: UIWindow?
-    
+}
+
+// MARK: Home page case
+extension AppCoordinator {
     private func createDiscoverVC() -> UINavigationController {
         let discoverViewController = DiscoverAssembly.assemble(endpoint: .getTopHeadlines)
         discoverViewController.title = "Discover"
@@ -61,11 +64,26 @@ class AppCoordinator {
     }
 }
 
+// MARK: Landing page case
+extension AppCoordinator {
+    private func createSignUpVC() -> UINavigationController {
+        let signUpViewController = SignUpAssembly.assemble()
+        return UINavigationController(rootViewController: signUpViewController)
+    }
+    
+    private func createLoginVC() -> UINavigationController {
+        let loginViewController = LoginAssembly.assemble()
+        return UINavigationController(rootViewController: loginViewController)
+    }
+}
+
 
 extension AppCoordinator: AppCoordinatorProtocol {
     
     func createLandingPage(scene: UIWindowScene) {
-       
+        window = UIWindow(windowScene: scene)
+        window?.rootViewController = createSignUpVC()
+        window?.makeKeyAndVisible()
     }
     
     func createHomePages(scene: UIWindowScene) {

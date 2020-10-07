@@ -52,12 +52,6 @@ class SourcesTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpUI()
     }
-
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        setUpUI()
-//    }
-
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
