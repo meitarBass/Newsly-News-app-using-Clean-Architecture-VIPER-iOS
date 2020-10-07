@@ -74,6 +74,45 @@ class BaseViewController: UIViewController {
         self.indicatorBlurView.isHidden = true
         self.indicator.stopAnimating()
     }
+    
+    func addKeyBoardObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardStartSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        self.handleKeyboardHeight(rect: keyboardStartSize)
+        
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+        let swipeGesture: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(dismissKeyboardOnSwipe))
+        swipeGesture.direction = .down
+        view.addGestureRecognizer(swipeGesture)
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.view.frame.origin.y = 0
+    }
+    
+    @objc func dismissKeyboard() {
+        self.handleTapGesture()
+        view.endEditing(true)
+    }
+    
+    @objc func dismissKeyboardOnSwipe(gesture: UISwipeGestureRecognizer) {
+        if gesture.direction == .down {
+            self.dismissKeyboard()
+        }
+    }
+    
+    func handleKeyboardHeight(rect: CGRect) {
+    }
+    
+    func handleTapGesture() {
+    }
 
 
 

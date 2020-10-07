@@ -44,7 +44,7 @@ class DiscoverViewController: BaseViewController {
         super.makeConstraints()
         collectionView.snp.makeConstraints { (make) in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.topMargin)
-            make.leading.trailing.bottom.equalToSuperview()
+            make.leading.trailing.bottom.equalToSuperview().inset(15.0)
         }
     }
 

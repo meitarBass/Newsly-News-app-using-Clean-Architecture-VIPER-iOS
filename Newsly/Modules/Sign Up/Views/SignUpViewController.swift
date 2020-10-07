@@ -11,9 +11,9 @@ import SnapKit
 extension SignUpViewController {
     struct Appearance {
         let leadingOffset: CGFloat = 24.0
-        let trailingOffset: CGFloat = -24.0
-        let topOffset: CGFloat = 24.0
-        let bottomOffset: CGFloat = -24.0
+        let trailingOffset: CGFloat = 24.0
+        let topOffset: CGFloat = 36.0
+        let bottomOffset: CGFloat = 24.0
         
         let buttonHeight: CGFloat = 48.0
         let textfieldHeight: CGFloat = 48.0
@@ -34,7 +34,7 @@ extension SignUpViewController {
 }
 
 class SignUpViewController: BaseViewController {
-    
+    let window: UIWindow? = UIApplication.shared.keyWindow
     private lazy var newslyTitleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Newsly"
@@ -85,7 +85,7 @@ class SignUpViewController: BaseViewController {
         nameTF.snp.makeConstraints { (make) in
             make.height.equalTo(appearance.textfieldHeight)
         }
-    
+        nameTF.delegate = self
         nameTF.isUserInteractionEnabled = true
         return nameTF
     }()
@@ -98,7 +98,7 @@ class SignUpViewController: BaseViewController {
         emailTF.snp.makeConstraints { (make) in
             make.height.equalTo(appearance.textfieldHeight)
         }
-        
+        emailTF.delegate = self
         emailTF.isUserInteractionEnabled = true
         return emailTF
     }()
@@ -111,7 +111,7 @@ class SignUpViewController: BaseViewController {
         pwTF.snp.makeConstraints { (make) in
             make.height.equalTo(appearance.textfieldHeight)
         }
-        
+        pwTF.delegate = self
         pwTF.isSecureTextEntry = true
         
         return pwTF
@@ -196,6 +196,7 @@ class SignUpViewController: BaseViewController {
     
     override func setUpUI() {
         super.setUpUI()
+        self.addKeyBoardObserver()
         view.backgroundColor = .background
         addSubViews()
         makeConstraints()
@@ -210,10 +211,10 @@ class SignUpViewController: BaseViewController {
         super.makeConstraints()
         
         signUpStackView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(appearance.topOffset + 12)
-            make.bottom.equalToSuperview().offset(appearance.bottomOffset)
+            make.top.equalToSuperview().offset(appearance.topOffset)
+            make.bottom.equalToSuperview().inset(appearance.bottomOffset)
             make.leading.equalToSuperview().offset(appearance.leadingOffset)
-            make.trailing.equalToSuperview().offset(appearance.trailingOffset)
+            make.trailing.equalToSuperview().inset(appearance.trailingOffset)
         }
     }
     
@@ -224,8 +225,26 @@ class SignUpViewController: BaseViewController {
     @objc private func alreadyHaveAccount() {
         presenter?.alreadyHaveAccount()
     }
+    
+    
+    override func handleTapGesture() {
+        view.frame.origin.y = 0
+    }
+    
+    override func handleKeyboardHeight(rect: CGRect) {
+        let errorSpace: CGFloat = 5.0
+        if rect.origin.y < formStackView.frame.maxY + self.appearance.topOffset {
+            view.frame.origin.y = ((rect.origin.y - (formStackView.frame.maxY + self.appearance.topOffset + errorSpace)))
+        }
+    }
 }
 
 extension SignUpViewController: SignUpViewInput {
     
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
 }

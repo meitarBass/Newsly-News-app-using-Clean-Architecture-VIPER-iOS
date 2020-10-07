@@ -40,6 +40,7 @@ class SearchViewController: BaseViewController {
     
     override func setUpUI() {
         super.setUpUI()
+        self.addKeyBoardObserver()
         addSubViews()
         makeConstraints()
         self.presenter?.collectionManager?.setUpCollectionView(collectionView: self.collectionView)
