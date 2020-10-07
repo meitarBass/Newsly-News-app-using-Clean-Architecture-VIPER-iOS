@@ -11,7 +11,7 @@ extension DiscoverCollectionViewManager {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
         let insets: CGFloat = 10.0
-        let titleFont: UIFont = UIFont.boldItalic18
+        let titleFont: UIFont = UIFont.extraBold28
         let descriptionFont: UIFont = UIFont.medium14
     }
 }
@@ -110,13 +110,6 @@ extension DiscoverCollectionViewManager: UICollectionViewDelegate {}
 
 extension DiscoverCollectionViewManager: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        self.getCellSize(at: indexPath.row)
+        return self.getCellSize(at: indexPath.row)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: appearance.insets,
-//                            left: appearance.insets,
-//                            bottom: appearance.insets,
-//                            right: appearance.insets)
-//    }
 }

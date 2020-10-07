@@ -18,7 +18,7 @@ struct CategoriesCellViewModel {
 
 extension SourcesTableViewCell {
     struct Appearance {
-        let sourceNameFont: UIFont = .boldItalic18
+        let sourceNameFont: UIFont = .extraBold28
     }
 }
 

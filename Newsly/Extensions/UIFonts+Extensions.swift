@@ -11,10 +11,11 @@ extension UIFont {
     
     //MARK: - boldItalic
     
-    public class var boldItalic18: UIFont {
-        UIFont.boldItalic(with: 18.0)
+    // DiscoverTitles, SearchTitles, FavouritesTitles, CategoriesTableCell, SourcesTableCell
+    public class var extraBold28: UIFont {
+        UIFont.extraBold(with: 28.0)
     }
-    
+
     //MARK: - semiBoldItalic
     
     public class var semiboldItalic16: UIFont {
@@ -38,24 +39,34 @@ extension UIFont {
     
     //MARK: - extraBoldItalic
 
+    // TabBarTitles
+    public class var extraBoldItalic28: UIFont {
+        UIFont.extraBoldItalic(with: 28.0)
+    }
+
     public class var extraBoldItalic48: UIFont {
         UIFont.extraBoldItalic(with: 48.0)
     }
     
     // MARK: - Private helpers
     private enum FontStyle: String {
-        case bold = "EBGaramond-Bold"
-        case boldItalic = "EBGaramond-BoldItalic"
         case regular = "EBGaramond-Regular"
+        
+        case medium = "EBGaramond-Medium"
+        case mediumItalic = "EBGaramond-MediumItalic"
+        
         case semibold = "EBGaramond-SemiBold"
         case semiboldItalic = "EBGaramond-SemiBoldItalic"
-        case mediumItalic = "EBGaramond-MediumItalic"
-        case medium = "EBGaramond-Medium"
+        
+        case bold = "EBGaramond-Bold"
+        case boldItalic = "EBGaramond-BoldItalic"
+        
+        case extraBold = "EBGaramond-ExtraBold"
         case extraBoldItalic = "EBGaramond-ExtraBoldItalic"
     }
     
-    private static func boldItalic(with size: CGFloat) -> UIFont {
-        self.font(with: .boldItalic, size: size)
+    private static func extraBold(with size: CGFloat) -> UIFont {
+        self.font(with: .extraBold, size: size)
     }
     
     private static func semiboldItalic(with size: CGFloat) -> UIFont {

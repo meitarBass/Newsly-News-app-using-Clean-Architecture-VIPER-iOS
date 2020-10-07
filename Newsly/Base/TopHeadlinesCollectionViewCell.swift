@@ -20,7 +20,7 @@ extension TopHeadlinesCollectionViewCell {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
         let seperatorHeight: CGFloat = 4.5
-        let titleFont: UIFont = UIFont.boldItalic18
+        let titleFont: UIFont = UIFont.extraBold28
         let descriptionFont: UIFont = UIFont.medium14
     }
 }
@@ -33,14 +33,6 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
             guard let viewModel = viewModel else { return }
             titleLabel.text = viewModel.article?.title
             descriptionLabel.text = viewModel.article?.description
-            
-            titleLabel.snp.updateConstraints { make in
-                make.height.equalTo(viewModel.titleHeight)
-            }
-            
-            descriptionLabel.snp.updateConstraints { make in
-                make.height.equalTo(viewModel.descriptionHeight)
-            }
             
             if let imageURL = viewModel.article?.urlToImage {
                 
@@ -62,19 +54,15 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
         let label = UILabel(frame: .zero)
         label.font = self.appearance.titleFont
         label.numberOfLines = 0
-        label.snp.makeConstraints { make in
-            make.size.height.equalTo(10.0)
-        }
+        label.textColor = .textColorBlack
         return label
     }()
     
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.font = self.appearance.descriptionFont
+        label.textColor = .textColorGray
         label.numberOfLines = 0
-        label.snp.makeConstraints { make in
-            make.size.height.equalTo(10.0)
-        }
         return label
     }()
     
@@ -97,7 +85,7 @@ class TopHeadlinesCollectionViewCell: UICollectionViewCell {
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, imageView, seperator])
         stackView.distribution = .equalSpacing
-        stackView.spacing = 5
+        stackView.spacing = 6
         stackView.axis = .vertical
         stackView.clipsToBounds = true
         return stackView

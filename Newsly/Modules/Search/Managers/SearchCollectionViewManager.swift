@@ -11,7 +11,7 @@ extension SearchCollectionViewManager {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
         let collectionViewInsets: CGFloat = 0.0
-        let titleFont: UIFont = .boldItalic18
+        let titleFont: UIFont = .extraBold28
         let descriptionFont: UIFont = .semiboldItalic16
     }
 }

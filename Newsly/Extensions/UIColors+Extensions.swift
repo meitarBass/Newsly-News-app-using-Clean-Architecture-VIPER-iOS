@@ -14,8 +14,13 @@ extension UIColor {
         #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.9490196078, alpha: 1)
     }
     
-    public class var textColor: UIColor {
+    public class var textColorBlack: UIColor {
         #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    }
+    
+    // DescriptionLabels,
+    public class var textColorGray: UIColor {
+        #colorLiteral(red: 0.4117647059, green: 0.4117647059, blue: 0.4117647059, alpha: 1)
     }
     
     // MARK: Tab Bar Items Tint Color
