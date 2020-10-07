@@ -45,11 +45,18 @@ class AppCoordinator {
         return UINavigationController(rootViewController: favouritesViewController)
     }
     
+    private func createCategoriesVC() -> UINavigationController {
+        let favouritesViewController = CategoriesAssembly.assemble()
+        favouritesViewController.title = "Categories"
+        favouritesViewController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage.tabBarItems.discover, selectedImage: UIImage.tabBarItems.discover)
+        return UINavigationController(rootViewController: favouritesViewController)
+    }
+    
     private func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
         UITabBar.appearance().tintColor = UIColor.tintColor
         //add more tabs here
-        tabBar.viewControllers = [createDiscoverVC(), createSourcesVC(), createSearchVC(), createFavouritesVC()]
+        tabBar.viewControllers = [createDiscoverVC(), createSourcesVC(), createSearchVC(), createFavouritesVC(), createCategoriesVC()]
         return tabBar
     }
 }

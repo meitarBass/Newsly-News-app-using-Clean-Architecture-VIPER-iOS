@@ -22,7 +22,6 @@ extension SourcesPresenter: SourcesPresenterProtocol {
     func viewDidLoad() {
         interactor?.fetchTrendingSources()
     }
-    
 }
 
 //MARK: - SourcesPresenterInput
@@ -47,6 +46,4 @@ extension SourcesPresenter: SourcesTableViewManagerDelegate {
         let textToSearch = sourceName.replacingOccurrences(of: " ", with: "-")
         self.router?.createDiscoverSources(sourceName: textToSearch)
     }
-    
-    
 }

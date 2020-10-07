@@ -7,11 +7,13 @@
 
 import UIKit
 import SnapKit
-import Kingfisher
-
 
 struct SourcesCellViewModel {
     let sources: Sources?
+}
+
+struct CategoriesCellViewModel {
+    let category: String?
 }
 
 extension SourcesTableViewCell {
@@ -29,7 +31,13 @@ class SourcesTableViewCell: UITableViewCell {
             sourceNameLabel.text = viewModel.sources?.name
         }
     }
-    
+
+    var categoryViewModel: CategoriesCellViewModel? {
+        didSet {
+            guard let viewModel = categoryViewModel else { return }
+            sourceNameLabel.text = categoryViewModel?.category
+        }
+    }
     
     private let appearance = Appearance()
     
