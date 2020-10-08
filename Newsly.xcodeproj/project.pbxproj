@@ -766,14 +766,14 @@
 		B2173BD0252B9096000FA911 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				A96BCC7E252F276D00CE2EFC /* Web Page */,
 				A968135B252DBE32001DCAE9 /* Sign Up */,
 				A9681370252E0DE2001DCAE9 /* Login */,
+				B2173BD1252B90B3000FA911 /* Discover */,
 				A9681336252DA4D5001DCAE9 /* Categories */,
 				A9681308252D23D5001DCAE9 /* Favourites */,
 				A932C0EA252CEC04006F2960 /* Search */,
 				A932C0B8252CA5AB006F2960 /* Sources */,
-				B2173BD1252B90B3000FA911 /* Discover */,
+				A96BCC7E252F276D00CE2EFC /* Web Page */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
