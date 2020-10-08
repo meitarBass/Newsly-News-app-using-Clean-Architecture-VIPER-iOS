@@ -10,7 +10,7 @@ import Foundation
 class SignUpPresenter {
     
     var router : SignUpRouterProtocol?
-    var view: SignUpViewInput?
+    weak var view: SignUpViewInput?
     var interactor: SignUpInteractorInput?
     
 }
@@ -34,6 +34,10 @@ extension SignUpPresenter: SignUpPresenterInput {
     
 }
 
-extension SignUpPresenter: SignUpTextFieldsManagerDelegate {
+extension SignUpPresenter: SignUpDelegate {
+    func presentAlert(title: String, message: String, action: ActionAlertModel?) {
+        self.view?.presentAlert(title: title, message: message, action: action)
+    }
+    
     
 }

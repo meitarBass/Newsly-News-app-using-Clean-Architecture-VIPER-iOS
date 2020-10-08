@@ -12,13 +12,3 @@ protocol SignUpInteractorInput {
     func signUp(email: String, password: String)
 }
 
-
-final class SignUpInteractor: SignUpInteractorInput {
-   
-   var profileService: ProfileServiceProtocol?
-    
-    func signUp(email: String, password: String) {
-        profileService?.signUp(email: email, password: password)
-    }
-    
-}

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+
+protocol LoginViewInput: class {
+    func presentAlert(title: String, message: String, action: ActionAlertModel?)
+}

@@ -35,6 +35,8 @@ extension LoginViewController {
 
 class LoginViewController: BaseViewController {
     
+    var presenter: SignInPresenterProtocol?
+    
     private lazy var newslyTitleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Newsly"
@@ -192,10 +194,14 @@ class LoginViewController: BaseViewController {
     }
     
     @objc private func loginToYourAccount() {
-        print("Done")
+        presenter?.signIn(email: emailAddressTF.text, password: passwordTF.text)
     }
     
     @objc private func forgotPasswordButtonWasClicked() {
         print("Already have")
     }
+}
+
+extension LoginViewController: LoginViewInput {
+    
 }

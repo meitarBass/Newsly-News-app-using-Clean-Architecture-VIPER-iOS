@@ -16,6 +16,7 @@ class CategoriesViewController: BaseViewController {
         let tableView = UITableView(frame: .zero)
         tableView.backgroundColor = .none
         tableView.keyboardDismissMode = .interactive
+        tableView.tableFooterView = UIView()
         return tableView
     }()
     

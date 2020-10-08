@@ -15,7 +15,12 @@ protocol ProfileServiceProtocol: class {
     func checkIfUserIsAuth() -> Bool
 }
 
-protocol LoginDelegate: class {
+protocol SigninDelegate: class {
+    func presentAlert(title: String, message: String, action: ActionAlertModel?)
+    
+}
+
+protocol SignUpDelegate: class {
     func presentAlert(title: String, message: String, action: ActionAlertModel?)
     
 }
@@ -23,7 +28,8 @@ protocol LoginDelegate: class {
 class ProfileService: ProfileServiceProtocol {
 
     weak var appInteratcor: AppInteractorProtocol?
-    weak var loginDelegate: LoginDelegate?
+    weak var loginDelegate: SigninDelegate?
+    weak var signUpDelegate: SignUpDelegate?
     
     func checkIfUserIsAuth() -> Bool {
         if Firebase.Auth.auth().currentUser != nil {
@@ -34,16 +40,21 @@ class ProfileService: ProfileServiceProtocol {
         
     }
     
-    
     func signIn(email: String, password: String) {
         Firebase.Auth.auth().signIn(withEmail: email, password: password) {[weak self] (result, error) in
             if let error = error {
                 self?.loginDelegate?.presentAlert(title: "Error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
             }
           
-            guard result != nil else { return }
+            guard result != nil else {
+                self?.loginDelegate?.presentAlert(title: "Error", message: "Couldn't complete sign in", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+                return
+            }
             
-            self?.appInteratcor?.checkIfUserisAuthenticated()
+            self?.loginDelegate?.presentAlert(title: "Error", message: "SignUpSuccessful", action: ActionAlertModel(actionText: "Cancel", actionHandler: { [weak self] in
+                self?.appInteratcor?.checkIfUserisAuthenticated()
+                
+            }))
             
         }
     }
@@ -51,11 +62,18 @@ class ProfileService: ProfileServiceProtocol {
     func signUp(email: String, password: String) {
         Firebase.Auth.auth().createUser(withEmail: email, password: password) {[weak self] (result, error) in
             if let error = error {
-                self?.loginDelegate?.presentAlert(title: "Error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+                self?.signUpDelegate?.presentAlert(title: "Error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
             }
-            guard result != nil else { return }
+            guard result != nil else {
+                self?.signUpDelegate?.presentAlert(title: "Error", message: "Couldn't Sign In", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+                return
+            }
             
-            self?.appInteratcor?.checkIfUserisAuthenticated()
+            self?.signUpDelegate?.presentAlert(title: "Error", message: "SignUpSuccessful", action: ActionAlertModel(actionText: "Cancel", actionHandler: { [weak self] in
+                self?.appInteratcor?.checkIfUserisAuthenticated()
+                
+            }))
+           
             
         }
     }

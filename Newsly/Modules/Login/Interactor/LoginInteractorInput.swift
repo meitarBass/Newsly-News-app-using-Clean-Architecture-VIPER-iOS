@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol SignInInteractorInput {
+    func signIn(email: String, password: String)
+}

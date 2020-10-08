@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+
+
+
+final class SignInInteractor: SignInInteractorInput {
+    
+   var profileService: ProfileServiceProtocol?
+    
+    func signIn(email: String, password: String) {
+        profileService?.signIn(email: email, password: password)
+    }
+    
+}
