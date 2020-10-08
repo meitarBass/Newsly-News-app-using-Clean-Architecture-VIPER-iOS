@@ -22,6 +22,7 @@ class DiscoverViewController: BaseViewController {
     private lazy var refreshController: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(userPulledView), for: .valueChanged)
+        refreshControl.transform = CGAffineTransform(scaleX: 0.65, y: 0.65)
         return refreshControl
     }()
     

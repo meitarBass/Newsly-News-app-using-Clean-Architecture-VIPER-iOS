@@ -18,6 +18,17 @@ class SourcesViewController: BaseViewController {
         return tableView
     }()
     
+    private lazy var refreshController: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(userPulledView), for: .valueChanged)
+        refreshControl.transform = CGAffineTransform(scaleX: 0.65, y: 0.65)
+        return refreshControl
+    }()
+    
+    @objc private func userPulledView() {
+        self.presenter?.viewDidLoad()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
@@ -34,6 +45,7 @@ class SourcesViewController: BaseViewController {
     override func addSubViews() {
         super.addSubViews()
         self.view.addSubview(tableView)
+        self.tableView.refreshControl = refreshController
     }
     
     override func makeConstraints() {
@@ -42,6 +54,11 @@ class SourcesViewController: BaseViewController {
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.topMargin)
             make.leading.trailing.bottom.equalToSuperview()
         }
+    }
+    
+    override func hideActivityIndicator() {
+        super.hideActivityIndicator()
+        self.refreshController.endRefreshing()
     }
     
 }
