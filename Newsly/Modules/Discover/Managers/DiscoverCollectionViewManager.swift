@@ -82,7 +82,7 @@ extension DiscoverCollectionViewManager: DiscoverCollectionViewManagerProtocol {
         self.collectionView = collectionView
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
-        self.collectionView?.register(TopHeadlinesCollectionViewCell.self, forCellWithReuseIdentifier: TopHeadlinesCollectionViewCell.reuseIdentifier)
+        self.collectionView?.register(DiscoverCollectionViewCell.self, forCellWithReuseIdentifier: DiscoverCollectionViewCell.reuseIdentifier)
     }
     
     
@@ -94,7 +94,7 @@ extension DiscoverCollectionViewManager: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopHeadlinesCollectionViewCell.reuseIdentifier, for: indexPath) as? TopHeadlinesCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiscoverCollectionViewCell.reuseIdentifier, for: indexPath) as? DiscoverCollectionViewCell else {
             return UICollectionViewCell()
         }
         let cellViewModel = HeadlinesCellViewModel(article: articles?[indexPath.row],

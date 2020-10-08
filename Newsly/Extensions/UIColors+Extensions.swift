@@ -31,7 +31,8 @@ extension UIColor {
     // MARK: Tab Bar Items Tint Color
     
     public class var tintColor: UIColor {
-        #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     // MARK: - Cells Background

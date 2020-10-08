@@ -16,7 +16,7 @@ struct HeadlinesCellViewModel {
     let descriptionHeight: CGFloat
 }
 
-extension TopHeadlinesCollectionViewCell {
+extension DiscoverCollectionViewCell {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
         let seperatorHeight: CGFloat = 4.5
@@ -26,7 +26,7 @@ extension TopHeadlinesCollectionViewCell {
 }
 
 
-class TopHeadlinesCollectionViewCell: UICollectionViewCell {
+class DiscoverCollectionViewCell: UICollectionViewCell {
     
     var viewModel: HeadlinesCellViewModel? {
         didSet {
