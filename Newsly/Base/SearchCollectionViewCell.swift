@@ -18,7 +18,6 @@ struct SearchCellViewModel {
 extension SearchCollectionViewCell {
     struct Appearance {
         let imageHeight: CGFloat = 200.0
-        let seperatorHeight: CGFloat = 2.0
         let sourceFont: UIFont = .extraBold28
         let titleFont: UIFont = .bold16
         let labelConstraints: CGFloat = 16.0
@@ -75,16 +74,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
-    private lazy var seperator: UIView = {
-        let seperator = UIView(frame: .zero)
-        seperator.backgroundColor = .tintColor
-        seperator.snp.makeConstraints { (make) in
-            make.height.equalTo(appearance.seperatorHeight)
-        }
-        seperator.clipsToBounds = true
-        return seperator
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpUI()
@@ -107,7 +96,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
         self.imageView.addSubview(view)
         view.addSubview(sourceLabel)
         view.addSubview(titleLabel)
-        view.addSubview(seperator)
     }
     
     
@@ -126,11 +114,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
         view.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-        
-        seperator.snp.makeConstraints { (make) in
-            make.bottom.leading.trailing.equalToSuperview()
-        }
-        
     }
     
     private func setCellImage(imageUrl: String?) {
