@@ -118,6 +118,8 @@
 		B2990A39252FA4C70078DFF8 /* WebPageInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A38252FA4C70078DFF8 /* WebPageInteractorProtocol.swift */; };
 		B2990A3C252FA5860078DFF8 /* WebPageViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */; };
 		B2990A42252FB5C30078DFF8 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A41252FB5C30078DFF8 /* ServiceLocator.swift */; };
+		B2FE83D8252FBF2B000ABF92 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE83D7252FBF2B000ABF92 /* ProfileService.swift */; };
+		B2FE83DC252FC8B0000ABF92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2FE83DB252FC8B0000ABF92 /* GoogleService-Info.plist */; };
 		FEC196E875ECBCD449BB6AF0 /* Pods_Newsly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +239,8 @@
 		B2990A38252FA4C70078DFF8 /* WebPageInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInteractorProtocol.swift; sourceTree = "<group>"; };
 		B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewInput.swift; sourceTree = "<group>"; };
 		B2990A41252FB5C30078DFF8 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		B2FE83D7252FBF2B000ABF92 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		B2FE83DB252FC8B0000ABF92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newsly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -688,6 +692,7 @@
 			isa = PBXGroup;
 			children = (
 				B2173C3E252BBD8C000FA911 /* Constants.swift */,
+				B2FE83DB252FC8B0000ABF92 /* GoogleService-Info.plist */,
 				B2173BA6252B7864000FA911 /* Newsly */,
 				B2173BA5252B7864000FA911 /* Products */,
 				9B19BFE54FC32539C099CAFB /* Pods */,
@@ -858,6 +863,7 @@
 		B2173C0C252BA7FB000FA911 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B2FE83D6252FBF12000ABF92 /* ProfileService */,
 				B2990A44252FB5CE0078DFF8 /* ServiceLocator */,
 				B2173C0D252BA804000FA911 /* NetworkService */,
 			);
@@ -916,6 +922,14 @@
 				B2990A41252FB5C30078DFF8 /* ServiceLocator.swift */,
 			);
 			path = ServiceLocator;
+			sourceTree = "<group>";
+		};
+		B2FE83D6252FBF12000ABF92 /* ProfileService */ = {
+			isa = PBXGroup;
+			children = (
+				B2FE83D7252FBF2B000ABF92 /* ProfileService.swift */,
+			);
+			path = ProfileService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -986,6 +1000,7 @@
 				B2173C32252BBC7D000FA911 /* EBGaramond-Medium.ttf in Resources */,
 				B2173C2A252BBC6F000FA911 /* EBGaramond-ExtraBold.ttf in Resources */,
 				B2173C3C252BBC8D000FA911 /* EBGaramond-VariableFont_wght.ttf in Resources */,
+				B2FE83DC252FC8B0000ABF92 /* GoogleService-Info.plist in Resources */,
 				B2173BC3252B7E91000FA911 /* EB_Garamond in Resources */,
 				B2173C36252BBC83000FA911 /* EBGaramond-Regular.ttf in Resources */,
 				B2173C38252BBC86000FA911 /* EBGaramond-SemiBold.ttf in Resources */,
@@ -1056,6 +1071,7 @@
 				A932C0F9252CEE35006F2960 /* SearchCollectionViewManager.swift in Sources */,
 				A968131E252D399A001DCAE9 /* FavouritesCollectionViewManager.swift in Sources */,
 				B2173BED252B92D0000FA911 /* DiscoverInteractorInput.swift in Sources */,
+				B2FE83D8252FBF2B000ABF92 /* ProfileService.swift in Sources */,
 				A96813A5252E22EB001DCAE9 /* SignUpInteractorInput.swift in Sources */,
 				B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */,
 				B2173C12252BA8B2000FA911 /* ArticleEndPoints.swift in Sources */,
@@ -1308,7 +1324,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bombapps.Newsly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blazeapps.Newsly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -59,6 +59,7 @@ class SourcesTableViewCell: UITableViewCell {
     
     private func setUpUI() {
         addSubviews()
+        self.backgroundColor = .clear
         makeConstraints()
     }
     

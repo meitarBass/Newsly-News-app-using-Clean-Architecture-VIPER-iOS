@@ -10,7 +10,7 @@ import Foundation
 // View To Presenter
 protocol SignUpPresenterProtocol: class {
     func alreadyHaveAccount()
-    func register()
+    func register(email: String?, password: String?)
 }
 
 // Interactor To Presenter

@@ -100,6 +100,7 @@ class SignUpViewController: BaseViewController {
         }
         emailTF.delegate = self
         emailTF.isUserInteractionEnabled = true
+        emailTF.autocapitalizationType = .none
         return emailTF
     }()
     
@@ -113,7 +114,7 @@ class SignUpViewController: BaseViewController {
         }
         pwTF.delegate = self
         pwTF.isSecureTextEntry = true
-        
+        pwTF.autocapitalizationType = .none
         return pwTF
     }()
     
@@ -219,7 +220,7 @@ class SignUpViewController: BaseViewController {
     }
     
     @objc private func doneCreatingAccount() {
-        presenter?.register()
+        presenter?.register(email: emailAddressTF.text, password: passwordTF.text)
     }
     
     @objc private func alreadyHaveAccount() {

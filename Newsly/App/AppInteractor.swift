@@ -6,35 +6,52 @@
 //
 
 import UIKit
+import Firebase
 
-protocol APPInteractorProtocol {
-//    func checkIfUserIsAuthenticated()
+protocol AppInteractorProtocol: class {
+    func checkIfUserisAuthenticated()
 }
 
-class AppInteractor: APPInteractorProtocol {
+class AppInteractor: AppInteractorProtocol {
     
     private var coordinator: AppCoordinatorProtocol?
     private var windowScene: UIWindowScene!
+    private var profileService: ProfileServiceProtocol?
     
     
     init(windowScene: UIWindowScene) {
         self.windowScene = windowScene
+        setupFirebase()
         self.setupServiceLocator()
         self.coordinator = AppCoordinator()
         self.checkIfUserisAuthenticated()
     }
     
+    
+    private func setupFirebase() {
+        FirebaseApp.configure()
+    }
+    
     private func setupServiceLocator() {
         let networkService = NetworkService<ArticleEndpoint>()
         ServiceLocator.shared.addService(service: networkService as NetworkService)
+        
+        let profileService = ProfileService()
+        self.profileService = profileService
+        profileService.appInteratcor = self
+        ServiceLocator.shared.addService(service: profileService as ProfileService)
+        
     }
     
-    private func checkIfUserisAuthenticated() {
+     func checkIfUserisAuthenticated() {
         //perform check from firebase
         
-        coordinator?.createHomePages(scene: windowScene)
-        
-//        coordinator?.createLandingPage(scene: windowScene)
+        guard let profileService = profileService else { return }
+        if profileService.checkIfUserIsAuth() {
+            coordinator?.createHomePages(scene: windowScene)
+        } else {
+            coordinator?.createLandingPage(scene: windowScene)
+        }
     }
     
 }

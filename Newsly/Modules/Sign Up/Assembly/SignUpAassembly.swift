@@ -12,11 +12,15 @@ class SignUpAssembly {
         let view = SignUpViewController()
         let router = SignUpRouter()
         let presenter = SignUpPresenter()
-        
+        let interactor = SignUpInteractor()
+        let profileService: ProfileService? = ServiceLocator.shared.getService()
         view.presenter = presenter
         
         presenter.view = view
         presenter.router = router
+        presenter.interactor = interactor
+        
+        interactor.profileService = profileService
         
         router.view = view
         return view

@@ -11,6 +11,7 @@ class SignUpPresenter {
     
     var router : SignUpRouterProtocol?
     var view: SignUpViewInput?
+    var interactor: SignUpInteractorInput?
     
 }
 
@@ -19,8 +20,11 @@ extension SignUpPresenter: SignUpPresenterProtocol {
         router?.createLoginPage()
     }
     
-    func register() {
-        
+    func register(email: String?, password: String?) {
+        guard
+             let email = email,
+            let password = password else { return }
+        interactor?.signUp(email: email, password: password)
     }
     
     

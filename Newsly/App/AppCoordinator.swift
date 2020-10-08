@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol AppCoordinatorProtocol {
+protocol AppCoordinatorProtocol: class {
     func createLandingPage(scene: UIWindowScene)
     func createHomePages(scene: UIWindowScene)
 }
