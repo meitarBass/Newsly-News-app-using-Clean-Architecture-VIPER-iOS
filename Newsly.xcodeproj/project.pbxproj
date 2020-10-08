@@ -117,6 +117,7 @@
 		B2990A36252FA4B90078DFF8 /* WebPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A35252FA4B90078DFF8 /* WebPageInteractor.swift */; };
 		B2990A39252FA4C70078DFF8 /* WebPageInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A38252FA4C70078DFF8 /* WebPageInteractorProtocol.swift */; };
 		B2990A3C252FA5860078DFF8 /* WebPageViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */; };
+		B2990A42252FB5C30078DFF8 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A41252FB5C30078DFF8 /* ServiceLocator.swift */; };
 		FEC196E875ECBCD449BB6AF0 /* Pods_Newsly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +236,7 @@
 		B2990A35252FA4B90078DFF8 /* WebPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInteractor.swift; sourceTree = "<group>"; };
 		B2990A38252FA4C70078DFF8 /* WebPageInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInteractorProtocol.swift; sourceTree = "<group>"; };
 		B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewInput.swift; sourceTree = "<group>"; };
+		B2990A41252FB5C30078DFF8 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newsly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -856,6 +858,7 @@
 		B2173C0C252BA7FB000FA911 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B2990A44252FB5CE0078DFF8 /* ServiceLocator */,
 				B2173C0D252BA804000FA911 /* NetworkService */,
 			);
 			path = Services;
@@ -905,6 +908,14 @@
 				B2990A32252FA4A80078DFF8 /* WebPageRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		B2990A44252FB5CE0078DFF8 /* ServiceLocator */ = {
+			isa = PBXGroup;
+			children = (
+				B2990A41252FB5C30078DFF8 /* ServiceLocator.swift */,
+			);
+			path = ServiceLocator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1117,6 +1128,7 @@
 				B2173BC7252B7FDE000FA911 /* UIFonts+Extensions.swift in Sources */,
 				A932C0C2252CCD39006F2960 /* SourcesViewInput.swift in Sources */,
 				A9681331252D3A36001DCAE9 /* FavouritesAssembly.swift in Sources */,
+				B2990A42252FB5C30078DFF8 /* ServiceLocator.swift in Sources */,
 				A9681321252D39D3001DCAE9 /* FavouritesPresenterProtocol.swift in Sources */,
 				A9681363252DBE7A001DCAE9 /* SignUpViewController.swift in Sources */,
 				A9681317252D3927001DCAE9 /* FavouritesViewController.swift in Sources */,

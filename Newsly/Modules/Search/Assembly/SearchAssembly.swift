@@ -29,7 +29,7 @@ class SearchAssembly {
         preseneter.searchControllerManager = searchControllerManager
         
         interactor.presenter = preseneter
-        interactor.apiManager = NetworkService<ArticleEndpoint>()
+        interactor.apiManager = ServiceLocator.shared.getService()
         
         router.view = view
         

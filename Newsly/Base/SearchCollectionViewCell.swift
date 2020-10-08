@@ -88,6 +88,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     private func setUpUI() {
         addSubviews()
+//        self.backgroundColor = .clear
         makeConstraints()
     }
     

@@ -25,7 +25,7 @@ class SourcesAssembly {
         presenter.router = router
         
         interactor.presenter = presenter
-        interactor.apiManager = NetworkService<ArticleEndpoint>()
+        interactor.apiManager = ServiceLocator.shared.getService()
         
         router.view = view
         

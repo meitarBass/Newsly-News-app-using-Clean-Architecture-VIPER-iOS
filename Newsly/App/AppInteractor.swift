@@ -19,8 +19,14 @@ class AppInteractor: APPInteractorProtocol {
     
     init(windowScene: UIWindowScene) {
         self.windowScene = windowScene
+        self.setupServiceLocator()
         self.coordinator = AppCoordinator()
         self.checkIfUserisAuthenticated()
+    }
+    
+    private func setupServiceLocator() {
+        let networkService = NetworkService<ArticleEndpoint>()
+        ServiceLocator.shared.addService(service: networkService as NetworkService)
     }
     
     private func checkIfUserisAuthenticated() {
