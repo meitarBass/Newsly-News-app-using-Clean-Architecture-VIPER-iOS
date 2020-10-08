@@ -645,10 +645,6 @@
 			isa = PBXGroup;
 			children = (
 				A96BCC7F252F277700CE2EFC /* View */,
-				A9C093D9252F2BD500514BC1 /* Managers */,
-				A9C093D7252F2BC300514BC1 /* Presenter */,
-				A9C093D8252F2BC900514BC1 /* Interactor */,
-				A9C093D5252F2BA700514BC1 /* Router */,
 				A9C093D6252F2BAD00514BC1 /* Assembly */,
 			);
 			path = "Web Page";
@@ -662,40 +658,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A9C093D5252F2BA700514BC1 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		A9C093D6252F2BAD00514BC1 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
 				A9C093DA252F2BFB00514BC1 /* WebPageViewAssembly.swift */,
 			);
 			path = Assembly;
-			sourceTree = "<group>";
-		};
-		A9C093D7252F2BC300514BC1 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		A9C093D8252F2BC900514BC1 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		A9C093D9252F2BD500514BC1 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		B2173B9B252B7864000FA911 = {
