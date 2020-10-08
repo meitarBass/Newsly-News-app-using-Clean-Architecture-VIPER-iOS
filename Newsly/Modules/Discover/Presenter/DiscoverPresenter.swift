@@ -35,7 +35,7 @@ extension DiscoverPresenter: DiscoverPresenterInput {
     
     func handleError(error: Error) {
         view?.hideActivityIndicator()
-        self.view?.presentAlert(title: "Error", message: error.localizedDescription, action: nil)
+        self.view?.presentAlert(title: "error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Ok", actionHandler: {}))
     }
     
     

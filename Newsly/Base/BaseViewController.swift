@@ -44,6 +44,9 @@ class BaseViewController: UIViewController {
             NSAttributedString.Key.font: UIFont.extraBoldItalic48,
             NSAttributedString.Key.foregroundColor: UIColor.textColorBlack
         ]
+    
+//        self.navigationController?.navigationBar.backgroundColor =
+        self.navigationController?.navigationBar.tintColor = .textColorGray
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.addSubViews()
@@ -79,7 +82,7 @@ class BaseViewController: UIViewController {
         self.indicatorBlurView.isHidden = true
         self.indicator.stopAnimating()
     }
-    
+            
     func addKeyBoardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)

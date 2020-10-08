@@ -18,6 +18,11 @@ extension UIColor {
         #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
+    // SearchCellLabels,
+    public class var textColorWhite: UIColor {
+        #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    }
+    
     // DescriptionLabels,
     public class var textColorGray: UIColor {
         #colorLiteral(red: 0.4117647059, green: 0.4117647059, blue: 0.4117647059, alpha: 1)
@@ -32,7 +37,7 @@ extension UIColor {
     // MARK: - Cells Background
     
     public class var darkBackground: UIColor {
-        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.75)
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.7)
     }
     
     // MARK: - Placeholder

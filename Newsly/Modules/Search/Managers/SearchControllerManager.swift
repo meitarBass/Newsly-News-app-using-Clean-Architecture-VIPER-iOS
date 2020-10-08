@@ -8,33 +8,31 @@
 import UIKit
 
 // Presenter to Manager
-protocol SearchSearchBarManagerProtocol {
-    func setUpSearchBar(searchBar: UISearchBar)
+protocol searchControllerManagerProtocol {
+    func setUpSearchController(searchController: UISearchController)
 }
 
-class SearchBarManager: NSObject {
+class SearchControllerManager: NSObject {
     var presenter: SearchPresenterProtocol?
     
     weak var delegate: SearchBarManagerDelegate?
-    weak var searchBar: UISearchBar?
+    weak var searchController: UISearchController?
 }
 
-extension SearchBarManager: SearchSearchBarManagerProtocol {
-    func setUpSearchBar(searchBar: UISearchBar) {
-        self.searchBar = searchBar
-        self.searchBar?.delegate = self
+extension SearchControllerManager: searchControllerManagerProtocol {
+    func setUpSearchController(searchController: UISearchController) {
+        self.searchController = searchController
+        self.searchController?.searchBar.delegate = self
     }
 }
 
-extension SearchBarManager: UISearchBarDelegate {
-    
+extension SearchControllerManager: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text else { return }
         if searchText.count > 0 {
             let textToSearch = searchText.replacingOccurrences(of: " ", with: "-")
             print(textToSearch)
             delegate?.searchClicked(name: textToSearch)
-//            presenter?.searchForArticles(by: textToSearch)
         }
     }
 }

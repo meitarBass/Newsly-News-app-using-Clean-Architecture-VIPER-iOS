@@ -14,23 +14,27 @@ class SearchPresenter {
     var interactor: SearchInteractorInput?
     var router: SearchRouter?
     var collectionManager: SearchCollectionViewManagerProtocol?
-    var searchBarManager: SearchSearchBarManagerProtocol?
+    var searchControllerManager: searchControllerManagerProtocol?
     var searchBarDelegate: SearchBarManagerDelegate?
 }
 
-extension SearchPresenter: SearchPresenterProtocol {    
+extension SearchPresenter: SearchPresenterProtocol {
+    
     func searchForArticles(by name: String) {
+        view?.showActivityIndicator()
         interactor?.fetchSearchedArticles(filter: name)
     }
 }
 //
 extension SearchPresenter: SearchPresenterInput {
     func apiFetchSuccess(articles: [Article]) {
+        view?.hideActivityIndicator()
         self.collectionManager?.setUpCells(articles: articles)
     }
 
     func handleError(error: Error) {
-        self.view?.presentAlert(title: "error", message: error.localizedDescription, action: nil)
+        view?.hideActivityIndicator()
+        self.view?.presentAlert(title: "error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Ok", actionHandler: {}))
     }
 }
 

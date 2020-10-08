@@ -20,6 +20,7 @@ class SourcesPresenter {
 //MARK: - SourcesPresenterProtocol
 extension SourcesPresenter: SourcesPresenterProtocol {
     func viewDidLoad() {
+        view?.showActivityIndicator()
         interactor?.fetchTrendingSources()
     }
 }
@@ -27,12 +28,14 @@ extension SourcesPresenter: SourcesPresenterProtocol {
 //MARK: - SourcesPresenterInput
 extension SourcesPresenter: SourcesPresenterInput {
     func apiFetchSuccess(sources: [Sources]) {
+        view?.hideActivityIndicator()
         self.sources = sources
         self.tableViewManager?.setUpCells(sources: sources)
     }
     
     func handleError(error: Error) {
-        self.view?.presentAlert(title: "Error", message: error.localizedDescription, action: nil)
+        view?.hideActivityIndicator()
+        self.view?.presentAlert(title: "error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Ok", actionHandler: {}))
     }
     
     

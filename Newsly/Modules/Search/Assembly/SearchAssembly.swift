@@ -12,7 +12,7 @@ class SearchAssembly {
         
         let view = SearchViewController()
         let collectionManager = SearchCollectionViewManager()
-        let searchBarManager = SearchBarManager()
+        let searchControllerManager = SearchControllerManager()
         let preseneter = SearchPresenter()
         let interactor = SearchInteractor()
         let router = SearchRouter()
@@ -20,13 +20,13 @@ class SearchAssembly {
         view.presenter = preseneter
         
         collectionManager.delegate = preseneter
-        searchBarManager.delegate = preseneter
+        searchControllerManager.delegate = preseneter
         
         preseneter.view = view
         preseneter.interactor = interactor
         preseneter.router = router
         preseneter.collectionManager = collectionManager
-        preseneter.searchBarManager = searchBarManager
+        preseneter.searchControllerManager = searchControllerManager
         
         interactor.presenter = preseneter
         interactor.apiManager = NetworkService<ArticleEndpoint>()

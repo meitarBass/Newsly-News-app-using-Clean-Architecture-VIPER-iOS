@@ -25,7 +25,6 @@ class DiscoverViewController: BaseViewController {
         presenter?.viewDidLoad()
     }
     
-    
     override func setUpUI() {
         super.setUpUI()
         addSubViews()

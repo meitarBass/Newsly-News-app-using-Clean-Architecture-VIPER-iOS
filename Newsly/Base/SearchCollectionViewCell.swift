@@ -11,16 +11,16 @@ import Kingfisher
 
 struct SearchCellViewModel {
     let article: Article?
+    let sourceHeight: CGFloat
     let titleHeight: CGFloat
-    let descriptionHeight: CGFloat
 }
 
 extension SearchCollectionViewCell {
     struct Appearance {
-        let imageHeight: CGFloat = 250.0
+        let imageHeight: CGFloat = 200.0
         let seperatorHeight: CGFloat = 2.0
-        let titleFont: UIFont = .extraBold28
-        let descriptionFont: UIFont = .semiboldItalic16
+        let sourceFont: UIFont = .extraBold28
+        let titleFont: UIFont = .bold16
         let labelConstraints: CGFloat = 16.0
     }
 }
@@ -31,16 +31,8 @@ class SearchCollectionViewCell: UICollectionViewCell {
         didSet {
             guard let viewModel = viewModel else { return }
             
+            sourceLabel.text = viewModel.article?.source.name
             titleLabel.text = viewModel.article?.title
-            descriptionLabel.text = viewModel.article?.description
-            
-            titleLabel.snp.makeConstraints { (make) in
-                make.height.equalTo(viewModel.titleHeight)
-            }
-            
-            descriptionLabel.snp.makeConstraints { (make) in
-                make.height.equalTo(viewModel.descriptionHeight)
-            }
             
             imageView.snp.makeConstraints { (make) in
                 make.edges.equalToSuperview()
@@ -52,24 +44,27 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     private let appearance = Appearance()
     
-    private lazy var titleLabel: UILabel = {
-        let title = UILabel(frame: .zero)
-        title.font = self.appearance.titleFont
-        title.numberOfLines = 0
-        return title
+    private lazy var sourceLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = .textColorWhite
+        label.font = self.appearance.sourceFont
+        label.numberOfLines = 0
+        return label
     }()
     
-    private lazy var descriptionLabel: UILabel = {
-        let description = UILabel(frame: .zero)
-        description.font = self.appearance.descriptionFont
-        description.numberOfLines = 0
-        return description
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = .textColorWhite
+        label.font = self.appearance.titleFont
+        label.numberOfLines = 0
+        return label
     }()
     
     private lazy var imageView: UIImageView = {
         let image = UIImageView(frame: .zero)
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
+        image.layer.cornerRadius = 8.0
         return image
     }()
     
@@ -96,7 +91,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
         makeConstraints()
         
         // MARK: Delete this line
-//        contentView.backgroundColor = .cyan
     }
     
     required init?(coder: NSCoder) {
@@ -111,21 +105,21 @@ class SearchCollectionViewCell: UICollectionViewCell {
     private func addSubviews() {
         self.contentView.addSubview(imageView)
         self.imageView.addSubview(view)
-        view.addSubview(descriptionLabel)
+        view.addSubview(sourceLabel)
         view.addSubview(titleLabel)
         view.addSubview(seperator)
     }
     
     
     private func makeConstraints() {
-        descriptionLabel.snp.makeConstraints { (make) in
+        titleLabel.snp.makeConstraints { (make) in
             make.bottom.trailing.equalTo(-appearance.labelConstraints)
             make.leading.equalTo(appearance.labelConstraints)
         }
         
-        titleLabel.snp.makeConstraints { (make) in
+        sourceLabel.snp.makeConstraints { (make) in
             make.trailing.equalTo(-appearance.labelConstraints)
-            make.bottom.equalTo(descriptionLabel.snp.top).offset(-4)
+            make.bottom.equalTo(titleLabel.snp.top).offset(-4)
             make.leading.equalTo(appearance.labelConstraints)
         }
         

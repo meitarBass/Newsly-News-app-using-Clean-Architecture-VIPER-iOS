@@ -21,7 +21,6 @@ extension CategoriesPresenter: CategoriesPresenterProtocol {
 
 extension CategoriesPresenter: CategoriesTableViewManagerDelegate {
     func sourceSelected(at row: Int) {
-        print(Categories.categories[row])
         let category: String = Categories.categories[row].rawValue
         let chosenCategory = category.replacingOccurrences(of: " ", with: "-")
         self.router?.createDiscoverCategory(categoryName: chosenCategory)

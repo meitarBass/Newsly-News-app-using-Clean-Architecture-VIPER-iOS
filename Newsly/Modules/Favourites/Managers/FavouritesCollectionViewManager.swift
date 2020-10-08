@@ -11,8 +11,8 @@ extension FavouritesCollectionViewManager {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
         let collectionViewInsets: CGFloat = 0.0
-        let titleFont: UIFont = .extraBold28
-        let descriptionFont: UIFont = .semiboldItalic16
+        let favouriteFont: UIFont = .extraBold28
+        let titleFont: UIFont = .bold16
     }
 }
 
@@ -50,17 +50,17 @@ class FavouritesCollectionViewManager: NSObject {
         return titleSize.height
     }
     
-    private func getDescriptionHeight(at row: Int) -> CGFloat {
+    private func getSourceHeight(at row: Int) -> CGFloat {
         guard
-            let description = articles?[row].description,
+            let source = articles?[row].source.name,
             let collectionView = collectionView else { return CGFloat.zero }
         
         let maxMessageSize = CGSize(width: collectionView.frame.size.width, height: CGFloat.greatestFiniteMagnitude)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
-        let descriptionSize = NSString(string: description)
-            .boundingRect(with: maxMessageSize, options: options, attributes: [NSAttributedString.Key.font : self.appearance.descriptionFont], context: nil)
+        let sourceSize = NSString(string: source)
+            .boundingRect(with: maxMessageSize, options: options, attributes: [NSAttributedString.Key.font : self.appearance.favouriteFont], context: nil)
         
-        return descriptionSize.height
+        return sourceSize.height
     }
     
 }
@@ -90,8 +90,7 @@ extension FavouritesCollectionViewManager: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCollectionViewCell.reuseIdentifier, for: indexPath) as? SearchCollectionViewCell else { return UICollectionViewCell() }
-        let cellViewModel = SearchCellViewModel(article: articles?[indexPath.row], titleHeight: getTitleHeight(at: indexPath.row
-        ), descriptionHeight: getDescriptionHeight(at: indexPath.row))
+        let cellViewModel = SearchCellViewModel(article: articles?[indexPath.row], sourceHeight: getSourceHeight(at: indexPath.row), titleHeight: getTitleHeight(at: indexPath.row))
         cell.viewModel = cellViewModel
         return cell
     }

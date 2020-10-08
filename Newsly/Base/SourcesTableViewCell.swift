@@ -18,7 +18,7 @@ struct CategoriesCellViewModel {
 
 extension SourcesTableViewCell {
     struct Appearance {
-        let sourceNameFont: UIFont = .extraBold28
+        let sourceNameFont: UIFont = .bold16
     }
 }
 
@@ -35,7 +35,7 @@ class SourcesTableViewCell: UITableViewCell {
     var categoryViewModel: CategoriesCellViewModel? {
         didSet {
             guard let viewModel = categoryViewModel else { return }
-            sourceNameLabel.text = categoryViewModel?.category
+            sourceNameLabel.text = viewModel.category
         }
     }
     

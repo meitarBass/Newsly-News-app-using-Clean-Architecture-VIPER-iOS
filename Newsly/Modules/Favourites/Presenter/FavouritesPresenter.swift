@@ -21,19 +21,20 @@ class FavouritesPresenter {
 
 extension FavouritesPresenter: FavouritesPresenterInput {
     func ApiFetchSuccess(articles: [Article]) {
+        view?.hideActivityIndicator()
         self.collectionManager?.setUpCells(articles: articles)
     }
     
     func handleError(error: Error) {
-        self.view?.presentAlert(title: "error", message: error.localizedDescription, action: nil)
+        view?.hideActivityIndicator()
+        self.view?.presentAlert(title: "error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Ok", actionHandler: {}))
     }
 }
 
 extension FavouritesPresenter: FavouritesPresenterProtocol {
     func searchForArticles(by name: String) {
-        guard let articles = articles else { return }
-        let filteredArticles = interactor?.searchByName(by: name, articles: articles)
         // TODO: Set the collection View Manager
+        view?.showActivityIndicator()
         interactor?.fetchFavouritesArticles()
     }
 }

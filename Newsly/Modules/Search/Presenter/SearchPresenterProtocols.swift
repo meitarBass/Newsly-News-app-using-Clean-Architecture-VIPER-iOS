@@ -11,7 +11,7 @@ import Foundation
 protocol SearchPresenterProtocol: class {
     func searchForArticles(by name: String)
     var collectionManager: SearchCollectionViewManagerProtocol? { get set }
-    var searchBarManager: SearchSearchBarManagerProtocol? { get set }
+    var searchControllerManager: searchControllerManagerProtocol? { get set }
 }
 
 // Interactor to Presenter
