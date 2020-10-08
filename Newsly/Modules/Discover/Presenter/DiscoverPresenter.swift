@@ -30,6 +30,7 @@ extension DiscoverPresenter: DiscoverPresenterProtocol {
 extension DiscoverPresenter: DiscoverPresenterInput {
     func apiFetchSuccess(articles: [Article]) {
         view?.hideActivityIndicator()
+        view?.hideRefreshIndicator()
         self.collectionManager?.setupChats(articles: articles)
     }
     

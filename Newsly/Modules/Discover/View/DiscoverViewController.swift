@@ -11,13 +11,24 @@ class DiscoverViewController: BaseViewController {
 
     var presenter: DiscoverPresenterProtocol?
     
-    lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.keyboardDismissMode = .interactive
         collectionView.backgroundColor = .clear
         return collectionView
     }()
+    
+    private lazy var refreshController: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(userPulledView), for: .valueChanged)
+        return refreshControl
+    }()
+    
+    @objc private func userPulledView() {
+        self.presenter?.viewDidLoad()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +48,7 @@ class DiscoverViewController: BaseViewController {
     override func addSubViews() {
         super.addSubViews()
         self.view.addSubview(collectionView)
+        collectionView.refreshControl = refreshController
     }
     
     override func makeConstraints() {
@@ -51,5 +63,9 @@ class DiscoverViewController: BaseViewController {
 
 
 extension DiscoverViewController: DiscoverViewInput {
+    func hideRefreshIndicator() {
+        self.refreshController.endRefreshing()
+    }
+    
     
 }
