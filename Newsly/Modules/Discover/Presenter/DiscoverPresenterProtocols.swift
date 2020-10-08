@@ -21,5 +21,5 @@ protocol DiscoverPresenterInput: class {
 
 //manager to presenter
 protocol DiscoverCollectionViewManagerDelegate: class {
-    
+    func cellClicked(urlString: String?, sourceName: String?)
 }

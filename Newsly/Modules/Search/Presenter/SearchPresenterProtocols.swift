@@ -22,7 +22,7 @@ protocol SearchPresenterInput: class {
 
 // Manager to Presenter
 protocol SearchCollectionViewManagerDelegate: class {
-    func cellClicked(urlString: String?)
+    func cellClicked(urlString: String?, sourceName: String?)
 }
 
 // Manager to Presenter

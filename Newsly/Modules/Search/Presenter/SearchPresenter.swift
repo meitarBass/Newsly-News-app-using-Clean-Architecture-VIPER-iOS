@@ -39,8 +39,8 @@ extension SearchPresenter: SearchPresenterInput {
 }
 
 extension SearchPresenter: SearchCollectionViewManagerDelegate {
-    func cellClicked(urlString: String?) {
-        router?.createWebView(urlString: urlString)
+    func cellClicked(urlString: String?, sourceName: String?) {
+        router?.createWebView(urlString: urlString, sourceName: sourceName)
     }
 }
 

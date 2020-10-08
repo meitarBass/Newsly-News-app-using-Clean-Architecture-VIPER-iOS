@@ -8,10 +8,14 @@
 import UIKit
 
 class WebPageViewAssembly {
-    public static func assemble(urlString: String?) -> UIViewController {
+    public static func assemble(urlString: String?, sourceName: String?) -> UIViewController {
         let view = WebPageViewController()
-        view.urlString = urlString
+        view.title = sourceName
+        let presenter = WebPagePresenter()
         
+        view.presenter = presenter
+        presenter.view = view
+        presenter.urlString = urlString
         return view
     }
 }

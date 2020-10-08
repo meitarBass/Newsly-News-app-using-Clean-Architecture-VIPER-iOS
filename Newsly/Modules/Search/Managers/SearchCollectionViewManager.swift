@@ -97,7 +97,7 @@ extension SearchCollectionViewManager: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let urlString = articles?[indexPath.row].url
-        delegate?.cellClicked(urlString: urlString)
+        delegate?.cellClicked(urlString: urlString, sourceName: articles?[indexPath.row].source.name)
     }
 }
 

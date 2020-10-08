@@ -9,14 +9,14 @@ import UIKit
 
 protocol SearchRouterProtocol {
     var view: UIViewController? { get set }
-    func createWebView(urlString: String?)
+    func createWebView(urlString: String?, sourceName: String?)
 }
 
 class SearchRouter: SearchRouterProtocol {    
     weak var view: UIViewController?
     
-    func createWebView(urlString: String?) {
-        let webView = WebPageViewAssembly.assemble(urlString: urlString)
+    func createWebView(urlString: String?, sourceName: String?) {
+        let webView = WebPageViewAssembly.assemble(urlString: urlString, sourceName: sourceName)
         view?.navigationController?.pushViewController(webView, animated: true)
     }
 }

@@ -17,6 +17,8 @@ protocol WebPageViewProtocol {
 
 class WebPageViewController: BaseViewController {
     
+    var presenter: WebPagePresenterProtocol?
+    
     // MARK: Need to add a star button for favourite
     
     private lazy var webView: WKWebView = {
@@ -30,16 +32,15 @@ class WebPageViewController: BaseViewController {
         return barButtonItem
     }()
     
-    var urlString: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter?.viewDidLoad()
     }
     
     override func setUpUI() {
         super.setUpUI()
-        loadWebView()
         navigationItem.rightBarButtonItem = favouriteButton
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     override func makeConstraints() {
@@ -55,9 +56,8 @@ class WebPageViewController: BaseViewController {
         self.view.addSubview(webView)
     }
     
-    private func loadWebView() {
-        guard let urlString = self.urlString, let url = URL(string: urlString)
-        else { return }
+    private func loadWebView(urlString: String) {
+        guard  let url = URL(string: urlString) else { return }
         let request = URLRequest(url: url)
         webView.load(request)
     }
@@ -67,8 +67,10 @@ class WebPageViewController: BaseViewController {
     }
 }
 
-extension WebPageViewController: WebPageViewProtocol {
-    func presentAlert(title: String, message: String, alert: ActionAlertModel) {
-        
+extension WebPageViewController: WebPageViewInput {
+    func showWebPage(url: String) {
+        self.loadWebView(urlString: url)
     }
+    
+    
 }

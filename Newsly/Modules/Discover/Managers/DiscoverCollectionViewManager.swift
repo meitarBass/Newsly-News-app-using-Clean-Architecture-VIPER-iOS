@@ -106,7 +106,12 @@ extension DiscoverCollectionViewManager: UICollectionViewDataSource {
 }
 
 
-extension DiscoverCollectionViewManager: UICollectionViewDelegate {}
+extension DiscoverCollectionViewManager: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.cellClicked(urlString: articles?[indexPath.row].url, sourceName: articles?[indexPath.row].source.name)
+    }
+}
 
 extension DiscoverCollectionViewManager: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

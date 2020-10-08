@@ -111,6 +111,12 @@
 		B2173C44252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C43252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift */; };
 		B2173C48252BC505000FA911 /* ArticlesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C47252BC505000FA911 /* ArticlesModel.swift */; };
 		B2173C4B252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */; };
+		B2990A2D252FA4850078DFF8 /* WebPagePresnterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A2C252FA4850078DFF8 /* WebPagePresnterProtocol.swift */; };
+		B2990A30252FA4900078DFF8 /* WebPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A2F252FA4900078DFF8 /* WebPagePresenter.swift */; };
+		B2990A33252FA4A80078DFF8 /* WebPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A32252FA4A80078DFF8 /* WebPageRouter.swift */; };
+		B2990A36252FA4B90078DFF8 /* WebPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A35252FA4B90078DFF8 /* WebPageInteractor.swift */; };
+		B2990A39252FA4C70078DFF8 /* WebPageInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A38252FA4C70078DFF8 /* WebPageInteractorProtocol.swift */; };
+		B2990A3C252FA5860078DFF8 /* WebPageViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */; };
 		FEC196E875ECBCD449BB6AF0 /* Pods_Newsly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */; };
 /* End PBXBuildFile section */
 
@@ -223,6 +229,12 @@
 		B2173C43252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2173C47252BC505000FA911 /* ArticlesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesModel.swift; sourceTree = "<group>"; };
 		B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		B2990A2C252FA4850078DFF8 /* WebPagePresnterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPagePresnterProtocol.swift; sourceTree = "<group>"; };
+		B2990A2F252FA4900078DFF8 /* WebPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPagePresenter.swift; sourceTree = "<group>"; };
+		B2990A32252FA4A80078DFF8 /* WebPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageRouter.swift; sourceTree = "<group>"; };
+		B2990A35252FA4B90078DFF8 /* WebPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInteractor.swift; sourceTree = "<group>"; };
+		B2990A38252FA4C70078DFF8 /* WebPageInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageInteractorProtocol.swift; sourceTree = "<group>"; };
+		B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewInput.swift; sourceTree = "<group>"; };
 		FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newsly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -645,6 +657,9 @@
 			isa = PBXGroup;
 			children = (
 				A96BCC7F252F277700CE2EFC /* View */,
+				B2990A28252FA41B0078DFF8 /* Presenter */,
+				B2990A29252FA41F0078DFF8 /* Interactor */,
+				B2990A2A252FA4220078DFF8 /* Router */,
 				A9C093D6252F2BAD00514BC1 /* Assembly */,
 			);
 			path = "Web Page";
@@ -654,6 +669,7 @@
 			isa = PBXGroup;
 			children = (
 				A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */,
+				B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -865,6 +881,32 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		B2990A28252FA41B0078DFF8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B2990A2C252FA4850078DFF8 /* WebPagePresnterProtocol.swift */,
+				B2990A2F252FA4900078DFF8 /* WebPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B2990A29252FA41F0078DFF8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B2990A35252FA4B90078DFF8 /* WebPageInteractor.swift */,
+				B2990A38252FA4C70078DFF8 /* WebPageInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B2990A2A252FA4220078DFF8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B2990A32252FA4A80078DFF8 /* WebPageRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -995,6 +1037,7 @@
 				B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */,
 				A968132E252D3A2E001DCAE9 /* FavouritesRouter.swift in Sources */,
 				B2173C3F252BBD8C000FA911 /* Constants.swift in Sources */,
+				B2990A39252FA4C70078DFF8 /* WebPageInteractorProtocol.swift in Sources */,
 				A932C10F252CEFEA006F2960 /* SearchPresenter.swift in Sources */,
 				A932C0C6252CCD43006F2960 /* SourcesViewController.swift in Sources */,
 				A968133E252DA516001DCAE9 /* CategoriesAssembly.swift in Sources */,
@@ -1023,6 +1066,7 @@
 				A9681379252E0E65001DCAE9 /* LoginViewController.swift in Sources */,
 				A9681351252DA577001DCAE9 /* CategoriesTableViewManager.swift in Sources */,
 				B2173C00252BA06A000FA911 /* BaseViewController.swift in Sources */,
+				B2990A30252FA4900078DFF8 /* WebPagePresenter.swift in Sources */,
 				A9681342252DA528001DCAE9 /* CategoriesRouter.swift in Sources */,
 				A932C0D8252CD7F7006F2960 /* SourcesInteractor.swift in Sources */,
 				A9681348252DA53C001DCAE9 /* CategoriesInteractorInput.swift in Sources */,
@@ -1036,11 +1080,13 @@
 				A932C0B5252CA23D006F2960 /* UIColors+Extensions.swift in Sources */,
 				A932C108252CEF42006F2960 /* SearchAssembly.swift in Sources */,
 				B2173C15252BA8EA000FA911 /* EndPointProtocol.swift in Sources */,
+				B2990A3C252FA5860078DFF8 /* WebPageViewInput.swift in Sources */,
 				B2173C4B252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift in Sources */,
 				A96813AB252E22FC001DCAE9 /* LoginInteractorInput.swift in Sources */,
 				A932C0CF252CD61E006F2960 /* SourcesPresenterProtocols.swift in Sources */,
 				B2173BF9252B9A97000FA911 /* UIImages+Extensions.swift in Sources */,
 				B2173BCB252B8F14000FA911 /* AppInteractor.swift in Sources */,
+				B2990A2D252FA4850078DFF8 /* WebPagePresnterProtocol.swift in Sources */,
 				B2173BE7252B91E4000FA911 /* DiscoverPresenterProtocols.swift in Sources */,
 				A932C112252CF69F006F2960 /* SearchControllerManager.swift in Sources */,
 				A968131A252D397A001DCAE9 /* FavouritesSearchBarManager.swift in Sources */,
@@ -1059,6 +1105,7 @@
 				A96BCC81252F27A000CE2EFC /* WebPageViewController.swift in Sources */,
 				A968137E252E2206001DCAE9 /* LoginViewinput.swift in Sources */,
 				A9681325252D39E7001DCAE9 /* FavouritesPresenter.swift in Sources */,
+				B2990A33252FA4A80078DFF8 /* WebPageRouter.swift in Sources */,
 				A9681391252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift in Sources */,
 				B2173BFC252B9ED3000FA911 /* UIViewController+Extensions.swift in Sources */,
 				A932C0F2252CEDFD006F2960 /* SearchViewInput.swift in Sources */,
@@ -1077,6 +1124,7 @@
 				A9681357252DA58A001DCAE9 /* CategoriesViewInput.swift in Sources */,
 				A9681328252D3A08001DCAE9 /* FavouritesInteractorInput.swift in Sources */,
 				A968139C252E22C2001DCAE9 /* LoginPresenterProtocols.swift in Sources */,
+				B2990A36252FA4B90078DFF8 /* WebPageInteractor.swift in Sources */,
 				A9681395252E22AF001DCAE9 /* SignUpPresenterProtcols.swift in Sources */,
 				A9681399252E22B8001DCAE9 /* SignUpPresenter.swift in Sources */,
 				B2173BE4252B91BE000FA911 /* DiscoverCollectionViewManager.swift in Sources */,
