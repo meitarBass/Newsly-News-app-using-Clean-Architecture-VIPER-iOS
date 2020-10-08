@@ -70,6 +70,8 @@
 		A96813A8252E22F2001DCAE9 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813A7252E22F2001DCAE9 /* LoginInteractor.swift */; };
 		A96813AB252E22FC001DCAE9 /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */; };
 		A96813AE252E2311001DCAE9 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813AD252E2311001DCAE9 /* SignUpRouter.swift */; };
+		A96BCC81252F27A000CE2EFC /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */; };
+		A9C093DB252F2BFB00514BC1 /* WebPageViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C093DA252F2BFB00514BC1 /* WebPageViewAssembly.swift */; };
 		B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA7252B7864000FA911 /* AppDelegate.swift */; };
 		B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA9252B7864000FA911 /* SceneDelegate.swift */; };
 		B2173BB1252B7866000FA911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2173BB0252B7866000FA911 /* Assets.xcassets */; };
@@ -178,6 +180,8 @@
 		A96813A7252E22F2001DCAE9 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
 		A96813AD252E2311001DCAE9 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
+		A9C093DA252F2BFB00514BC1 /* WebPageViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewAssembly.swift; sourceTree = "<group>"; };
 		B2173BA4252B7864000FA911 /* Newsly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2173BA7252B7864000FA911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2173BA9252B7864000FA911 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -637,6 +641,63 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		A96BCC7E252F276D00CE2EFC /* Web Page */ = {
+			isa = PBXGroup;
+			children = (
+				A96BCC7F252F277700CE2EFC /* View */,
+				A9C093D9252F2BD500514BC1 /* Managers */,
+				A9C093D7252F2BC300514BC1 /* Presenter */,
+				A9C093D8252F2BC900514BC1 /* Interactor */,
+				A9C093D5252F2BA700514BC1 /* Router */,
+				A9C093D6252F2BAD00514BC1 /* Assembly */,
+			);
+			path = "Web Page";
+			sourceTree = "<group>";
+		};
+		A96BCC7F252F277700CE2EFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9C093D5252F2BA700514BC1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A9C093D6252F2BAD00514BC1 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				A9C093DA252F2BFB00514BC1 /* WebPageViewAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		A9C093D7252F2BC300514BC1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A9C093D8252F2BC900514BC1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A9C093D9252F2BD500514BC1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		B2173B9B252B7864000FA911 = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +782,7 @@
 		B2173BD0252B9096000FA911 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A96BCC7E252F276D00CE2EFC /* Web Page */,
 				A968135B252DBE32001DCAE9 /* Sign Up */,
 				A9681370252E0DE2001DCAE9 /* Login */,
 				A9681336252DA4D5001DCAE9 /* Categories */,
@@ -988,6 +1050,7 @@
 				B2173C48252BC505000FA911 /* ArticlesModel.swift in Sources */,
 				B2173BDD252B919A000FA911 /* DiscoverViewInput.swift in Sources */,
 				B2173BF3252B92EF000FA911 /* DiscoverRouter.swift in Sources */,
+				A9C093DB252F2BFB00514BC1 /* WebPageViewAssembly.swift in Sources */,
 				B2173C44252BC361000FA911 /* TopHeadlinesCollectionViewCell.swift in Sources */,
 				A9681379252E0E65001DCAE9 /* LoginViewController.swift in Sources */,
 				A9681351252DA577001DCAE9 /* CategoriesTableViewManager.swift in Sources */,
@@ -1025,6 +1088,7 @@
 				A932C0E8252CE7E4006F2960 /* UITableViewCell+Extensions.swift in Sources */,
 				A932C0C9252CCD5B006F2960 /* SourcesTableViewManager.swift in Sources */,
 				A968134B252DA544001DCAE9 /* CategoriesPresenter.swift in Sources */,
+				A96BCC81252F27A000CE2EFC /* WebPageViewController.swift in Sources */,
 				A968137E252E2206001DCAE9 /* LoginViewinput.swift in Sources */,
 				A9681325252D39E7001DCAE9 /* FavouritesPresenter.swift in Sources */,
 				A9681391252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift in Sources */,

@@ -12,7 +12,7 @@ class FavouritesPresenter {
     weak var view: FavouritesViewInput?
     var interactor: FavouritesInteractorInput?
     var searchBarDelegate: FavouritesSearchBarManagerDelegate?
-    var searchBarManager: FavouritesSearchBarManagerProtocol?
+    var searchControllerManager: FavouritesSearchControllerManagerProtocol?
     var collectionManager: FavouritesCollectionViewManagerProtocol?
     var router: FavouritesRouter?
     

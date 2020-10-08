@@ -26,7 +26,7 @@ class FavouritesAssembly {
         preseneter.interactor = interactor
         preseneter.router = router
         preseneter.collectionManager = collectionManager
-        preseneter.searchBarManager = searchBarManager
+        preseneter.searchControllerManager = searchBarManager
         
         interactor.presenter = preseneter
         interactor.apiManager = NetworkService<ArticleEndpoint>()

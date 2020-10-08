@@ -8,21 +8,21 @@
 import UIKit
 
 // Presenter to Manager
-protocol FavouritesSearchBarManagerProtocol {
-    func setUpSearchBar(searchBar: UISearchBar)
+protocol FavouritesSearchControllerManagerProtocol {
+    func setUpSearchController(searchController: UISearchController)
 }
 
 class FavouritesSearchBarManager: NSObject {
     var presenter: FavouritesPresenterProtocol?
     
     weak var delegate: FavouritesSearchBarManagerDelegate?
-    weak var searchBar: UISearchBar?
+    weak var searchController: UISearchController?
 }
 
-extension FavouritesSearchBarManager: FavouritesSearchBarManagerProtocol {
-    func setUpSearchBar(searchBar: UISearchBar) {
-        self.searchBar = searchBar
-        self.searchBar?.delegate = self
+extension FavouritesSearchBarManager: FavouritesSearchControllerManagerProtocol {
+    func setUpSearchController(searchController: UISearchController) {
+        self.searchController = searchController
+        self.searchController?.searchBar.delegate = self
     }
 }
 

@@ -9,7 +9,7 @@
 protocol FavouritesPresenterProtocol: class {
     func searchForArticles(by name: String)
     var collectionManager: FavouritesCollectionViewManagerProtocol? { get set }
-    var searchBarManager: FavouritesSearchBarManagerProtocol? { get set }
+    var searchControllerManager: FavouritesSearchControllerManagerProtocol? { get set }
 //    var searchBarDelegate: FavouritesSearchBarManagerProtocol? { get set }
 }
 

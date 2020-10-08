@@ -45,10 +45,10 @@ class BaseViewController: UIViewController {
             NSAttributedString.Key.foregroundColor: UIColor.textColorBlack
         ]
     
-//        self.navigationController?.navigationBar.backgroundColor =
         self.navigationController?.navigationBar.tintColor = .textColorGray
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
         self.addSubViews()
         self.makeConstraints()
     }

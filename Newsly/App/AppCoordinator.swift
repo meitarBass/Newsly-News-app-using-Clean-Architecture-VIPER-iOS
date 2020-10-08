@@ -42,7 +42,7 @@ extension AppCoordinator {
     }
     
     private func createFavouritesVC() -> UINavigationController {
-        let favouritesViewController = SearchAssembly.assemble()
+        let favouritesViewController = FavouritesAssembly.assemble()
         favouritesViewController.title = "Faourites"
         favouritesViewController.tabBarItem = UITabBarItem(title: "Favourites", image: UIImage.tabBarItems.favourite, selectedImage: UIImage.tabBarItems.favourite)
         return UINavigationController(rootViewController: favouritesViewController)

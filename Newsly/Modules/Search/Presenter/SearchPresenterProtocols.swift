@@ -20,10 +20,12 @@ protocol SearchPresenterInput: class {
     func handleError(error: Error)
 }
 
+// Manager to Presenter
 protocol SearchCollectionViewManagerDelegate: class {
-    
+    func cellClicked(urlString: String?)
 }
 
+// Manager to Presenter
 protocol SearchBarManagerDelegate: class {
     func searchClicked(name: String)
 }

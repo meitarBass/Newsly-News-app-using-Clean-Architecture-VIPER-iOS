@@ -27,15 +27,11 @@ class SearchViewController: BaseViewController {
         return collectionView
     }()
     
-//    private lazy var searchBar: UISearchBar = {
-//        let searchBar = UISearchBar(frame: .zero)
-//        // TODO: Set Font
-//        return searchBar
-//    }()
-//
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.font: UIFont.semiboldItalic16]
+        
         navigationItem.searchController = searchController
         return searchController
     }()
@@ -62,7 +58,7 @@ class SearchViewController: BaseViewController {
     override func makeConstraints() {
         super.makeConstraints()
         collectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.topMargin)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.topMargin).inset(15)
             make.leading.trailing.bottom.equalToSuperview().inset(15.0)
         }
     }
