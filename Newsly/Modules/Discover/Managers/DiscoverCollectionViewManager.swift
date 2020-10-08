@@ -13,6 +13,7 @@ extension DiscoverCollectionViewManager {
         let insets: CGFloat = 10.0
         let titleFont: UIFont = UIFont.extraBold28
         let descriptionFont: UIFont = UIFont.medium14
+        let extraSpacing: CGFloat = 19.0
     }
 }
 
@@ -41,7 +42,7 @@ class DiscoverCollectionViewManager: NSObject {
         let descriptionHeight = getDescriptionHeight(at: row)
         
         return CGSize(width: collectionView.frame.size.width,
-                      height: titleHeight + descriptionHeight + self.appearance.imageHeight)
+                      height: titleHeight + descriptionHeight + self.appearance.imageHeight + self.appearance.extraSpacing)
     }
     
     private func getTitleHeight(at row: Int) -> CGFloat {

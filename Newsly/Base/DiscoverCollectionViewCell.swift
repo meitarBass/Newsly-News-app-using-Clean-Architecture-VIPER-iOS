@@ -19,7 +19,7 @@ struct HeadlinesCellViewModel {
 extension DiscoverCollectionViewCell {
     struct Appearance {
         let imageHeight: CGFloat = 250.0
-        let seperatorHeight: CGFloat = 4.5
+        let seperatorHeight: CGFloat = 1.0
         let titleFont: UIFont = UIFont.extraBold28
         let descriptionFont: UIFont = UIFont.medium14
     }
@@ -75,7 +75,7 @@ class DiscoverCollectionViewCell: UICollectionViewCell {
     
     private lazy var seperator: UIView = {
         let view = UIView(frame: .zero)
-        view.backgroundColor = .placeHolderTextColor
+        view.backgroundColor = .textColorBlack
         view.snp.makeConstraints { (make) in
             make.height.equalTo(self.appearance.seperatorHeight)
         }
