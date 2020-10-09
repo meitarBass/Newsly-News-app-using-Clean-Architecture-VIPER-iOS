@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class SignUpPresenter {
     
@@ -16,15 +17,18 @@ class SignUpPresenter {
 }
 
 extension SignUpPresenter: SignUpPresenterProtocol {
+    
     func alreadyHaveAccount() {
         router?.createLoginPage()
     }
     
-    func register(email: String?, password: String?) {
+    // MARK: Need to consider using data type from now on instead of UIImage (to prevent loading UIKit)
+    func register(email: String?, password: String?, image: UIImage?) {
         guard
-             let email = email,
-            let password = password else { return }
-        interactor?.signUp(email: email, password: password)
+            let email = email,
+            let password = password,
+            let image = image else { return }
+        interactor?.signUp(email: email, password: password, image: image)
     }
 }
 

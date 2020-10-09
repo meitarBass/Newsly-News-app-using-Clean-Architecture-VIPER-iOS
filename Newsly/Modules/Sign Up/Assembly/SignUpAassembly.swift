@@ -9,11 +9,14 @@ import UIKit
 
 class SignUpAssembly {
     static func assemble() -> UIViewController {
+        
         let view = SignUpViewController()
         let router = SignUpRouter()
         let presenter = SignUpPresenter()
         let interactor = SignUpInteractor()
+        
         let profileService: ProfileService? = ServiceLocator.shared.getService()
+        
         view.presenter = presenter
         
         presenter.view = view
@@ -21,9 +24,11 @@ class SignUpAssembly {
         presenter.interactor = interactor
         
         interactor.profileService = profileService
+        interactor.storageService = ServiceLocator.shared.getService()
         interactor.presenter = presenter
         
         profileService?.signUpDelegate = interactor
+        
         
         router.view = view
         return view

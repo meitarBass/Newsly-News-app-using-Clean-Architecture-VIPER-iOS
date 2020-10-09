@@ -5,13 +5,15 @@
 //  Created by Meitar Basson on 07/10/2020.
 //
 
-import Foundation
+import UIKit
 
 class FavouritesInteractor: FavouritesInteractorInput {
     
     var presenter: FavouritesPresenterInput?
+    
     var apiManager: NetworkService<ArticleEndpoint>?
     var dataBaseManager: DataBaseService?
+    var storageManager: StorageService?
     
     func fetchFavouritesArticles() {
         // MARK: Todo - Change it to fetch from firebase
@@ -38,6 +40,10 @@ class FavouritesInteractor: FavouritesInteractorInput {
     
     func loadFavouriteArticles() -> [Article]? {
         return dataBaseManager?.loadFavouriteArticles()
+    }
+    
+    func loadProfileImage() -> UIImage? {
+        return storageManager?.loadUserImage()
     }
     
 }

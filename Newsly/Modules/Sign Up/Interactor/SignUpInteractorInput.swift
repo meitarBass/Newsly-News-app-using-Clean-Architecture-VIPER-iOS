@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
+import UIKit
 
 protocol SignUpInteractorInput {
-    func signUp(email: String, password: String)
+    func signUp(email: String, password: String, image: UIImage)
 }

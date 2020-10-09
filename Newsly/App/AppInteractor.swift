@@ -43,6 +43,9 @@ class AppInteractor: AppInteractorProtocol {
         
         let dataBaseService = DataBaseService()
         ServiceLocator.shared.addService(service: dataBaseService as DataBaseService)
+        
+        let storageService = StorageService()
+        ServiceLocator.shared.addService(service: storageService as StorageService)
     }
     
      func checkIfUserisAuthenticated() {

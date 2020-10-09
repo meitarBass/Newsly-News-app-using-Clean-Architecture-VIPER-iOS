@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 // View To Presenter
 protocol SignUpPresenterProtocol: class {
     func alreadyHaveAccount()
-    func register(email: String?, password: String?)
+    func register(email: String?, password: String?, image: UIImage?)
 }
 
 // Interactor To Presenter

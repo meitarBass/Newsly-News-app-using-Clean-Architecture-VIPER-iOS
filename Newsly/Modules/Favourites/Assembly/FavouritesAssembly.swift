@@ -30,6 +30,7 @@ class FavouritesAssembly {
         
         interactor.presenter = preseneter
         interactor.dataBaseManager = ServiceLocator.shared.getService()
+        interactor.storageManager = ServiceLocator.shared.getService()
 //        interactor.apiManager = ServiceLocator.shared.getService()
         
         router.view = view

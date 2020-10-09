@@ -5,7 +5,7 @@
 //  Created by Meitar Basson on 07/10/2020.
 //
 
-import Foundation
+import UIKit
 
 class FavouritesPresenter {
     
@@ -40,6 +40,10 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
     
     func loadFavouriteArticles() -> [Article]? {
         return interactor?.loadFavouriteArticles()
+    }
+    
+    func loadProfileImage() -> UIImage? {
+        return interactor?.loadProfileImage()
     }
 }
 

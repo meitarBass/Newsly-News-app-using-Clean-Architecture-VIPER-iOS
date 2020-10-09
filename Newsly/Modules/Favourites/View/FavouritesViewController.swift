@@ -20,6 +20,7 @@ class FavouritesViewController: BaseViewController {
     let appearance = Appearance()
     
     var favouriteArticles: [Article]?
+    var userImage: UIImage?
     
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
@@ -44,13 +45,14 @@ class FavouritesViewController: BaseViewController {
         
         // MARK: Move this to the presenter
         self.favouriteArticles = presenter?.loadFavouriteArticles()
-        print(self.favouriteArticles)
+        self.userImage = presenter?.loadProfileImage()
     }
     
     override func setUpUI() {
         super.setUpUI()
         addSubViews()
         makeConstraints()
+        
         self.presenter?.collectionManager?.setUpCollectionView(collectionView: self.collectionView)
         self.presenter?.searchControllerManager?.setUpSearchController(searchController: self.searchController)
     }

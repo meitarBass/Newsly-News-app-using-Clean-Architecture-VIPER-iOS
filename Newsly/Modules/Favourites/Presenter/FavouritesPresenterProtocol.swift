@@ -6,9 +6,14 @@
 //
 
 // View to Presenter
+
+import UIKit
+
 protocol FavouritesPresenterProtocol: class {
     func searchForArticles(by name: String)
+    
     func loadFavouriteArticles() -> [Article]?
+    func loadProfileImage() -> UIImage?
     
     var collectionManager: FavouritesCollectionViewManagerProtocol? { get set }
     var searchControllerManager: FavouritesSearchControllerManagerProtocol? { get set }
