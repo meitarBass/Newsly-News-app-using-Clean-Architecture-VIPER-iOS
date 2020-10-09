@@ -63,7 +63,7 @@ class WebPageViewController: BaseViewController {
     }
     
     @objc private func favouriteButtonTapped() {
-        print("Favourite!")
+        presenter?.saveArticle()
     }
 }
 

@@ -11,7 +11,8 @@ import Foundation
 
 // View To Presenter
 protocol WebPagePresenterProtocol: class {
-   func viewDidLoad()
+    func viewDidLoad()
+    func saveArticle()
 }
 
 // Interactor To Presenter
@@ -19,5 +20,6 @@ protocol WebPagePresenterInput: class {
 }
 
 //
-protocol WebPageTextFieldsManagerDelegate: class {
+protocol WebPageInteractorDelegate: class {
+    func saveArticle()
 }

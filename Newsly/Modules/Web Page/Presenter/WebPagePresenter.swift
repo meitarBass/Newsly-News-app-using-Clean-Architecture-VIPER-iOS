@@ -11,6 +11,8 @@ class WebPagePresenter {
     
     weak var view: WebPageViewInput?
     var urlString: String?
+    var article: Article?
+    var interactor: WebPageInteractorProtocol?
 }
 
 extension WebPagePresenter: WebPagePresenterProtocol {
@@ -24,6 +26,8 @@ extension WebPagePresenter: WebPagePresenterInput {
     
 }
 
-extension WebPagePresenter: WebPageTextFieldsManagerDelegate {
-    
+extension WebPagePresenter: WebPageInteractorDelegate {
+    func saveArticle() {
+        interactor?.saveArticle(article: article)
+    }
 }

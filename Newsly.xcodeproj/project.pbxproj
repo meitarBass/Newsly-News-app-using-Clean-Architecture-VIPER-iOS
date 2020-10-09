@@ -913,8 +913,8 @@
 		B2990A29252FA41F0078DFF8 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				B2990A35252FA4B90078DFF8 /* WebPageInteractor.swift */,
 				B2990A38252FA4C70078DFF8 /* WebPageInteractorProtocol.swift */,
+				B2990A35252FA4B90078DFF8 /* WebPageInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";

@@ -41,6 +41,8 @@ class AppInteractor: AppInteractorProtocol {
         profileService.appInteratcor = self
         ServiceLocator.shared.addService(service: profileService as ProfileService)
         
+        let dataBaseService = DataBaseService()
+        ServiceLocator.shared.addService(service: dataBaseService as DataBaseService)
     }
     
      func checkIfUserisAuthenticated() {

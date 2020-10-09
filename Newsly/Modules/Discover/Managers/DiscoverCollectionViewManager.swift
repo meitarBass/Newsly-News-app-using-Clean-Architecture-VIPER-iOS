@@ -110,7 +110,7 @@ extension DiscoverCollectionViewManager: UICollectionViewDataSource {
 extension DiscoverCollectionViewManager: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.cellClicked(urlString: articles?[indexPath.row].url, sourceName: articles?[indexPath.row].source.name)
+        delegate?.cellClicked(article: articles?[indexPath.row])
     }
 }
 

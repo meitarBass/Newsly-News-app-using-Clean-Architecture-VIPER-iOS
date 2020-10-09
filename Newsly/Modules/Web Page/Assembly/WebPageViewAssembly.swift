@@ -8,14 +8,22 @@
 import UIKit
 
 class WebPageViewAssembly {
-    public static func assemble(urlString: String?, sourceName: String?) -> UIViewController {
-        let view = WebPageViewController()
-        view.title = sourceName
-        let presenter = WebPagePresenter()
+    public static func assemble(article: Article?) -> UIViewController {
         
+        let view = WebPageViewController()
+        let presenter = WebPagePresenter()
+        let interactor = WebPageInteractor()
+        
+        view.title = article?.source.name
         view.presenter = presenter
+        
+        presenter.interactor = interactor
+        presenter.article = article
         presenter.view = view
-        presenter.urlString = urlString
+        presenter.urlString = article?.url
+        
+        interactor.dataBaseService = ServiceLocator.shared.getService()
+        
         return view
     }
 }

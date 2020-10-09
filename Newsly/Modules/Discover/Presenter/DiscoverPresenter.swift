@@ -45,8 +45,8 @@ extension DiscoverPresenter: DiscoverPresenterInput {
 
 //MARK: - DiscoverCollectionViewManagerDelegate
 extension DiscoverPresenter: DiscoverCollectionViewManagerDelegate {
-    func cellClicked(urlString: String?, sourceName: String?) {
-        router?.createWebView(urlString: urlString, sourceName: sourceName)
+    func cellClicked(article: Article?) {
+        router?.createWebView(article: article)
     }
     
     

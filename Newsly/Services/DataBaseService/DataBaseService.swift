@@ -11,7 +11,7 @@ import Firebase
 protocol DataBaseServiceProtocol: class {
     func saveFavourite(article: Article)
 //    func saveUserInfo(fullName: String, img: String)
-    func isArticleSaved(article: Article)
+    func loadFavouriteArticles() -> [Article]?
     func queryFavourites(queryBy: String)
 }
 
@@ -22,10 +22,13 @@ class DataBaseService: DataBaseServiceProtocol {
     
     func saveFavourite(article: Article) {
 //        <#code#>
+        print("Data saved")
     }
     
-    func isArticleSaved(article: Article) {
+    func loadFavouriteArticles() -> [Article]? {
 //        <#code#>
+        print("Got articles")
+        return nil
     }
     
     func queryFavourites(queryBy: String) {
