@@ -12,6 +12,7 @@ import UIKit
 protocol SignUpPresenterProtocol: class {
     func alreadyHaveAccount()
     func register(email: String?, password: String?, image: UIImage?, fullName: String?)
+    func addPhotoTapped()
 }
 
 // Interactor To Presenter

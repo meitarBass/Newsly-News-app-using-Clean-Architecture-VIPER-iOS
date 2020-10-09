@@ -32,6 +32,8 @@ extension FavouritesPresenter: FavouritesPresenterInput {
 }
 
 extension FavouritesPresenter: FavouritesPresenterProtocol {
+
+    
     func viewDidAppear() {
         
         //TODO: -  fetch user image also
@@ -55,9 +57,9 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
        
     }
     
-//    func loadFavouriteArticles() -> [Article]? {
-//        return interactor?.loadFavouriteArticles()
-//    }
+    func addPhotoTapped() {
+        self.router?.routeToImagePicker(delegate: self)
+    }
     
     func loadProfileImage() -> UIImage? {
         return interactor?.loadProfileImage()
@@ -72,4 +74,12 @@ extension FavouritesPresenter: FavouritesSearchBarManagerDelegate {
     func searchBarClicked(name: String) {
 //        interactor?.fetchFavouritesArticles()
     }
+}
+
+extension FavouritesPresenter: ImagePickerManagerDelegate {
+    func imageGotten(image: UIImage) {
+        
+    }
+    
+    
 }

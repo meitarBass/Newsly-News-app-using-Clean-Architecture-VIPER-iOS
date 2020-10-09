@@ -114,6 +114,7 @@
 		B2173C44252BC361000FA911 /* DiscoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C43252BC361000FA911 /* DiscoverCollectionViewCell.swift */; };
 		B2173C48252BC505000FA911 /* ArticlesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C47252BC505000FA911 /* ArticlesModel.swift */; };
 		B2173C4B252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */; };
+		B2192C6B2531272D004977DA /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2192C6A2531272D004977DA /* ImagePickerManager.swift */; };
 		B2990A2D252FA4850078DFF8 /* WebPagePresnterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A2C252FA4850078DFF8 /* WebPagePresnterProtocol.swift */; };
 		B2990A30252FA4900078DFF8 /* WebPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A2F252FA4900078DFF8 /* WebPagePresenter.swift */; };
 		B2990A33252FA4A80078DFF8 /* WebPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A32252FA4A80078DFF8 /* WebPageRouter.swift */; };
@@ -237,6 +238,7 @@
 		B2173C43252BC361000FA911 /* DiscoverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2173C47252BC505000FA911 /* ArticlesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesModel.swift; sourceTree = "<group>"; };
 		B2173C4A252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		B2192C6A2531272D004977DA /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		B2990A2C252FA4850078DFF8 /* WebPagePresnterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPagePresnterProtocol.swift; sourceTree = "<group>"; };
 		B2990A2F252FA4900078DFF8 /* WebPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPagePresenter.swift; sourceTree = "<group>"; };
 		B2990A32252FA4A80078DFF8 /* WebPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageRouter.swift; sourceTree = "<group>"; };
@@ -883,6 +885,7 @@
 		B2173C0C252BA7FB000FA911 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B2192C69253126EE004977DA /* ImagePickerManager */,
 				A95A41B32530D7BC0017955B /* StorageService */,
 				A94BFC2625307932004D8E26 /* DataBaseService */,
 				B2FE83D6252FBF12000ABF92 /* ProfileService */,
@@ -910,6 +913,14 @@
 				A9681333252DA358001DCAE9 /* Categories.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		B2192C69253126EE004977DA /* ImagePickerManager */ = {
+			isa = PBXGroup;
+			children = (
+				B2192C6A2531272D004977DA /* ImagePickerManager.swift */,
+			);
+			path = ImagePickerManager;
 			sourceTree = "<group>";
 		};
 		B2990A28252FA41B0078DFF8 /* Presenter */ = {
@@ -1132,6 +1143,7 @@
 				B2173C15252BA8EA000FA911 /* EndPointProtocol.swift in Sources */,
 				B2990A3C252FA5860078DFF8 /* WebPageViewInput.swift in Sources */,
 				B2173C4B252BCE2A000FA911 /* UICollectionViewCell+Extensions.swift in Sources */,
+				B2192C6B2531272D004977DA /* ImagePickerManager.swift in Sources */,
 				A96813AB252E22FC001DCAE9 /* LoginInteractorInput.swift in Sources */,
 				A932C0CF252CD61E006F2960 /* SourcesPresenterProtocols.swift in Sources */,
 				B2173BF9252B9A97000FA911 /* UIImages+Extensions.swift in Sources */,

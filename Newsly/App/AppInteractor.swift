@@ -41,11 +41,9 @@ class AppInteractor: AppInteractorProtocol {
         profileService.appInteratcor = self
         ServiceLocator.shared.addService(service: profileService as ProfileService)
         
-//        let dataBaseService = DataBaseService()
-//        ServiceLocator.shared.addService(service: dataBaseService as DataBaseService)
+        let imagePickerManager = ImagePickerManager()
+        ServiceLocator.shared.addService(service: imagePickerManager as ImagePickerManager )
         
-        let storageService = StorageService()
-        ServiceLocator.shared.addService(service: storageService as StorageService)
     }
     
      func checkIfUserisAuthenticated() {

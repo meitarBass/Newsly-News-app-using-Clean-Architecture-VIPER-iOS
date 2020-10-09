@@ -18,11 +18,12 @@ extension SignUpViewController {
         let buttonHeight: CGFloat = 48.0
         let textfieldHeight: CGFloat = 48.0
         
-        let stacksSpacing: CGFloat = 16.0
+        let stacksSpacing: CGFloat = 5.0
         let textToFieldSpacing: CGFloat = 8.0
         
         let buttonRadius: CGFloat = 8.0
         let padding: CGFloat = 8.0
+        let imageHeight: CGFloat = 110.0
     }
     
     struct Shadow {
@@ -41,6 +42,28 @@ class SignUpViewController: BaseViewController {
         label.font = .extraBoldItalic48
         label.textAlignment = .center
         return label
+    }()
+    
+    private lazy var profileImage: UIImageView = {
+        let imageView = UIImageView(frame: .zero)
+        imageView.backgroundColor = .cyan
+        imageView.layer.cornerRadius = appearance.imageHeight / 2
+        imageView.clipsToBounds = true
+        imageView.isUserInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+        imageView.image = UIImage.tabBarItems.categories
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    private lazy var imageHoldeView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = .clear
+        view.snp.makeConstraints { make in
+            make.height.width.equalTo(appearance.imageHeight)
+        }
+        return view
     }()
     
     private lazy var createYourProfileLabel: UILabel = {
@@ -153,11 +176,19 @@ class SignUpViewController: BaseViewController {
         return stackView
     }()
     
+    private lazy var imageStackView: UIStackView = {
+       let stackView = UIStackView(arrangedSubviews: [imageHoldeView])
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 0
+        stackView.axis = .vertical
+        return stackView
+    }()
+    
     private lazy var formStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [fullNameLabel, fullNameTF,
                                                        emailAddressLabel, emailAddressTF,
                                                        passwordLabel, passwordTF])
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillEqually
         stackView.spacing = appearance.stacksSpacing
         stackView.axis = .vertical
         return stackView
@@ -169,15 +200,16 @@ class SignUpViewController: BaseViewController {
         stackView.distribution = .equalSpacing
         stackView.spacing = appearance.stacksSpacing
         stackView.axis = .vertical
-        stackView.clipsToBounds = true
+//        stackView.clipsToBounds = true
         return stackView
     }()
     
     private lazy var signUpStackView: UIStackView = {
        let stackView = UIStackView(arrangedSubviews: [titleStackView,
+                                                      imageStackView,
                                                       formStackView,
                                                       buttonStackView])
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillProportionally
         stackView.spacing = appearance.stacksSpacing
         stackView.axis = .vertical
         stackView.clipsToBounds = true
@@ -205,6 +237,7 @@ class SignUpViewController: BaseViewController {
     override func addSubViews() {
         super.addSubViews()
         view.addSubview(signUpStackView)
+        imageHoldeView.addSubview(profileImage)
     }
     
     override func makeConstraints() {
@@ -216,6 +249,12 @@ class SignUpViewController: BaseViewController {
             make.leading.equalToSuperview().offset(appearance.leadingOffset)
             make.trailing.equalToSuperview().inset(appearance.trailingOffset)
         }
+        
+        profileImage.snp.makeConstraints { make in
+            make.height.width.equalTo(imageHoldeView.snp.height)
+            make.center.equalToSuperview()
+        }
+        
     }
     
     @objc private func doneCreatingAccount() {
@@ -224,6 +263,10 @@ class SignUpViewController: BaseViewController {
     
     @objc private func alreadyHaveAccount() {
         presenter?.alreadyHaveAccount()
+    }
+    
+    @objc private func profileImageTapped() {
+        presenter?.addPhotoTapped()
     }
     
     
@@ -240,6 +283,10 @@ class SignUpViewController: BaseViewController {
 }
 
 extension SignUpViewController: SignUpViewInput {
+    func updateImage(image: UIImage) {
+        profileImage.image = image
+    }
+    
     
 }
 

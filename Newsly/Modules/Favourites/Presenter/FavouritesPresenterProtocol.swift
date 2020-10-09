@@ -16,6 +16,7 @@ protocol FavouritesPresenterProtocol: class {
     
     var collectionManager: FavouritesCollectionViewManagerProtocol? { get set }
     var searchBarManager: FavouritesSearchBarManagerProtocol? { get set }
+    func addPhotoTapped()
     
     func viewDidAppear() 
 }

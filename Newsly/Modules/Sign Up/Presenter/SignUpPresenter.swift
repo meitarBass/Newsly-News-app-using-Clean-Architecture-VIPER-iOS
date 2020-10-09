@@ -17,10 +17,16 @@ class SignUpPresenter {
 }
 
 extension SignUpPresenter: SignUpPresenterProtocol {
+   
     
     func alreadyHaveAccount() {
         router?.createLoginPage()
     }
+    
+    func addPhotoTapped() {
+        self.router?.routeToImagePicker(delegate: self)
+    }
+    
     
     // MARK: Need to consider using data type from now on instead of UIImage (to prevent loading UIKit)
     func register(email: String?, password: String?, image: UIImage?, fullName: String?) {
@@ -38,4 +44,12 @@ extension SignUpPresenter: SignUpPresenterInput {
     func presentAlert(title: String, message: String, action: ActionAlertModel?) {
         self.view?.presentAlert(title: title, message: message, action: action)
     }
+}
+
+extension SignUpPresenter: ImagePickerManagerDelegate {
+    func imageGotten(image: UIImage) {
+        view?.updateImage(image: image)
+    }
+    
+    
 }

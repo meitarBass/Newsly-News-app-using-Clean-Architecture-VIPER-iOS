@@ -9,8 +9,21 @@ import UIKit
 
 protocol FavouritesRouterProtocol {
     var view: UIViewController? { get set }
+    func routeToImagePicker(delegate: ImagePickerManagerDelegate)
 }
 
 class FavouritesRouter: FavouritesRouterProtocol {
+    func routeToImagePicker(delegate: ImagePickerManagerDelegate) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePickerManger: ImagePickerManager? = ServiceLocator.shared.getService()
+            imagePickerManger?.delegate = delegate
+            let imagePickerComtroller = UIImagePickerController()
+            imagePickerComtroller.delegate = imagePickerManger
+            imagePickerComtroller.allowsEditing = true
+            imagePickerComtroller.sourceType = .photoLibrary
+            view?.navigationController?.present(imagePickerComtroller, animated: true, completion: nil)
+        }
+    }
+    
     weak var view: UIViewController?
 }
