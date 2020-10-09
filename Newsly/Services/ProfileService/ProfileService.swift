@@ -15,6 +15,7 @@ protocol ProfileServiceProtocol: class {
     func signOut()
     func resetPassword(email: String)
     func checkIfUserIsAuth() -> Bool
+    func getUserInfo() -> (name: String?, email: String?)
 }
 
 protocol SigninDelegate: class {
@@ -27,7 +28,7 @@ protocol SignUpDelegate: class {
 }
 
 class ProfileService: ProfileServiceProtocol {
-
+    
     weak var appInteratcor: AppInteractorProtocol?
     weak var loginDelegate: SigninDelegate?
     weak var signUpDelegate: SignUpDelegate?
@@ -100,6 +101,10 @@ class ProfileService: ProfileServiceProtocol {
                 self?.signUpDelegate?.presentAlert(title: "Password was reset successfully", message: "please check your email", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
             }
         }
+    }
+    
+    func getUserInfo() -> (name: String?, email: String?) {
+        (Firebase.Auth.auth().currentUser?.displayName, Firebase.Auth.auth().currentUser?.email)
     }
     
 }

@@ -85,8 +85,30 @@ class DataBaseService {
     }
     
     func loadFavouriteArticles(completion: @escaping ([Article]?) -> ()) {
-      
-        
+        //TODO: -  handle error
+        var favouriteArticles: [Article] = [Article]()
+        db.collection("Users").document(userID).collection("Favourites").getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print(error)
+                completion(nil)
+            }
+            
+            if let querySnpashot = querySnapshot {
+                for article in querySnpashot.documents {
+                    let data = article.data()
+                    
+                    guard let sourceName = data["sourceName"] as? String,
+                          let title = data["title"] as? String,
+                          let url = data["urlLink"] as? String,
+                          let urlToImage = data["urlImage"] as? String?
+                    else { return }
+                    let source = Source(name: sourceName)
+                    let article = Article(source: source, title: title, description: nil, url: url, urlToImage: urlToImage)
+                    favouriteArticles.append(article)
+                }
+                completion(favouriteArticles)
+            }
+        }
         
     }
 } 

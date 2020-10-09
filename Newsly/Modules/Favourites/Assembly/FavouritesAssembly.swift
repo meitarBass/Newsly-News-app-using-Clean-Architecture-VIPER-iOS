@@ -16,6 +16,8 @@ class FavouritesAssembly {
         let preseneter = FavouritesPresenter()
         let interactor = FavouritesInteractor()
         let router = FavouritesRouter()
+        let storageManager: StorageService? = ServiceLocator.shared.getService()
+        let profileManager: ProfileService? = ServiceLocator.shared.getService()
         
         view.presenter = preseneter
         
@@ -29,9 +31,8 @@ class FavouritesAssembly {
         preseneter.searchBarManager = searchBarManager
         
         interactor.presenter = preseneter
-        interactor.dataBaseManager = ServiceLocator.shared.getService()
-        interactor.storageManager = ServiceLocator.shared.getService()
-        interactor.apiManager = ServiceLocator.shared.getService()
+        interactor.storageManager = storageManager
+        interactor.profileManager = profileManager
         
         router.view = view
         

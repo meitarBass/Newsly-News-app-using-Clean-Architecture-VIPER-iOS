@@ -32,15 +32,32 @@ extension FavouritesPresenter: FavouritesPresenterInput {
 }
 
 extension FavouritesPresenter: FavouritesPresenterProtocol {
-    func searchForArticles(by name: String) {
-        // TODO: Set the collection View Manager
-        view?.showActivityIndicator()
-        interactor?.fetchFavouritesArticles()
+    func viewDidAppear() {
+        
+        //TODO: -  fetch user image also
+        
+        let userInfo = interactor?.getUserInfo()
+        view?.updateUserInfo(name: userInfo?.name, email: userInfo?.email)
+            
+        interactor?.loadFavouriteArticles(completion: {[weak self] articles in
+            if let articles = articles {
+                self?.collectionManager?.setUpCells(articles: articles)
+            } else {
+                self?.view?.presentAlert(title: "", message: "Error occured", action: ActionAlertModel(actionText: "Ok", actionHandler: {}))
+            }
+        })
+        
+        
     }
     
-    func loadFavouriteArticles() -> [Article]? {
-        return interactor?.loadFavouriteArticles()
+    func searchForArticles(by name: String) {
+        // TODO: Set the collection View Manager
+       
     }
+    
+//    func loadFavouriteArticles() -> [Article]? {
+//        return interactor?.loadFavouriteArticles()
+//    }
     
     func loadProfileImage() -> UIImage? {
         return interactor?.loadProfileImage()
@@ -53,6 +70,6 @@ extension FavouritesPresenter: FavouritesCollectionViewManagerDelegate {
 
 extension FavouritesPresenter: FavouritesSearchBarManagerDelegate {
     func searchBarClicked(name: String) {
-        interactor?.fetchFavouritesArticles()
+//        interactor?.fetchFavouritesArticles()
     }
 }

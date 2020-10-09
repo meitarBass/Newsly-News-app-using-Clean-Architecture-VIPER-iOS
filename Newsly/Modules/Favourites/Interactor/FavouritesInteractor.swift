@@ -8,26 +8,11 @@
 import UIKit
 
 class FavouritesInteractor: FavouritesInteractorInput {
-    
+  
     var presenter: FavouritesPresenterInput?
+    var storageManager: StorageServiceProtocol?
+    var profileManager: ProfileServiceProtocol?
     
-    var apiManager: NetworkService<ArticleEndpoint>?
-    var dataBaseManager: DataBaseService?
-    var storageManager: StorageService?
-    
-    func fetchFavouritesArticles() {
-        // MARK: Todo - Change it to fetch from firebase
-        apiManager?.networkRequest(from: .getTopHeadlines, modelType: ArticlesModel.self, completion: {[weak self] (result) in
-            DispatchQueue.main.async {[weak self] in
-                switch result {
-                case .success(let articlesModel):
-                    self?.presenter?.ApiFetchSuccess(articles: articlesModel.articles)
-                case .failure(let error):
-                    self?.presenter?.handleError(error: error)
-                }
-            }
-        })
-    }
     
     func searchByName(by name: String, articles: [Article]) -> [Article] {
         var filteredList = [Article]()
@@ -38,13 +23,19 @@ class FavouritesInteractor: FavouritesInteractorInput {
         return filteredList
     }
     
-    func loadFavouriteArticles() -> [Article]? {
-//        return dataBaseManager?.loadFavouriteArticles()
-        return nil
+    func loadFavouriteArticles(completion: @escaping ([Article]?) -> ()) {
+        DataBaseService.shared.loadFavouriteArticles { articles in
+            completion(articles)
+        }
     }
     
     func loadProfileImage() -> UIImage? {
         return storageManager?.loadUserImage()
+    }
+    
+    func getUserInfo() -> (name: String?, email: String?) {
+        guard let profileManager = profileManager else { return (nil, nil) }
+        return profileManager.getUserInfo()
     }
     
 }

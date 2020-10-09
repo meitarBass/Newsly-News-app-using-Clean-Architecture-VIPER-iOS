@@ -22,8 +22,6 @@ class FavouritesViewController: BaseViewController {
     
     var presenter: FavouritesPresenterProtocol?
     let appearance = Appearance()
-    
-    var favouriteArticles: [Article]?
     var userImage: UIImage?
     
     lazy var collectionView: UICollectionView = {
@@ -46,7 +44,6 @@ class FavouritesViewController: BaseViewController {
         let label = UILabel(frame: .zero)
         label.font = appearance.labelFont
         label.textColor = appearance.labelColor
-        label.text = "Ebi"
         return label
     }()
     
@@ -54,7 +51,6 @@ class FavouritesViewController: BaseViewController {
         let label = UILabel(frame: .zero)
         label.font = appearance.labelFont
         label.textColor = appearance.labelColor
-        label.text = "Something@random.com"
         return label
     }()
     
@@ -77,10 +73,12 @@ class FavouritesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        
-        // MARK: Move this to the presenter
-        self.favouriteArticles = presenter?.loadFavouriteArticles()
-        self.userImage = presenter?.loadProfileImage()
+        self.presenter?.viewDidAppear()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.presenter?.viewDidAppear()
     }
     
     override func setUpUI() {
@@ -128,5 +126,10 @@ class FavouritesViewController: BaseViewController {
 }
 
 extension FavouritesViewController: FavouritesViewInput {
+    func updateUserInfo(name: String?, email: String?) {
+        emailLabel.text = email
+        nameLabel.text = name
+    }
+    
     
 }

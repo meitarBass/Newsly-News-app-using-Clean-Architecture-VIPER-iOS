@@ -9,8 +9,7 @@ import UIKit
 
 protocol FavouritesInteractorInput {
     func searchByName(by name: String, articles: [Article]) -> [Article]
-    
-    func fetchFavouritesArticles()
-    func loadFavouriteArticles() -> [Article]?
+    func loadFavouriteArticles(completion: @escaping ([Article]?) -> ())
     func loadProfileImage() -> UIImage?
+    func getUserInfo() -> (name: String?, email: String?)
 }
