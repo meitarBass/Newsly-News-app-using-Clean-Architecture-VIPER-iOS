@@ -12,6 +12,8 @@ import Firebase
 protocol ProfileServiceProtocol: class {
     func signIn(email: String, password: String)
     func signUp(email: String, password: String)
+    func signOut()
+    func resetPassword(email: String)
     func checkIfUserIsAuth() -> Bool
 }
 
@@ -22,7 +24,6 @@ protocol SigninDelegate: class {
 
 protocol SignUpDelegate: class {
     func presentAlert(title: String, message: String, action: ActionAlertModel?)
-    
 }
 
 class ProfileService: ProfileServiceProtocol {
@@ -43,15 +44,15 @@ class ProfileService: ProfileServiceProtocol {
     func signIn(email: String, password: String) {
         Firebase.Auth.auth().signIn(withEmail: email, password: password) {[weak self] (result, error) in
             if let error = error {
-                self?.loginDelegate?.presentAlert(title: "Error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+                self?.loginDelegate?.presentAlert(title: "error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
             }
           
             guard result != nil else {
-                self?.loginDelegate?.presentAlert(title: "Error", message: "Couldn't complete sign in", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+                self?.loginDelegate?.presentAlert(title: "error", message: "Couldn't complete sign in", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
                 return
             }
             
-            self?.loginDelegate?.presentAlert(title: "Error", message: "SignUpSuccessful", action: ActionAlertModel(actionText: "Cancel", actionHandler: { [weak self] in
+            self?.loginDelegate?.presentAlert(title: "Welcome Back", message: "We are glad to have you here", action: ActionAlertModel(actionText: "Cancel", actionHandler: { [weak self] in
                 self?.appInteratcor?.checkIfUserisAuthenticated()
                 
             }))
@@ -62,22 +63,35 @@ class ProfileService: ProfileServiceProtocol {
     func signUp(email: String, password: String) {
         Firebase.Auth.auth().createUser(withEmail: email, password: password) {[weak self] (result, error) in
             if let error = error {
-                self?.signUpDelegate?.presentAlert(title: "Error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+                self?.signUpDelegate?.presentAlert(title: "error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
             }
             guard result != nil else {
-                self?.signUpDelegate?.presentAlert(title: "Error", message: "Couldn't Sign In", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+                self?.signUpDelegate?.presentAlert(title: "error", message: "Couldn't Sign In", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
                 return
             }
             
-            self?.signUpDelegate?.presentAlert(title: "Error", message: "SignUpSuccessful", action: ActionAlertModel(actionText: "Cancel", actionHandler: { [weak self] in
+            self?.signUpDelegate?.presentAlert(title: "Signed up successfuly", message: "Welcome to our community!", action: ActionAlertModel(actionText: "Cancel", actionHandler: { [weak self] in
                 self?.appInteratcor?.checkIfUserisAuthenticated()
-                
             }))
-           
-            
         }
     }
     
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            self.signUpDelegate?.presentAlert(title: "error", message: signOutError.description, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+        }
+    }
     
+    func resetPassword(email: String) {
+        Auth.auth().sendPasswordReset(withEmail: email) {[weak self] (error) in
+            if let error = error {
+                self?.signUpDelegate?.presentAlert(title: "error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+            } else {
+                self?.signUpDelegate?.presentAlert(title: "Password was reset successfully", message: "please check your email", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
+            }
+        }
+    }
     
 }

@@ -11,4 +11,3 @@ import Foundation
 protocol SignUpInteractorInput {
     func signUp(email: String, password: String)
 }
-

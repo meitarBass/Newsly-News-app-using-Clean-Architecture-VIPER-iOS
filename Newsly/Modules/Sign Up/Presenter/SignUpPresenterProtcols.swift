@@ -15,6 +15,7 @@ protocol SignUpPresenterProtocol: class {
 
 // Interactor To Presenter
 protocol SignUpPresenterInput: class {
+    func presentAlert(title: String, message: String, action: ActionAlertModel?)
 }
 
 //

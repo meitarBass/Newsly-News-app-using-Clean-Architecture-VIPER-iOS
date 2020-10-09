@@ -21,7 +21,9 @@ class SignUpAssembly {
         presenter.interactor = interactor
         
         interactor.profileService = profileService
-        profileService?.signUpDelegate = presenter
+        interactor.presenter = presenter
+        
+        profileService?.signUpDelegate = interactor
         
         router.view = view
         return view

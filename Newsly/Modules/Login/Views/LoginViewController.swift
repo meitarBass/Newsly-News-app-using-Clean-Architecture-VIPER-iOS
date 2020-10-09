@@ -175,6 +175,7 @@ class LoginViewController: BaseViewController {
     
     override func setUpUI() {
         super.setUpUI()
+        self.addKeyBoardObserver()
         self.makeConstraints()
         self.addSubViews()
     }
@@ -199,7 +200,12 @@ class LoginViewController: BaseViewController {
     }
     
     @objc private func forgotPasswordButtonWasClicked() {
-        print("Already have")
+        presentAlertWithTF(title: "Reset Password",
+                           actionCancel: ActionAlertModel(actionText: "Cancel", actionHandler: {}),
+                           actionComplete: ActionAlertModel(actionText: "Reset", actionHandler: {}),
+                           placeHolder: "Please enter your email") { email in
+            self.presenter?.resetPassword(email: email)
+        }
     }
 }
 

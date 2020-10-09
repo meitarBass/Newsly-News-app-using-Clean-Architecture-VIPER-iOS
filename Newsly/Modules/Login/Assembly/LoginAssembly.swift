@@ -18,8 +18,9 @@ class LoginAssembly {
         presenter.view = view
         
         interactor.profileService = profileService
+        interactor.presenter = presenter
         
-        profileService?.loginDelegate = presenter
+        profileService?.loginDelegate = interactor
         
         return view
     }

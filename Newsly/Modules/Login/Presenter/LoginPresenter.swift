@@ -23,14 +23,12 @@ extension SignInPresenter: SignInPresenterProtocol {
         interactor?.signIn(email: email, password: password)
     }
     
-    
+    func resetPassword(email: String) {
+        interactor?.resetPassword(email: email)
+    }
 }
 
 extension SignInPresenter: SignInPresenterInput {
-    
-}
-
-extension SignInPresenter: SigninDelegate {
     func presentAlert(title: String, message: String, action: ActionAlertModel?) {
         self.view?.presentAlert(title: title, message: message, action: action)
     }

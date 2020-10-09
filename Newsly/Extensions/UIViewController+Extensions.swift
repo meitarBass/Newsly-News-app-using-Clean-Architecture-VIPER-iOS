@@ -14,7 +14,7 @@ struct ActionAlertModel {
 
 
 extension UIViewController {
-    
+        
     func presentAlert(title: String, message: String, action: ActionAlertModel?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         if let action = action {
@@ -25,8 +25,25 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    
-
-    
-    
+    func presentAlertWithTF(title: String, actionCancel: ActionAlertModel?, actionComplete: ActionAlertModel?, placeHolder: String, completion: @escaping (String) -> ()) {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        
+        alert.addTextField { (tf) in
+            tf.placeholder = placeHolder
+        }
+        
+        if let actionCancel = actionCancel {
+            alert.addAction(UIAlertAction(title: actionCancel.actionText, style: .default, handler: { UIAlertAction in
+                actionCancel.actionHandler()
+            }))
+        }
+        
+        if let actionComplete = actionComplete {
+            alert.addAction(UIAlertAction(title: actionComplete.actionText, style: .default, handler: { UIAlertAction in
+                guard let tf = alert.textFields, let text = tf[0].text else { return }
+                completion(text )
+            }))
+        }
+        present(alert, animated: true, completion: nil)
+    }
 }

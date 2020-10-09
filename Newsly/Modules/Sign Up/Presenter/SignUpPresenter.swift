@@ -26,18 +26,10 @@ extension SignUpPresenter: SignUpPresenterProtocol {
             let password = password else { return }
         interactor?.signUp(email: email, password: password)
     }
-    
-    
 }
 
 extension SignUpPresenter: SignUpPresenterInput {
-    
-}
-
-extension SignUpPresenter: SignUpDelegate {
     func presentAlert(title: String, message: String, action: ActionAlertModel?) {
         self.view?.presentAlert(title: title, message: message, action: action)
     }
-    
-    
 }
