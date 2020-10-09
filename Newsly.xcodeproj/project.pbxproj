@@ -71,6 +71,7 @@
 		A96813AB252E22FC001DCAE9 /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */; };
 		A96813AE252E2311001DCAE9 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813AD252E2311001DCAE9 /* SignUpRouter.swift */; };
 		A96BCC81252F27A000CE2EFC /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */; };
+		A99684B025304EF2005B2A95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A99684AF25304EF2005B2A95 /* GoogleService-Info.plist */; };
 		A9C093DB252F2BFB00514BC1 /* WebPageViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C093DA252F2BFB00514BC1 /* WebPageViewAssembly.swift */; };
 		B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA7252B7864000FA911 /* AppDelegate.swift */; };
 		B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA9252B7864000FA911 /* SceneDelegate.swift */; };
@@ -119,7 +120,6 @@
 		B2990A3C252FA5860078DFF8 /* WebPageViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */; };
 		B2990A42252FB5C30078DFF8 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2990A41252FB5C30078DFF8 /* ServiceLocator.swift */; };
 		B2FE83D8252FBF2B000ABF92 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FE83D7252FBF2B000ABF92 /* ProfileService.swift */; };
-		B2FE83DC252FC8B0000ABF92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2FE83DB252FC8B0000ABF92 /* GoogleService-Info.plist */; };
 		FEC196E875ECBCD449BB6AF0 /* Pods_Newsly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +190,7 @@
 		A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
 		A96813AD252E2311001DCAE9 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
+		A99684AF25304EF2005B2A95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9C093DA252F2BFB00514BC1 /* WebPageViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewAssembly.swift; sourceTree = "<group>"; };
 		B2173BA4252B7864000FA911 /* Newsly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2173BA7252B7864000FA911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -240,7 +241,6 @@
 		B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewInput.swift; sourceTree = "<group>"; };
 		B2990A41252FB5C30078DFF8 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		B2FE83D7252FBF2B000ABF92 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
-		B2FE83DB252FC8B0000ABF92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FADC0EEFE8129236896A1F5D /* Pods_Newsly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newsly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -692,7 +692,7 @@
 			isa = PBXGroup;
 			children = (
 				B2173C3E252BBD8C000FA911 /* Constants.swift */,
-				B2FE83DB252FC8B0000ABF92 /* GoogleService-Info.plist */,
+				A99684AF25304EF2005B2A95 /* GoogleService-Info.plist */,
 				B2173BA6252B7864000FA911 /* Newsly */,
 				B2173BA5252B7864000FA911 /* Products */,
 				9B19BFE54FC32539C099CAFB /* Pods */,
@@ -777,8 +777,8 @@
 				A9681370252E0DE2001DCAE9 /* Login */,
 				B2173BD1252B90B3000FA911 /* Discover */,
 				A9681336252DA4D5001DCAE9 /* Categories */,
-				A9681308252D23D5001DCAE9 /* Favourites */,
 				A932C0EA252CEC04006F2960 /* Search */,
+				A9681308252D23D5001DCAE9 /* Favourites */,
 				A932C0B8252CA5AB006F2960 /* Sources */,
 				A96BCC7E252F276D00CE2EFC /* Web Page */,
 			);
@@ -1000,7 +1000,7 @@
 				B2173C32252BBC7D000FA911 /* EBGaramond-Medium.ttf in Resources */,
 				B2173C2A252BBC6F000FA911 /* EBGaramond-ExtraBold.ttf in Resources */,
 				B2173C3C252BBC8D000FA911 /* EBGaramond-VariableFont_wght.ttf in Resources */,
-				B2FE83DC252FC8B0000ABF92 /* GoogleService-Info.plist in Resources */,
+				A99684B025304EF2005B2A95 /* GoogleService-Info.plist in Resources */,
 				B2173BC3252B7E91000FA911 /* EB_Garamond in Resources */,
 				B2173C36252BBC83000FA911 /* EBGaramond-Regular.ttf in Resources */,
 				B2173C38252BBC86000FA911 /* EBGaramond-SemiBold.ttf in Resources */,
@@ -1296,7 +1296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QMSK8P2267;
+				DEVELOPMENT_TEAM = 9PG63NVD7U;
 				INFOPLIST_FILE = Newsly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1317,7 +1317,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QMSK8P2267;
+				DEVELOPMENT_TEAM = 9PG63NVD7U;
 				INFOPLIST_FILE = Newsly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
