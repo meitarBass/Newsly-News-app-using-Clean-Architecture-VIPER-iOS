@@ -11,6 +11,7 @@ class FavouritesInteractor: FavouritesInteractorInput {
     
     var presenter: FavouritesPresenterInput?
     var apiManager: NetworkService<ArticleEndpoint>?
+    var dataBaseManager: DataBaseService?
     
     func fetchFavouritesArticles() {
         // MARK: Todo - Change it to fetch from firebase
@@ -33,6 +34,10 @@ class FavouritesInteractor: FavouritesInteractorInput {
             return title.contains(name)
         }
         return filteredList
+    }
+    
+    func loadFavouriteArticles() -> [Article]? {
+        return dataBaseManager?.loadFavouriteArticles()
     }
     
 }

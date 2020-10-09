@@ -8,4 +8,5 @@
 protocol FavouritesInteractorInput {
     func fetchFavouritesArticles()
     func searchByName(by name: String, articles: [Article]) -> [Article]
+    func loadFavouriteArticles() -> [Article]?
 }

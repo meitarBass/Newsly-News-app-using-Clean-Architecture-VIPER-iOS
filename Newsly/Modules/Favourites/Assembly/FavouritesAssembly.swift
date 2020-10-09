@@ -29,6 +29,7 @@ class FavouritesAssembly {
         preseneter.searchControllerManager = searchBarManager
         
         interactor.presenter = preseneter
+        interactor.dataBaseManager = ServiceLocator.shared.getService()
 //        interactor.apiManager = ServiceLocator.shared.getService()
         
         router.view = view

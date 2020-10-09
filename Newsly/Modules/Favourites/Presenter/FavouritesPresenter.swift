@@ -14,9 +14,9 @@ class FavouritesPresenter {
     var searchBarDelegate: FavouritesSearchBarManagerDelegate?
     var searchControllerManager: FavouritesSearchControllerManagerProtocol?
     var collectionManager: FavouritesCollectionViewManagerProtocol?
-    var router: FavouritesRouter?
     
-    var articles: [Article]?
+    var router: FavouritesRouter?
+//    var articles: [Article]?
 }
 
 extension FavouritesPresenter: FavouritesPresenterInput {
@@ -36,6 +36,10 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
         // TODO: Set the collection View Manager
         view?.showActivityIndicator()
         interactor?.fetchFavouritesArticles()
+    }
+    
+    func loadFavouriteArticles() -> [Article]? {
+        return interactor?.loadFavouriteArticles()
     }
 }
 

@@ -26,9 +26,9 @@ class DataBaseService: DataBaseServiceProtocol {
     }
     
     func loadFavouriteArticles() -> [Article]? {
-//        <#code#>
-        print("Got articles")
-        return nil
+        var favouriteArticles: [Article]?
+        print("just loaded your favourites items")
+        return favouriteArticles
     }
     
     func queryFavourites(queryBy: String) {

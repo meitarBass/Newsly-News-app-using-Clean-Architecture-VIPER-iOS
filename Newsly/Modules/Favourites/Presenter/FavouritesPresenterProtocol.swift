@@ -8,9 +8,10 @@
 // View to Presenter
 protocol FavouritesPresenterProtocol: class {
     func searchForArticles(by name: String)
+    func loadFavouriteArticles() -> [Article]?
+    
     var collectionManager: FavouritesCollectionViewManagerProtocol? { get set }
     var searchControllerManager: FavouritesSearchControllerManagerProtocol? { get set }
-//    var searchBarDelegate: FavouritesSearchBarManagerProtocol? { get set }
 }
 
 // Interactor to Presenter

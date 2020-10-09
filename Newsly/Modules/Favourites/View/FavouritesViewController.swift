@@ -19,6 +19,8 @@ class FavouritesViewController: BaseViewController {
     var presenter: FavouritesPresenterProtocol?
     let appearance = Appearance()
     
+    var favouriteArticles: [Article]?
+    
     lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
@@ -39,6 +41,10 @@ class FavouritesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        
+        // MARK: Move this to the presenter
+        self.favouriteArticles = presenter?.loadFavouriteArticles()
+        print(self.favouriteArticles)
     }
     
     override func setUpUI() {
