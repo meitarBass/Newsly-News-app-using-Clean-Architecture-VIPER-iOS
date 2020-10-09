@@ -34,7 +34,6 @@ extension SignUpViewController {
 }
 
 class SignUpViewController: BaseViewController {
-    let window: UIWindow? = UIApplication.shared.keyWindow
     private lazy var newslyTitleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Newsly"

@@ -73,6 +73,7 @@ class LoginViewController: BaseViewController {
         }
         
         emailTF.isUserInteractionEnabled = true
+        emailTF.autocapitalizationType = .none
         return emailTF
     }()
     
@@ -94,7 +95,7 @@ class LoginViewController: BaseViewController {
         }
         
         pwTF.isSecureTextEntry = true
-        
+        pwTF.autocapitalizationType = .none
         return pwTF
     }()
     
