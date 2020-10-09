@@ -11,7 +11,7 @@ import UIKit
 // View To Presenter
 protocol SignUpPresenterProtocol: class {
     func alreadyHaveAccount()
-    func register(email: String?, password: String?, image: UIImage?)
+    func register(email: String?, password: String?, image: UIImage?, fullName: String?)
 }
 
 // Interactor To Presenter

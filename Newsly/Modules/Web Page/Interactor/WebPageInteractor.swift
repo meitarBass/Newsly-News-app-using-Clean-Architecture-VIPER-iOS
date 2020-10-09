@@ -13,6 +13,7 @@ class WebPageInteractor: WebPageInteractorProtocol {
     
     func saveArticle(article: Article?) {
         guard let article = article else { return }
-        dataBaseService?.saveFavourite(article: article)
+//        DataBaseService.shared.createNewDataBase()
+        DataBaseService.shared.saveFavourite(article: article)
     }
 }

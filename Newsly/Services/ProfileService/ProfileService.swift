@@ -11,7 +11,7 @@ import Firebase
 
 protocol ProfileServiceProtocol: class {
     func signIn(email: String, password: String)
-    func signUp(email: String, password: String)
+    func signUp(email: String, password: String, fullName: String)
     func signOut()
     func resetPassword(email: String)
     func checkIfUserIsAuth() -> Bool
@@ -60,7 +60,7 @@ class ProfileService: ProfileServiceProtocol {
         }
     }
     
-    func signUp(email: String, password: String) {
+    func signUp(email: String, password: String, fullName: String) {
         Firebase.Auth.auth().createUser(withEmail: email, password: password) {[weak self] (result, error) in
             if let error = error {
                 self?.signUpDelegate?.presentAlert(title: "error", message: error.localizedDescription, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
@@ -68,6 +68,14 @@ class ProfileService: ProfileServiceProtocol {
             guard result != nil else {
                 self?.signUpDelegate?.presentAlert(title: "error", message: "Couldn't Sign In", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
                 return
+            }
+            
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = fullName
+            changeRequest?.commitChanges {  (error) in
+                
+                DataBaseService.shared.createNewDataBase()
+                
             }
             
             self?.signUpDelegate?.presentAlert(title: "Signed up successfuly", message: "Welcome to our community!", action: ActionAlertModel(actionText: "Cancel", actionHandler: { [weak self] in

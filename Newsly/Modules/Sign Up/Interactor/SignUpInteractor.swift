@@ -14,10 +14,10 @@ final class SignUpInteractor: SignUpInteractorInput {
     
     var presenter: SignUpPresenterInput?
     
-    func signUp(email: String, password: String, image: UIImage) {
+    func signUp(email: String, password: String, image: UIImage, fullName: String) {
         //MARK: Need to check if the sign up was successful, only then save the image
         //MARK: Could add completion handler for the sign up
-        profileService?.signUp(email: email, password: password)
+        profileService?.signUp(email: email, password: password, fullName: fullName)
         storageService?.saveUserImage(image: image)
     }
 }

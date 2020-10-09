@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 protocol SignUpInteractorInput {
-    func signUp(email: String, password: String, image: UIImage)
+    func signUp(email: String, password: String, image: UIImage, fullName: String)
 }

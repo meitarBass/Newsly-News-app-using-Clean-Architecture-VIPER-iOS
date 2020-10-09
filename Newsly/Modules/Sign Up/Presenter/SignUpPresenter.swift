@@ -23,12 +23,14 @@ extension SignUpPresenter: SignUpPresenterProtocol {
     }
     
     // MARK: Need to consider using data type from now on instead of UIImage (to prevent loading UIKit)
-    func register(email: String?, password: String?, image: UIImage?) {
+    func register(email: String?, password: String?, image: UIImage?, fullName: String?) {
+        //TODO: -  handle error if user doesn't completer
         guard
             let email = email,
             let password = password,
-            let image = image else { return }
-        interactor?.signUp(email: email, password: password, image: image)
+            let image = image,
+            let fullName = fullName else { return }
+        interactor?.signUp(email: email, password: password, image: image, fullName: fullName)
     }
 }
 

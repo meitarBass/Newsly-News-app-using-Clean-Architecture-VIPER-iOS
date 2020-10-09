@@ -39,7 +39,8 @@ class FavouritesInteractor: FavouritesInteractorInput {
     }
     
     func loadFavouriteArticles() -> [Article]? {
-        return dataBaseManager?.loadFavouriteArticles()
+//        return dataBaseManager?.loadFavouriteArticles()
+        return nil
     }
     
     func loadProfileImage() -> UIImage? {

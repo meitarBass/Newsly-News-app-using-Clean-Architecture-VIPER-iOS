@@ -6,8 +6,8 @@
 //
 
 import Foundation
-//import Firebase
-import FirebaseStorage
+import Firebase
+//import FirebaseStorage
 
 protocol StorageServiceProtocol {
     func loadUserImage() -> UIImage?
@@ -17,12 +17,12 @@ protocol StorageServiceProtocol {
 class StorageService: StorageServiceProtocol {
     
     func saveUserImage(image: UIImage?) {
-//        <#code#>
+//
         print("image saved")
     }
     
     func loadUserImage() -> UIImage? {
-//        <#code#>
+//
         print("imageLoaded")
         return nil
     }
