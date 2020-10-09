@@ -9,4 +9,5 @@ import Foundation
 
 protocol WebPageViewInput: class {
     func showWebPage(url: String)
+    func changeFavouriteState(state: Bool)
 }

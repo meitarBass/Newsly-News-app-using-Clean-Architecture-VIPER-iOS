@@ -17,6 +17,7 @@ protocol WebPagePresenterProtocol: class {
 
 // Interactor To Presenter
 protocol WebPagePresenterInput: class {
+    func changeFavouriteState(state: Bool)
 }
 
 //

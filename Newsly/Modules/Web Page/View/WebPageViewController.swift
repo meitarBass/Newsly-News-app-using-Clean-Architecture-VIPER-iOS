@@ -28,7 +28,6 @@ class WebPageViewController: BaseViewController {
     
     private lazy var favouriteButton: UIBarButtonItem = {
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(favouriteButtonTapped))
-//        barButtonItem.image
         return barButtonItem
     }()
     
@@ -68,6 +67,10 @@ class WebPageViewController: BaseViewController {
 }
 
 extension WebPageViewController: WebPageViewInput {
+    func changeFavouriteState(state: Bool) {
+        print("favouriteButtonState", state)
+    }
+    
     func showWebPage(url: String) {
         self.loadWebView(urlString: url)
     }

@@ -23,7 +23,9 @@ extension WebPagePresenter: WebPagePresenterProtocol {
 }
 
 extension WebPagePresenter: WebPagePresenterInput {
-    
+    func changeFavouriteState(state: Bool) {
+        view?.changeFavouriteState(state: state)
+    }
 }
 
 extension WebPagePresenter: WebPageInteractorDelegate {

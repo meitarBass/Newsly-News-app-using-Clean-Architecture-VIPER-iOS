@@ -9,11 +9,17 @@ import Foundation
 
 class WebPageInteractor: WebPageInteractorProtocol {
     
-    var dataBaseService: DataBaseService?
+    weak var presenter: WebPagePresenterInput?
     
     func saveArticle(article: Article?) {
         guard let article = article else { return }
-//        DataBaseService.shared.createNewDataBase()
-        DataBaseService.shared.saveFavourite(article: article)
+        DataBaseService.shared.updateDataBase(article: article) {[weak self] updateType in
+            switch updateType {
+            case .deleted:
+                self?.presenter?.changeFavouriteState(state: false)
+            case .saved:
+                self?.presenter?.changeFavouriteState(state: true)
+            }
+        }
     }
 }

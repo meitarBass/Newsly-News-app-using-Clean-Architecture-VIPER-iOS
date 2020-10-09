@@ -22,7 +22,7 @@ class WebPageViewAssembly {
         presenter.view = view
         presenter.urlString = article?.url
         
-        interactor.dataBaseService = ServiceLocator.shared.getService()
+        interactor.presenter = presenter
         
         return view
     }
