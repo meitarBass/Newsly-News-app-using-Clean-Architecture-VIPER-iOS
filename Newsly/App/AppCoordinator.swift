@@ -51,7 +51,7 @@ extension AppCoordinator {
     private func createCategoriesVC() -> UINavigationController {
         let favouritesViewController = CategoriesAssembly.assemble()
         favouritesViewController.title = "Categories"
-        favouritesViewController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage.tabBarItems.discover, selectedImage: UIImage.tabBarItems.discover)
+        favouritesViewController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage.tabBarItems.categories, selectedImage: UIImage.tabBarItems.categories)
         return UINavigationController(rootViewController: favouritesViewController)
     }
     

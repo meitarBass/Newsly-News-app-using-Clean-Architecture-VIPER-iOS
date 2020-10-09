@@ -14,5 +14,6 @@ extension UIImage {
         static var source: UIImage { UIImage(systemName: "folder")! }
         static var search: UIImage { UIImage(systemName: "magnifyingglass")! }
         static var favourite: UIImage { UIImage(systemName: "star")! }
+        static var categories: UIImage { UIImage(systemName: "list.dash")! }
     }
 }
