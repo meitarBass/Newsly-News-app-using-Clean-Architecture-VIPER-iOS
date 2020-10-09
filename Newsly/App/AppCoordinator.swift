@@ -43,8 +43,8 @@ extension AppCoordinator {
     
     private func createFavouritesVC() -> UINavigationController {
         let favouritesViewController = FavouritesAssembly.assemble()
-        favouritesViewController.title = "Faourites"
-        favouritesViewController.tabBarItem = UITabBarItem(title: "Favourites", image: UIImage.tabBarItems.favourite, selectedImage: UIImage.tabBarItems.favourite)
+        favouritesViewController.title = "Favourites"
+        favouritesViewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage.tabBarItems.profile, selectedImage: UIImage.tabBarItems.profile)
         return UINavigationController(rootViewController: favouritesViewController)
     }
     
@@ -59,7 +59,7 @@ extension AppCoordinator {
         let tabBar = UITabBarController()
         UITabBar.appearance().tintColor = UIColor.tintColor
         //add more tabs here
-        tabBar.viewControllers = [createDiscoverVC(), createSourcesVC(), createSearchVC(), createFavouritesVC(), createCategoriesVC()]
+        tabBar.viewControllers = [createDiscoverVC(), createSourcesVC(), createSearchVC(), createCategoriesVC(), createFavouritesVC()]
         return tabBar
     }
 }

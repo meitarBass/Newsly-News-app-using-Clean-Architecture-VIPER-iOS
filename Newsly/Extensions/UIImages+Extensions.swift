@@ -13,7 +13,7 @@ extension UIImage {
         static var discover: UIImage { UIImage(systemName: "globe")! }
         static var source: UIImage { UIImage(systemName: "folder")! }
         static var search: UIImage { UIImage(systemName: "magnifyingglass")! }
-        static var favourite: UIImage { UIImage(systemName: "star")! }
+        static var profile: UIImage { UIImage(systemName: "person.crop.circle")! }
         static var categories: UIImage { UIImage(systemName: "list.dash")! }
     }
 }

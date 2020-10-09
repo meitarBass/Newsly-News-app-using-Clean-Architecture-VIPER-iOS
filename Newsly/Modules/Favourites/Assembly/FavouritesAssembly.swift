@@ -26,12 +26,12 @@ class FavouritesAssembly {
         preseneter.interactor = interactor
         preseneter.router = router
         preseneter.collectionManager = collectionManager
-        preseneter.searchControllerManager = searchBarManager
+        preseneter.searchBarManager = searchBarManager
         
         interactor.presenter = preseneter
         interactor.dataBaseManager = ServiceLocator.shared.getService()
         interactor.storageManager = ServiceLocator.shared.getService()
-//        interactor.apiManager = ServiceLocator.shared.getService()
+        interactor.apiManager = ServiceLocator.shared.getService()
         
         router.view = view
         

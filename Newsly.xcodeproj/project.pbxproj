@@ -874,8 +874,8 @@
 			children = (
 				B2173BFF252BA06A000FA911 /* BaseViewController.swift */,
 				B2173C43252BC361000FA911 /* DiscoverCollectionViewCell.swift */,
-				A932C0E4252CDC07006F2960 /* SourcesTableViewCell.swift */,
 				A932C114252CFCB7006F2960 /* SearchCollectionViewCell.swift */,
+				A932C0E4252CDC07006F2960 /* SourcesTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";

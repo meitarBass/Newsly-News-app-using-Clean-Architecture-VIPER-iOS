@@ -89,7 +89,6 @@ class DiscoverCollectionViewCell: UICollectionViewCell {
         stackView.axis = .vertical
         stackView.clipsToBounds = true
         return stackView
-        
     }()
     
     override init(frame: CGRect) {

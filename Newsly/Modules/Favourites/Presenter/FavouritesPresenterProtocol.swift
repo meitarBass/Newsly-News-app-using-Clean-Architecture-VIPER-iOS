@@ -16,7 +16,7 @@ protocol FavouritesPresenterProtocol: class {
     func loadProfileImage() -> UIImage?
     
     var collectionManager: FavouritesCollectionViewManagerProtocol? { get set }
-    var searchControllerManager: FavouritesSearchControllerManagerProtocol? { get set }
+    var searchBarManager: FavouritesSearchBarManagerProtocol? { get set }
 }
 
 // Interactor to Presenter
