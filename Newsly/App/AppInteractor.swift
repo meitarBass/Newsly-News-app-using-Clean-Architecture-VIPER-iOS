@@ -15,7 +15,7 @@ protocol AppInteractorProtocol: class {
 class AppInteractor: AppInteractorProtocol {
     
     private var coordinator: AppCoordinatorProtocol?
-    private var windowScene: UIWindowScene!
+    private weak var windowScene: UIWindowScene!
     private var profileService: ProfileServiceProtocol?
     
     

@@ -70,14 +70,13 @@ class DataBaseService {
         }
         let db = Firestore.firestore()
         let queriedCollection = db.collection("Users").document(userID).collection("Favourites").whereField("urlLink", isEqualTo: url)
-        print(queriedCollection)
         queriedCollection.getDocuments { (querySnapShot, error) in
             guard error == nil,
                   let querySnapShot = querySnapShot else { return }
             if querySnapShot.documents.isEmpty {
-//                completion(false, nil)
+                completion(false, nil)
             } else {
-//                completion(true, querySnapShot.documents)
+                completion(true, querySnapShot.documents)
             }
         }
     }
