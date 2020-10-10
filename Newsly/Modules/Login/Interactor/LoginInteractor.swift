@@ -10,7 +10,7 @@ import Foundation
 final class SignInInteractor: SignInInteractorInput {
     
     var profileService: ProfileServiceProtocol?
-    var presenter: SignInPresenterInput?
+    weak var presenter: SignInPresenterInput?
     
     func signIn(email: String, password: String) {
         profileService?.signIn(email: email, password: password)

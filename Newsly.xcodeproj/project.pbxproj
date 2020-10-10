@@ -738,8 +738,6 @@
 				B2173C46252BC4A2000FA911 /* Entities */,
 				B2173C0C252BA7FB000FA911 /* Services */,
 				B2173BFE252BA054000FA911 /* Base */,
-				B2173BC5252B7FC4000FA911 /* Extensions */,
-				B2173BBF252B7902000FA911 /* App */,
 				B2173BD0252B9096000FA911 /* Modules */,
 				B2173BB0252B7866000FA911 /* Assets.xcassets */,
 				B2173BC1252B7E7E000FA911 /* Fonts */,
@@ -876,11 +874,10 @@
 		B2173BFE252BA054000FA911 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				B2173BFF252BA06A000FA911 /* BaseViewController.swift */,
-				B2173C43252BC361000FA911 /* DiscoverCollectionViewCell.swift */,
-				A932C114252CFCB7006F2960 /* SearchCollectionViewCell.swift */,
-				A932C0E4252CDC07006F2960 /* SourcesTableViewCell.swift */,
-				B21F97732531F2510017297C /* ProfileInfoCollectionViewCell.swift */,
+				B2173BBF252B7902000FA911 /* App */,
+				B2173BC5252B7FC4000FA911 /* Extensions */,
+				B21F977625320BAE0017297C /* ViewControllers */,
+				B21F977725320BC00017297C /* Cells */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -924,6 +921,25 @@
 				B2192C6A2531272D004977DA /* ImagePickerManager.swift */,
 			);
 			path = ImagePickerManager;
+			sourceTree = "<group>";
+		};
+		B21F977625320BAE0017297C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2173BFF252BA06A000FA911 /* BaseViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B21F977725320BC00017297C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B2173C43252BC361000FA911 /* DiscoverCollectionViewCell.swift */,
+				A932C114252CFCB7006F2960 /* SearchCollectionViewCell.swift */,
+				A932C0E4252CDC07006F2960 /* SourcesTableViewCell.swift */,
+				B21F97732531F2510017297C /* ProfileInfoCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B2990A28252FA41B0078DFF8 /* Presenter */ = {

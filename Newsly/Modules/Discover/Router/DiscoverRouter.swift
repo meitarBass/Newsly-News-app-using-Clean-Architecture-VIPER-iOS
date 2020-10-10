@@ -13,7 +13,6 @@ protocol DiscoverRouterProtocol {
     func createWebView(article: Article?)
 }
 
-
 class DiscoverRouter: DiscoverRouterProtocol {
     weak var view: UIViewController?
     
