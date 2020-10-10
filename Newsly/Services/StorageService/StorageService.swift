@@ -29,18 +29,15 @@ class StorageService {
                 if let error = error {
                     debugPrint(error)
                     return
-                } 
+                }
             }
         }
         
-        func downloadImageFromStorage(imageURL: String?, completion: @escaping (UIImage?) -> Void) {
-            // NEED TO FIGURE OUT HOW TO RESTORE IT FROM THE CLOSURE
+        func downloadImageFromStorage(completion: @escaping (UIImage?) -> Void) {
             let MAX_DATA_SIZE: Int64 = 1 * 1024 * 1024
-            guard let url = imageURL else { return }
-        
-            let httpsReference = Storage.storage().reference(forURL: url)
+            let profileRef = Storage.storage().reference().child(userID)
             
-            httpsReference.getData(maxSize: MAX_DATA_SIZE) { (data, error) in
+            profileRef.getData(maxSize: MAX_DATA_SIZE) { (data, error) in
                 if let error = error {
                     debugPrint(error)
                 } else {

@@ -28,9 +28,12 @@ class FavouritesInteractor: FavouritesInteractorInput {
         }
     }
     
-    func loadProfileImage() -> UIImage? {
-        return nil
-    }
+    func loadProfileImage(completion: @escaping (UIImage?) -> ()) {
+         return StorageService.shared.downloadImageFromStorage { (image) in
+             completion(image)
+         }
+     }
+     
     
     func getUserInfo() -> (name: String?, email: String?) {
         guard let profileManager = profileManager else { return (nil, nil) }

@@ -49,6 +49,10 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
             }
         })
         
+        interactor?.loadProfileImage(completion: { [weak self] image in
+            self?.view?.updateImage(Image: image)
+        })
+        
         
     }
     
@@ -61,9 +65,6 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
         self.router?.routeToImagePicker(delegate: self)
     }
     
-    func loadProfileImage() -> UIImage? {
-        return interactor?.loadProfileImage()
-    }
 }
 
 extension FavouritesPresenter: FavouritesCollectionViewManagerDelegate {

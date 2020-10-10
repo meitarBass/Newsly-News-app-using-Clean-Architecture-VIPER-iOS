@@ -257,16 +257,16 @@ class SignUpViewController: BaseViewController {
         
     }
     
-    @objc private func doneCreatingAccount() {
-        presenter?.register(email: emailAddressTF.text, password: passwordTF.text, image: UIImage(), fullName: fullNameTF.text)
-    }
-    
     @objc private func alreadyHaveAccount() {
         presenter?.alreadyHaveAccount()
     }
     
     @objc private func profileImageTapped() {
         presenter?.addPhotoTapped()
+    }
+    
+    @objc private func doneCreatingAccount() {
+        presenter?.register(email: emailAddressTF.text, password: passwordTF.text, image: profileImage.image, fullName: fullNameTF.text)
     }
     
     

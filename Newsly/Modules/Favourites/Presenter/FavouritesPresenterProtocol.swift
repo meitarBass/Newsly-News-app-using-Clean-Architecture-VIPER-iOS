@@ -12,8 +12,6 @@ import UIKit
 protocol FavouritesPresenterProtocol: class {
     func searchForArticles(by name: String)
     
-    func loadProfileImage() -> UIImage?
-    
     var collectionManager: FavouritesCollectionViewManagerProtocol? { get set }
     var searchBarManager: FavouritesSearchBarManagerProtocol? { get set }
     func addPhotoTapped()

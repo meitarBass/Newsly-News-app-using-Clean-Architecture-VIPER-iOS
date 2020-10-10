@@ -19,12 +19,24 @@ extension FavouritesViewController {
 }
 
 class FavouritesViewController: BaseViewController {
-    
+    //TODO: -  fix scroll view
     var presenter: FavouritesPresenterProtocol?
     let appearance = Appearance()
     var userImage: UIImage?
     
-    lazy var collectionView: UICollectionView = {
+    private lazy var profileView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }()
+    
+    private lazy var mainScrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.isScrollEnabled = true
+        return scrollView
+    }()
+    
+    private lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.keyboardDismissMode = .interactive
@@ -58,6 +70,7 @@ class FavouritesViewController: BaseViewController {
         let imageView = UIImageView(frame: .zero)
         imageView.backgroundColor = .cyan
         imageView.layer.cornerRadius = appearance.imageHeight / 2
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -76,6 +89,11 @@ class FavouritesViewController: BaseViewController {
         self.presenter?.viewDidAppear()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        mainScrollView.contentSize = collectionView.contentSize
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.presenter?.viewDidAppear()
@@ -92,17 +110,25 @@ class FavouritesViewController: BaseViewController {
     
     override func addSubViews() {
         super.addSubViews()
-        self.view.addSubview(collectionView)
-        self.view.addSubview(profileImage)
-        self.view.addSubview(labelStack)
-        self.view.addSubview(searchBar)
+        self.view.addSubview(mainScrollView)
+        mainScrollView.addSubview(profileView)
+        self.profileView.addSubview(profileImage)
+        self.profileView.addSubview(labelStack)
+        self.profileView.addSubview(searchBar)
+        self.profileView.addSubview(collectionView)
     }
     
     override func makeConstraints() {
         super.makeConstraints()
-        collectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(searchBar.snp.bottom).offset(16.0)
-            make.leading.trailing.bottom.equalToSuperview().inset(16.0)
+        
+        mainScrollView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        
+        profileView.snp.makeConstraints { make in
+            make.top.bottom.equalTo(self.view)
+            make.centerX.equalTo(self.view)
+            make.leading.trailing.equalTo(self.view)
         }
         
         searchBar.snp.makeConstraints { (make) in
@@ -111,7 +137,7 @@ class FavouritesViewController: BaseViewController {
         }
         
         profileImage.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.topMargin).inset(16.0)
+            make.top.equalTo(self.mainScrollView.safeAreaLayoutGuide.snp.topMargin).inset(16.0)
             make.leading.equalTo(16.0)
             make.height.width.equalTo(appearance.imageHeight)
         }
@@ -122,10 +148,23 @@ class FavouritesViewController: BaseViewController {
             make.leading.equalTo(profileImage.snp.trailing).offset(16)
         }
         
+        collectionView.snp.makeConstraints { (make) in
+            make.top.equalTo(searchBar.snp.bottom).offset(16.0)
+            make.leading.trailing.bottom.equalToSuperview().inset(16.0)
+        }
+        
     }
 }
 
 extension FavouritesViewController: FavouritesViewInput {
+    func updateImage(Image: UIImage?) {
+        profileImage.image = Image
+    }
+    
+    func collectionViewWasUpdated() {
+        mainScrollView.contentSize = collectionView.contentSize
+    }
+    
     func updateUserInfo(name: String?, email: String?) {
         emailLabel.text = email
         nameLabel.text = name
