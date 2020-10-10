@@ -20,14 +20,13 @@ class DataBaseService {
     
     //MARK: - private properties
     static let shared = DataBaseService()
-    private let db = Firestore.firestore()
     private let userID = Firebase.Auth.auth().currentUser?.uid ?? ""
     private let email = Firebase.Auth.auth().currentUser?.email ?? ""
     private let name = Firebase.Auth.auth().currentUser?.displayName
     private init() {}
     
     private func saveArticle(article: Article) {
-        self.db.collection("Users").document(userID).collection("Favourites").document().setData([
+        Firestore.firestore().collection("Users").document(userID).collection("Favourites").document().setData([
             "sourceName" : article.source.name ?? "",
             "urlImage" : article.urlToImage ?? "",
             "urlLink" : article.url ?? "",
@@ -45,7 +44,7 @@ class DataBaseService {
     //MARK: - singletonProperties
     
     func createNewDataBase() {
-        db.collection("Users").document(userID).setData([
+        Firestore.firestore().collection("Users").document(userID).setData([
             "name" : name ?? "",
             "email" : email,
         ])
@@ -73,20 +72,20 @@ class DataBaseService {
         let queriedCollection = db.collection("Users").document(userID).collection("Favourites").whereField("urlLink", isEqualTo: url)
         print(queriedCollection)
         queriedCollection.getDocuments { (querySnapShot, error) in
-//            guard error == nil,
-//                  let querySnapShot = querySnapShot else { return }
-//            if querySnapShot.documents.isEmpty {
-////                completion(false, nil)
-//            } else {
-////                completion(true, querySnapShot.documents)
-//            }
+            guard error == nil,
+                  let querySnapShot = querySnapShot else { return }
+            if querySnapShot.documents.isEmpty {
+//                completion(false, nil)
+            } else {
+//                completion(true, querySnapShot.documents)
+            }
         }
     }
     
     func loadFavouriteArticles(completion: @escaping ([Article]?) -> ()) {
         //TODO: -  handle error
         var favouriteArticles: [Article] = [Article]()
-        db.collection("Users").document(userID).collection("Favourites").getDocuments { (querySnapshot, error) in
+        Firestore.firestore().collection("Users").document(userID).collection("Favourites").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print(error)
                 completion(nil)

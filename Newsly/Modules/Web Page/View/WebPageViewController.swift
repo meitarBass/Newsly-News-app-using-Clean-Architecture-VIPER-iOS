@@ -12,14 +12,12 @@ import SnapKit
 // MARK: Move to WebPageViewInput file
 
 protocol WebPageViewProtocol {
-//    func presentAlert(title: String, message: String, alert: ActionAlertModel)
+
 }
 
 class WebPageViewController: BaseViewController {
     
     var presenter: WebPagePresenterProtocol?
-    
-    // MARK: Need to add a star button for favourite
     
     private lazy var webView: WKWebView = {
         let webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
@@ -30,8 +28,6 @@ class WebPageViewController: BaseViewController {
         let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "star.fill"), style: .plain, target: self, action: #selector(favouriteButtonTapped))
         return barButtonItem
     }()
-    
-    let notLikedButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()

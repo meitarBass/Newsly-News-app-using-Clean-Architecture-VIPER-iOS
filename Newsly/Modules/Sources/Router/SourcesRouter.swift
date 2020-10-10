@@ -16,12 +16,14 @@ protocol SourcesRouterProtocol {
 
 
 class SourcesRouter: SourcesRouterProtocol {
+    
+    weak var view: UIViewController?
     func createDiscoverSources(sourceName: String) {
         let discoverView = DiscoverAssembly.assemble(endpoint: .getArticlesFromSource(sourceName))
         discoverView.title = sourceName
         view?.navigationController?.pushViewController(discoverView, animated: true)
     }
     
-    weak var view: UIViewController?
+
     
 }

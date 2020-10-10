@@ -7,8 +7,7 @@
 
 import Foundation
 
-class SourcesInteractor: SourcesInteractorInput
-{
+class SourcesInteractor: SourcesInteractorInput {
     weak var presenter: SourcesPresenterInput?
     var apiManager: NetworkService<ArticleEndpoint>?
     

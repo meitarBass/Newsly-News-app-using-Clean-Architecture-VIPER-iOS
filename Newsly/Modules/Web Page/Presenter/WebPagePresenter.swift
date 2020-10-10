@@ -16,8 +16,7 @@ class WebPagePresenter {
 }
 
 extension WebPagePresenter: WebPagePresenterProtocol {
-    
-    
+
     func viewDidLoad() {
         guard let urlString = self.urlString else { return }
         self.view?.showWebPage(url: urlString)

@@ -14,6 +14,9 @@ protocol FavouritesRouterProtocol {
 }
 
 class FavouritesRouter: FavouritesRouterProtocol {
+    
+    weak var view: UIViewController?
+    
     func routeToImagePicker(delegate: ImagePickerManagerDelegate) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePickerManger: ImagePickerManager? = ServiceLocator.shared.getService()
@@ -31,5 +34,5 @@ class FavouritesRouter: FavouritesRouterProtocol {
         view?.navigationController?.pushViewController(webView, animated: true)
     }
     
-    weak var view: UIViewController?
+
 }
