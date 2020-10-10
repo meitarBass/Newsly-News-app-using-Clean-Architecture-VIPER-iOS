@@ -46,4 +46,7 @@ To-do list:
 Project is: _finished_
 
 ## Contact
-Created by [@flynerdpl](http://developer.foursquare.com) - feel free to contact me!
+
+ebubedimobi Ebubechukwu Dimobi
+@meitarBass
+Created by [@ebubedimobi],[@meitarbass] - feel free to contact me!
