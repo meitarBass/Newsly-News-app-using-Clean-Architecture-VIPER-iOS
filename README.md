@@ -1,9 +1,10 @@
-# Newsly
+# Newsly - News app using VIPER iOS
 > Newsly is a news app fetching data from the "newsApi" and displaying it and few modes.The project was made with Viper Architecture.
 
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
+* [Setup](#Setup)
 * [Technologies](#technologies)
 * [Features](#features)
 * [Status](#status)
@@ -11,6 +12,18 @@
 
 ## General info
 Newsly app is a news app where you get the latest news, as well as news by categories and also you could save your favourite articles.
+
+## Setup:
+
+1. [Get your News API key](https://newsapi.org)
+
+2. [Get your google.plist file](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjz1-3U16rsAhVE3dUKHXjzD8YYABAAGgJ3cw&ohost=www.google.com&cid=CAESQOD2p4915hCOcLEoSbb3g8Pul5Ed_OrMHAdIzOvSF4d-QNrb_9gousJb398STrH-JqFm4_K2fd2hIM07otFwCsM&sig=AOD64_1owLXQ__dQ4hr-W1rkFRiILT5z-A&q&adurl&ved=2ahUKEwivpuPU16rsAhWFzoUKHV2dAfAQ0Qx6BAggEAE)
+
+3. Insert your key into Container.swift file
+
+4. Inject your google.plist file to your project
+
+5. Run app
 
 ## Screenshots
 ![Example-Movie1](./Newsly/Readme/Movie1-Gif.gif)
