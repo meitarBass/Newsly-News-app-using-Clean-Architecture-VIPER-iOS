@@ -844,8 +844,8 @@
             filePath = "Newsly/Modules/Favourites/Presenter/FavouritesPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "imageGotten(image:)"
             landmarkType = "7">
          </BreakpointContent>

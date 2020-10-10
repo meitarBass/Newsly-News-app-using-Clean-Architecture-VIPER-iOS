@@ -35,9 +35,6 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
 
     
     func viewDidAppear() {
-        
-        //TODO: -  fetch user image also
-        
         let userInfo = interactor?.getUserInfo()
         view?.updateUserInfo(name: userInfo?.name, email: userInfo?.email)
             
