@@ -16,7 +16,6 @@ class SearchInteractor: SearchInteractorInput {
         apiManager?.networkRequest(from: .searchForArticles(searchFilter: filter), modelType: ArticlesModel.self) { [weak self] (result) in
             DispatchQueue.main.async { [weak self] in
                 switch result {
-                
                 case .success(let searchModel):
                     self?.presenter?.apiFetchSuccess(articles: searchModel.articles)
                 case .failure(let error):

@@ -61,8 +61,6 @@
 		A9681379252E0E65001DCAE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681378252E0E65001DCAE9 /* LoginViewController.swift */; };
 		A968137E252E2206001DCAE9 /* LoginViewinput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968137D252E2206001DCAE9 /* LoginViewinput.swift */; };
 		A9681382252E221B001DCAE9 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681381252E221B001DCAE9 /* LoginRouter.swift */; };
-		A968138D252E2278001DCAE9 /* LoginFormTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968138C252E2278001DCAE9 /* LoginFormTextFieldsManager.swift */; };
-		A9681391252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681390252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift */; };
 		A9681395252E22AF001DCAE9 /* SignUpPresenterProtcols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681394252E22AF001DCAE9 /* SignUpPresenterProtcols.swift */; };
 		A9681399252E22B8001DCAE9 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681398252E22B8001DCAE9 /* SignUpPresenter.swift */; };
 		A968139C252E22C2001DCAE9 /* LoginPresenterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968139B252E22C2001DCAE9 /* LoginPresenterProtocols.swift */; };
@@ -184,8 +182,6 @@
 		A9681378252E0E65001DCAE9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A968137D252E2206001DCAE9 /* LoginViewinput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewinput.swift; sourceTree = "<group>"; };
 		A9681381252E221B001DCAE9 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
-		A968138C252E2278001DCAE9 /* LoginFormTextFieldsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormTextFieldsManager.swift; sourceTree = "<group>"; };
-		A9681390252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormTextFieldsManager.swift; sourceTree = "<group>"; };
 		A9681394252E22AF001DCAE9 /* SignUpPresenterProtcols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterProtcols.swift; sourceTree = "<group>"; };
 		A9681398252E22B8001DCAE9 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		A968139B252E22C2001DCAE9 /* LoginPresenterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocols.swift; sourceTree = "<group>"; };
@@ -559,7 +555,6 @@
 			isa = PBXGroup;
 			children = (
 				A968135D252DBE4F001DCAE9 /* Views */,
-				A9681389252E2244001DCAE9 /* Manager */,
 				A968138B252E2254001DCAE9 /* Presenter */,
 				A968138A252E2249001DCAE9 /* Interactor */,
 				A968137B252E1094001DCAE9 /* Router */,
@@ -589,7 +584,6 @@
 			isa = PBXGroup;
 			children = (
 				A9681371252E0DEB001DCAE9 /* Views */,
-				A9681388252E2237001DCAE9 /* Manager */,
 				A9681386252E2223001DCAE9 /* Presenter */,
 				A9681387252E222E001DCAE9 /* Interactor */,
 				A9681380252E220E001DCAE9 /* Router */,
@@ -647,22 +641,6 @@
 				A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		A9681388252E2237001DCAE9 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				A968138C252E2278001DCAE9 /* LoginFormTextFieldsManager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		A9681389252E2244001DCAE9 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				A9681390252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift */,
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		A968138A252E2249001DCAE9 /* Interactor */ = {
@@ -735,10 +713,10 @@
 		B2173BA6252B7864000FA911 /* Newsly */ = {
 			isa = PBXGroup;
 			children = (
-				B2173C46252BC4A2000FA911 /* Entities */,
 				B2173C0C252BA7FB000FA911 /* Services */,
 				B2173BFE252BA054000FA911 /* Base */,
 				B2173BD0252B9096000FA911 /* Modules */,
+				B2173C46252BC4A2000FA911 /* Entities */,
 				B2173BB0252B7866000FA911 /* Assets.xcassets */,
 				B2173BC1252B7E7E000FA911 /* Fonts */,
 				B2173BB2252B7866000FA911 /* LaunchScreen.storyboard */,
@@ -1131,7 +1109,6 @@
 				B2173C12252BA8B2000FA911 /* ArticleEndPoints.swift in Sources */,
 				A932C0D5252CD7C3006F2960 /* SourcesInteractorInput.swift in Sources */,
 				A9681366252DBED1001DCAE9 /* SignUpViewInput.swift in Sources */,
-				A968138D252E2278001DCAE9 /* LoginFormTextFieldsManager.swift in Sources */,
 				A9681382252E221B001DCAE9 /* LoginRouter.swift in Sources */,
 				A968135F252DBE5A001DCAE9 /* SignUpAassembly.swift in Sources */,
 				A932C0E5252CDC07006F2960 /* SourcesTableViewCell.swift in Sources */,
@@ -1188,7 +1165,6 @@
 				A968137E252E2206001DCAE9 /* LoginViewinput.swift in Sources */,
 				A9681325252D39E7001DCAE9 /* FavouritesPresenter.swift in Sources */,
 				B2990A33252FA4A80078DFF8 /* WebPageRouter.swift in Sources */,
-				A9681391252E2283001DCAE9 /* SignUpFormTextFieldsManager.swift in Sources */,
 				B2173BFC252B9ED3000FA911 /* UIViewController+Extensions.swift in Sources */,
 				A932C0F2252CEDFD006F2960 /* SearchViewInput.swift in Sources */,
 				A932C104252CEEEF006F2960 /* SearchInteractor.swift in Sources */,

@@ -35,8 +35,6 @@ extension LoginViewController {
 
 class LoginViewController: BaseViewController {
     
-    var presenter: SignInPresenterProtocol?
-    
     private lazy var newslyTitleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Newsly"
@@ -164,7 +162,7 @@ class LoginViewController: BaseViewController {
         return stackView
     }()
     
-    
+    var presenter: SignInPresenterProtocol?
     let appearance = Appearance()
     let shadow = Shadow()
     

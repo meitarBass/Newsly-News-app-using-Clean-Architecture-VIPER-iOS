@@ -11,7 +11,7 @@ final class SignUpInteractor: SignUpInteractorInput {
     
     var profileService: ProfileServiceProtocol?
     
-    var presenter: SignUpPresenterInput?
+    weak var presenter: SignUpPresenterInput?
     
     func signUp(email: String, password: String, image: UIImage, fullName: String) {
         //MARK: Need to check if the sign up was successful, only then save the image

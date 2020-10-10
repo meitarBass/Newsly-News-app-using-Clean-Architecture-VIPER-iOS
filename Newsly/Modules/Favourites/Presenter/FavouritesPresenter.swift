@@ -83,7 +83,7 @@ extension FavouritesPresenter: FavouritesSearchBarManagerDelegate {
             for article in articles {
                 if (article.title?.lowercased().contains(name.lowercased()) ?? false) ||
                     (article.source.name?.lowercased().contains(name.lowercased()) ?? false) {
-                        queriedArticles.append(article)
+                    queriedArticles.append(article)
                 }
             }
             self.collectionManager?.setUpCells(articles: queriedArticles)

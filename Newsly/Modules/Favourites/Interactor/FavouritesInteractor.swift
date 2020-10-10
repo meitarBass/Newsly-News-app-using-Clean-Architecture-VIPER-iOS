@@ -8,9 +8,8 @@
 import UIKit
 
 class FavouritesInteractor: FavouritesInteractorInput {
-   
 
-    var presenter: FavouritesPresenterInput?
+    weak var presenter: FavouritesPresenterInput?
     var profileManager: ProfileServiceProtocol?
     
     

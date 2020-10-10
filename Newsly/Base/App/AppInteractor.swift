@@ -33,7 +33,6 @@ class AppInteractor: AppInteractorProtocol {
     }
     
     private func setupServiceLocator() {
-//        let networkService: NetworkServiceProtocol?
         
         let networkService = NetworkService<ArticleEndpoint>()
         ServiceLocator.shared.addService(service: networkService as NetworkService)
