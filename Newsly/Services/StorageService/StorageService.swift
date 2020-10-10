@@ -17,8 +17,8 @@ class StorageService {
     private init() {}
     
     
-    func saveImageToStorage(image: UIImage, completion: ((_ url: String) -> ())?) {
-            guard let imageData = image.jpegData(compressionQuality: 0.2) else { return }
+    func saveImageToStorage(image: UIImage?, completion: ((_ url: String) -> ())?) {
+            guard let imageData = image?.jpegData(compressionQuality: 0.2) else { return }
             
             let imageRef = Storage.storage().reference().child(userID)
             
@@ -30,6 +30,8 @@ class StorageService {
                     debugPrint(error)
                     return
                 }
+                
+                completion?("completed")
             }
         }
         
@@ -46,7 +48,6 @@ class StorageService {
                 }
             }
         }
-
 }
 
 

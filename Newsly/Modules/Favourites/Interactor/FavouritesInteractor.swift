@@ -8,7 +8,8 @@
 import UIKit
 
 class FavouritesInteractor: FavouritesInteractorInput {
-  
+   
+
     var presenter: FavouritesPresenterInput?
     var profileManager: ProfileServiceProtocol?
     
@@ -34,10 +35,17 @@ class FavouritesInteractor: FavouritesInteractorInput {
          }
      }
      
-    
     func getUserInfo() -> (name: String?, email: String?) {
         guard let profileManager = profileManager else { return (nil, nil) }
         return profileManager.getUserInfo()
     }
+    
+    func saveImageToDataBase(image: UIImage?, completion: @escaping() -> ()) {
+        StorageService.shared.saveImageToStorage(image: image) { (_) in
+           completion()
+        }
+    }
+    
+    
     
 }

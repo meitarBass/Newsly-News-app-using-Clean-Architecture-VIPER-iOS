@@ -71,6 +71,10 @@ class FavouritesViewController: BaseViewController {
         imageView.backgroundColor = .cyan
         imageView.layer.cornerRadius = appearance.imageHeight / 2
         imageView.layer.masksToBounds = true
+        imageView.isUserInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+        imageView.image = UIImage.tabBarItems.categories
         return imageView
     }()
     
@@ -153,6 +157,10 @@ class FavouritesViewController: BaseViewController {
             make.leading.trailing.bottom.equalToSuperview().inset(16.0)
         }
         
+    }
+    
+    @objc private func profileImageTapped() {
+        presenter?.addPhotoTapped()
     }
 }
 

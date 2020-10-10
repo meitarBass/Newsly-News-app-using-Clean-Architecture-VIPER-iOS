@@ -45,6 +45,7 @@ class SignUpViewController: BaseViewController {
     }()
     
     private lazy var profileImage: UIImageView = {
+        //TODO: -  change home image
         let imageView = UIImageView(frame: .zero)
         imageView.backgroundColor = .cyan
         imageView.layer.cornerRadius = appearance.imageHeight / 2

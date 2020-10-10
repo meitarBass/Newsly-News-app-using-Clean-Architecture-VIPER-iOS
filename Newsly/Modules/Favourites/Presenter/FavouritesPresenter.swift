@@ -79,8 +79,8 @@ extension FavouritesPresenter: FavouritesSearchBarManagerDelegate {
 
 extension FavouritesPresenter: ImagePickerManagerDelegate {
     func imageGotten(image: UIImage) {
-        
+        interactor?.saveImageToDataBase(image: image, completion: {[weak self] in
+            self?.view?.updateImage(Image: image)
+        })
     }
-    
-    
 }

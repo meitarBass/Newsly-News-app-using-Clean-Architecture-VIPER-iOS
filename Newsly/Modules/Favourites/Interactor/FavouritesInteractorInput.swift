@@ -12,4 +12,5 @@ protocol FavouritesInteractorInput {
     func loadFavouriteArticles(completion: @escaping ([Article]?) -> ())
     func loadProfileImage(completion: @escaping (UIImage?) -> ())
     func getUserInfo() -> (name: String?, email: String?)
+    func saveImageToDataBase(image: UIImage?, completion: @escaping() -> ())
 }
