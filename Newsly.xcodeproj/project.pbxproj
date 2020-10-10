@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A9125205253233FA00D3A543 /* Movie3-Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A9125201253233F700D3A543 /* Movie3-Gif.gif */; };
-		A9125206253233FA00D3A543 /* Movie4-Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A9125202253233F800D3A543 /* Movie4-Gif.gif */; };
 		A9125207253233FA00D3A543 /* Movie2-Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A9125203253233F900D3A543 /* Movie2-Gif.gif */; };
 		A9125208253233FA00D3A543 /* Movie1-Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A9125204253233FA00D3A543 /* Movie1-Gif.gif */; };
 		A912520D2532350700D3A543 /* img3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A912520A2532350600D3A543 /* img3.pdf */; };
 		A912520E2532350700D3A543 /* img1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A912520B2532350700D3A543 /* img1.pdf */; };
 		A912520F2532350700D3A543 /* img2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A912520C2532350700D3A543 /* img2.pdf */; };
+		A917423025323BB90029E4C9 /* Movie4-Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A917422F25323BB90029E4C9 /* Movie4-Gif.gif */; };
 		A932C0B5252CA23D006F2960 /* UIColors+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0B4252CA23C006F2960 /* UIColors+Extensions.swift */; };
 		A932C0C2252CCD39006F2960 /* SourcesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0C1252CCD39006F2960 /* SourcesViewInput.swift */; };
 		A932C0C6252CCD43006F2960 /* SourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C0C5252CCD43006F2960 /* SourcesViewController.swift */; };
@@ -136,12 +136,12 @@
 		0048BEBD93DEE84F8860E2A2 /* Pods-Newsly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsly.release.xcconfig"; path = "Target Support Files/Pods-Newsly/Pods-Newsly.release.xcconfig"; sourceTree = "<group>"; };
 		3BA642893EBF286A5CE43FB7 /* Pods-Newsly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsly.debug.xcconfig"; path = "Target Support Files/Pods-Newsly/Pods-Newsly.debug.xcconfig"; sourceTree = "<group>"; };
 		A9125201253233F700D3A543 /* Movie3-Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Movie3-Gif.gif"; sourceTree = "<group>"; };
-		A9125202253233F800D3A543 /* Movie4-Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Movie4-Gif.gif"; sourceTree = "<group>"; };
 		A9125203253233F900D3A543 /* Movie2-Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Movie2-Gif.gif"; sourceTree = "<group>"; };
 		A9125204253233FA00D3A543 /* Movie1-Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Movie1-Gif.gif"; sourceTree = "<group>"; };
 		A912520A2532350600D3A543 /* img3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = img3.pdf; sourceTree = "<group>"; };
 		A912520B2532350700D3A543 /* img1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = img1.pdf; sourceTree = "<group>"; };
 		A912520C2532350700D3A543 /* img2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = img2.pdf; sourceTree = "<group>"; };
+		A917422F25323BB90029E4C9 /* Movie4-Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Movie4-Gif.gif"; sourceTree = "<group>"; };
 		A932C0B4252CA23C006F2960 /* UIColors+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Extensions.swift"; sourceTree = "<group>"; };
 		A932C0C1252CCD39006F2960 /* SourcesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewInput.swift; sourceTree = "<group>"; };
 		A932C0C5252CCD43006F2960 /* SourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesViewController.swift; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 				A9125204253233FA00D3A543 /* Movie1-Gif.gif */,
 				A9125203253233F900D3A543 /* Movie2-Gif.gif */,
 				A9125201253233F700D3A543 /* Movie3-Gif.gif */,
-				A9125202253233F800D3A543 /* Movie4-Gif.gif */,
+				A917422F25323BB90029E4C9 /* Movie4-Gif.gif */,
 			);
 			path = Readme;
 			sourceTree = "<group>";
@@ -1052,7 +1052,6 @@
 			files = (
 				A912520F2532350700D3A543 /* img2.pdf in Resources */,
 				B2173C2C252BBC73000FA911 /* EBGaramond-ExtraBoldItalic.ttf in Resources */,
-				A9125206253233FA00D3A543 /* Movie4-Gif.gif in Resources */,
 				A9125207253233FA00D3A543 /* Movie2-Gif.gif in Resources */,
 				B2173C30252BBC7A000FA911 /* EBGaramond-Italic.ttf in Resources */,
 				B2173C2E252BBC76000FA911 /* EBGaramond-Italic-VariableFont_wght.ttf in Resources */,
@@ -1061,6 +1060,7 @@
 				B2173C34252BBC80000FA911 /* EBGaramond-MediumItalic.ttf in Resources */,
 				B2173C32252BBC7D000FA911 /* EBGaramond-Medium.ttf in Resources */,
 				B2173C2A252BBC6F000FA911 /* EBGaramond-ExtraBold.ttf in Resources */,
+				A917423025323BB90029E4C9 /* Movie4-Gif.gif in Resources */,
 				A9125208253233FA00D3A543 /* Movie1-Gif.gif in Resources */,
 				B2173C3C252BBC8D000FA911 /* EBGaramond-VariableFont_wght.ttf in Resources */,
 				A9125205253233FA00D3A543 /* Movie3-Gif.gif in Resources */,
