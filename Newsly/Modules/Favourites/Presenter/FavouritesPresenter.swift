@@ -62,6 +62,10 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
         self.router?.routeToImagePicker(delegate: self)
     }
     
+    func signOut() {
+        self.interactor?.signOut()
+    }
+    
 }
 
 extension FavouritesPresenter: FavouritesCollectionViewManagerDelegate {

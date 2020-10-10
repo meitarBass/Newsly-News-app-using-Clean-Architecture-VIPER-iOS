@@ -78,6 +78,11 @@ class FavouritesViewController: BaseViewController {
         return imageView
     }()
     
+    private lazy var logoutButton: UIBarButtonItem = {
+        let barButton = UIBarButtonItem(title: "logout", style: .plain, target: self, action: #selector(logoutButtonTapped))
+        return barButton
+    }()
+    
     private lazy var labelStack: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [nameLabel, emailLabel])
         stackView.distribution = .equalSpacing
@@ -120,6 +125,8 @@ class FavouritesViewController: BaseViewController {
         self.profileView.addSubview(labelStack)
         self.profileView.addSubview(searchBar)
         self.profileView.addSubview(collectionView)
+        
+        self.navigationItem.rightBarButtonItem = logoutButton
     }
     
     override func makeConstraints() {
@@ -161,6 +168,13 @@ class FavouritesViewController: BaseViewController {
     
     @objc private func profileImageTapped() {
         presenter?.addPhotoTapped()
+    }
+    
+    @objc private func logoutButtonTapped() {
+        presentAlert(title: "Sign Out", message: "Are you sure you want to sign out?", action: ActionAlertModel(actionText: "Cancel", actionHandler: {}), action2: ActionAlertModel(actionText: "Ok", actionHandler: {
+            self.presenter?.signOut()
+        }))
+        
     }
 }
 

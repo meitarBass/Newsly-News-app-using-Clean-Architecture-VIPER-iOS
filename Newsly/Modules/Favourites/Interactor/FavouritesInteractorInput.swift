@@ -13,4 +13,5 @@ protocol FavouritesInteractorInput {
     func loadProfileImage(completion: @escaping (UIImage?) -> ())
     func getUserInfo() -> (name: String?, email: String?)
     func saveImageToDataBase(image: UIImage?, completion: @escaping() -> ())
+    func signOut()
 }

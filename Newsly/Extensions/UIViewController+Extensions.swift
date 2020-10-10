@@ -25,6 +25,22 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func presentAlert(title: String, message: String, action: ActionAlertModel?, action2: ActionAlertModel?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if let action = action {
+            alert.addAction(UIAlertAction(title: action.actionText, style: .default, handler: { UIAlertAction in
+                action.actionHandler()
+            }))
+        }
+        
+        if let action = action2 {
+            alert.addAction(UIAlertAction(title: action.actionText, style: .default, handler: { UIAlertAction in
+                action.actionHandler()
+            }))
+        }
+        present(alert, animated: true, completion: nil)
+    }
+    
     func presentAlertWithTF(title: String, actionCancel: ActionAlertModel?, actionComplete: ActionAlertModel?, placeHolder: String, completion: @escaping (String) -> ()) {
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         

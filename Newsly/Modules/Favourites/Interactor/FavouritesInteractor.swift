@@ -46,6 +46,7 @@ class FavouritesInteractor: FavouritesInteractorInput {
         }
     }
     
-    
-    
+    func signOut() {
+        profileManager?.signOut()
+    }
 }
