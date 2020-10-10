@@ -15,6 +15,7 @@ class FavouritesPresenter {
     var searchBarManager: FavouritesSearchBarManagerProtocol?
     var collectionManager: FavouritesCollectionViewManagerProtocol?
     
+    
     var router: FavouritesRouter?
     var articles: [Article]?
 }
@@ -36,7 +37,7 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
     
     func viewDidAppear() {
         let userInfo = interactor?.getUserInfo()
-        view?.updateUserInfo(name: userInfo?.name, email: userInfo?.email)
+        collectionManager?.updateUserInfo(name: userInfo?.name, email: userInfo?.email)
             
         interactor?.loadFavouriteArticles(completion: {[weak self] articles in
             if let articles = articles {
@@ -48,14 +49,10 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
         })
         
         interactor?.loadProfileImage(completion: { [weak self] image in
-            self?.view?.updateImage(Image: image)
+            self?.collectionManager?.imageGotten(image: image)
         })
         
         
-    }
-    
-    func addPhotoTapped() {
-        self.router?.routeToImagePicker(delegate: self)
     }
     
     func signOut() {
@@ -67,6 +64,10 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
 extension FavouritesPresenter: FavouritesCollectionViewManagerDelegate {
     func cellClicked(article: Article?) {
         self.router?.createWebView(article: article)
+    }
+    
+    func addPhotoTapped() {
+        self.router?.routeToImagePicker(delegate: self)
     }
     
     
@@ -93,7 +94,7 @@ extension FavouritesPresenter: FavouritesSearchBarManagerDelegate {
 extension FavouritesPresenter: ImagePickerManagerDelegate {
     func imageGotten(image: UIImage) {
         interactor?.saveImageToDataBase(image: image, completion: {[weak self] in
-            self?.view?.updateImage(Image: image)
+            self?.collectionManager?.imageGotten(image: image)
         })
     }
 }

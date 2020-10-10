@@ -20,6 +20,8 @@ extension FavouritesCollectionViewManager {
 protocol FavouritesCollectionViewManagerProtocol {
     func setUpCollectionView(collectionView: UICollectionView)
     func setUpCells(articles: [Article])
+    func imageGotten(image: UIImage?)
+    func updateUserInfo(name: String?, email: String?)
 }
 
 
@@ -27,6 +29,7 @@ class FavouritesCollectionViewManager: NSObject {
     
     weak var delegate: FavouritesCollectionViewManagerDelegate?
     weak var collectionView: UICollectionView?
+    var profileInfoCellManager: ProfileInfoCollectionViewCellProtocol?
     
     let appearance = Appearance()
     var articles: [Article]?
@@ -63,40 +66,74 @@ class FavouritesCollectionViewManager: NSObject {
         return sourceSize.height
     }
     
+    private func getProfileInfoCellHeight() -> CGFloat {
+        ProfileInfoCollectionViewCell.Appearance.searchBarHeight + ProfileInfoCollectionViewCell.Appearance.imageHeight + ProfileInfoCollectionViewCell.Appearance.imageTopMarging + ProfileInfoCollectionViewCell.Appearance.searchBarTopMargin + 20.0
+    }
+    
 }
 
 extension FavouritesCollectionViewManager: FavouritesCollectionViewManagerProtocol {
+  
     func setUpCollectionView(collectionView: UICollectionView) {
         self.collectionView = collectionView
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         self.collectionView?.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: SearchCollectionViewCell.reuseIdentifier)
+        self.collectionView?.register(ProfileInfoCollectionViewCell.self, forCellWithReuseIdentifier: ProfileInfoCollectionViewCell.reuseIdentifier)
         self.collectionView?.contentInset = UIEdgeInsets(top: appearance.collectionViewInsets, left: appearance.collectionViewInsets, bottom: appearance.collectionViewInsets, right: appearance.collectionViewInsets)
         
     }
     
     func setUpCells(articles: [Article]) {
         self.articles = articles
-        collectionView?.reloadData()
+        UIView.setAnimationsEnabled(false)
+        collectionView?.performBatchUpdates {
+            collectionView?.reloadSections(IndexSet(integer: 1))
+        } completion: { (_) in
+            UIView.setAnimationsEnabled(true)
+        }
     }
+    
+    func imageGotten(image: UIImage?) {
+        profileInfoCellManager?.updateImage(Image: image)
+    }
+    
+    func updateUserInfo(name: String?, email: String?) {
+        profileInfoCellManager?.updateUserInfo(name: name, email: email)
+    }
+    
 }
 
 extension FavouritesCollectionViewManager: UICollectionViewDelegate { }
 
 extension FavouritesCollectionViewManager: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return articles?.count ?? 0
+        if section == 0 {
+            return 1
+        } else {
+            return articles?.count ?? 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCollectionViewCell.reuseIdentifier, for: indexPath) as? SearchCollectionViewCell else { return UICollectionViewCell() }
-        let cellViewModel = SearchCellViewModel(article: articles?[indexPath.row], sourceHeight: getSourceHeight(at: indexPath.row), titleHeight: getTitleHeight(at: indexPath.row))
-        cell.viewModel = cellViewModel
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.cellClicked(article: articles?[indexPath.row])
+        
+        if indexPath.section == 0 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileInfoCollectionViewCell.reuseIdentifier, for: indexPath) as? ProfileInfoCollectionViewCell else { return UICollectionViewCell() }
+            self.profileInfoCellManager = cell
+            cell.delegate = self
+            cell.setupSearchbar()
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCollectionViewCell.reuseIdentifier, for: indexPath) as? SearchCollectionViewCell else { return UICollectionViewCell() }
+            let cellViewModel = SearchCellViewModel(article: articles?[indexPath.row], sourceHeight: getSourceHeight(at: indexPath.row), titleHeight: getTitleHeight(at: indexPath.row))
+            cell.viewModel = cellViewModel
+            return cell
+        }
+        
     }
     
     
@@ -104,6 +141,17 @@ extension FavouritesCollectionViewManager: UICollectionViewDataSource {
 
 extension FavouritesCollectionViewManager: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        self.getCellSize(at: indexPath.row)
+        if indexPath.section == 0 {
+            return CGSize(width: collectionView.frame.size.width, height: getProfileInfoCellHeight() )
+        } else {
+            return self.getCellSize(at: indexPath.row)
+        }
+    }
+}
+
+
+extension FavouritesCollectionViewManager: ProfileInfoCollectionViewCellDelegate {
+    func addPhotoTapped() {
+        delegate?.addPhotoTapped()
     }
 }

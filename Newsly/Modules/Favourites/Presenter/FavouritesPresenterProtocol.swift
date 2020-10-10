@@ -11,8 +11,6 @@ import UIKit
 
 protocol FavouritesPresenterProtocol: class {
     var collectionManager: FavouritesCollectionViewManagerProtocol? { get set }
-    var searchBarManager: FavouritesSearchBarManagerProtocol? { get set }
-    func addPhotoTapped()
     func signOut()
     func viewDidAppear() 
 }
@@ -30,4 +28,6 @@ protocol FavouritesSearchBarManagerDelegate: class {
 
 protocol FavouritesCollectionViewManagerDelegate: class {
     func cellClicked(article: Article?)
+    func addPhotoTapped()
+    var searchBarManager: FavouritesSearchBarManagerProtocol? { get set }
 }
