@@ -7,8 +7,10 @@
 
 import Foundation
 
-protocol NetworkServiceProtocol {
-
+protocol NetworkServiceProtocol: class {
+    associatedtype E
+    func parseData< T: Codable>(data: Data, modelType: T.Type) -> Result<T, Error>
+    func networkRequest<T: Codable> (from endpoint: E, modelType: T.Type, completion: @escaping (Result<T, Error>) -> ())
 }
 
 class NetworkService<E: EndPointProtocol> : NetworkServiceProtocol {
@@ -34,7 +36,7 @@ class NetworkService<E: EndPointProtocol> : NetworkServiceProtocol {
         task.resume()
     }
     
-    private func parseData< T: Codable>(data: Data, modelType: T.Type) -> Result<T, Error> {
+    func parseData< T: Codable>(data: Data, modelType: T.Type) -> Result<T, Error> {
         let decoder = JSONDecoder()
         
         do {
