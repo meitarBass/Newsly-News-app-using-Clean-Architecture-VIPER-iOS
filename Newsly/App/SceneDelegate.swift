@@ -23,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             [NSAttributedString.Key.font : UIFont.semiboldItalic16], for: .highlighted)
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
         self.interactor = AppInteractor(windowScene: windowScene)
     }
 

@@ -121,7 +121,4 @@ class BaseViewController: UIViewController {
     
     func handleTapGesture() {
     }
-
-
-
 }

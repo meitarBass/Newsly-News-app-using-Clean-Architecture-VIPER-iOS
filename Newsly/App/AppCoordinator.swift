@@ -91,6 +91,4 @@ extension AppCoordinator: AppCoordinatorProtocol {
         window?.rootViewController = createTabBar()
         window?.makeKeyAndVisible()
     }
-    
-    
 }

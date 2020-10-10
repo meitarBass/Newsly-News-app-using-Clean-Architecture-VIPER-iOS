@@ -19,6 +19,7 @@ struct CategoriesCellViewModel {
 extension SourcesTableViewCell {
     struct Appearance {
         let sourceNameFont: UIFont = .bold16
+        let sourceNameColor: UIColor = .black
     }
 }
 
@@ -45,6 +46,7 @@ class SourcesTableViewCell: UITableViewCell {
         let label = UILabel(frame: .zero)
         label.font = self.appearance.sourceNameFont
         label.numberOfLines = 0
+        label.textColor = self.appearance.sourceNameColor
         return label
     }()
     
