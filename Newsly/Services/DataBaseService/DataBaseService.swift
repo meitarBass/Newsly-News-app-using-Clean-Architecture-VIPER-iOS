@@ -74,7 +74,6 @@ class DataBaseService {
         queriedCollection.getDocuments() { (querySnapShot, error) in
             guard error == nil,
                   let querySnapShot = querySnapShot else {
-                
                 return }
             if querySnapShot.documents.isEmpty {
                 completion(false, nil)

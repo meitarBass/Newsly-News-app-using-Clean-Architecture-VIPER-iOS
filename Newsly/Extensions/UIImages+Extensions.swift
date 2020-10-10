@@ -16,4 +16,13 @@ extension UIImage {
         static var profile: UIImage { UIImage(systemName: "person.crop.circle")! }
         static var categories: UIImage { UIImage(systemName: "list.dash")! }
     }
+    
+    // MARK: - Favourites
+    public class var notLiked: UIImage {
+        #imageLiteral(resourceName: "heartWhite")
+    }
+    
+    public class var liked: UIImage {
+        #imageLiteral(resourceName: "heartRed")
+    }
 }

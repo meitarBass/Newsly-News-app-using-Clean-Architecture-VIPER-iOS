@@ -22,4 +22,15 @@ class WebPageInteractor: WebPageInteractorProtocol {
             }
         }
     }
+    
+    func isArticleSaved(article: Article?) {
+        guard let article = article else { return }
+        DataBaseService.shared.checkIfAlreadyHasArticle(article: article) { (isLiked, nil) in
+            if isLiked {
+                self.presenter?.isArticleSaved(state: true)
+            } else {
+                self.presenter?.isArticleSaved(state: false)
+            }
+        }
+    }
 }

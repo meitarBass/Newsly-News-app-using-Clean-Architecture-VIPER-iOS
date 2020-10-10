@@ -7,4 +7,5 @@
 
 protocol WebPageInteractorProtocol {
     func saveArticle(article: Article?)
+    func isArticleSaved(article: Article?)
 }

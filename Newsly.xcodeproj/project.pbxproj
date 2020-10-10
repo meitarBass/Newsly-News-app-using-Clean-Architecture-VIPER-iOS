@@ -33,7 +33,6 @@
 		A932C115252CFCB7006F2960 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932C114252CFCB7006F2960 /* SearchCollectionViewCell.swift */; };
 		A94BFC282530793C004D8E26 /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94BFC272530793C004D8E26 /* DataBaseService.swift */; };
 		A95A41B52530D7CE0017955B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95A41B42530D7CE0017955B /* StorageService.swift */; };
-		A95A41BB2530DCC30017955B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A95A41BA2530DCC30017955B /* GoogleService-Info.plist */; };
 		A9681312252D38CC001DCAE9 /* FavouritesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681311252D38CB001DCAE9 /* FavouritesViewInput.swift */; };
 		A9681317252D3927001DCAE9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681316252D3927001DCAE9 /* FavouritesViewController.swift */; };
 		A968131A252D397A001DCAE9 /* FavouritesSearchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9681319252D397A001DCAE9 /* FavouritesSearchBarManager.swift */; };
@@ -74,6 +73,7 @@
 		A96813AB252E22FC001DCAE9 /* LoginInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */; };
 		A96813AE252E2311001DCAE9 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96813AD252E2311001DCAE9 /* SignUpRouter.swift */; };
 		A96BCC81252F27A000CE2EFC /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */; };
+		A99F6DB6253146A1004A0A75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A99F6DB5253146A1004A0A75 /* GoogleService-Info.plist */; };
 		A9C093DB252F2BFB00514BC1 /* WebPageViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C093DA252F2BFB00514BC1 /* WebPageViewAssembly.swift */; };
 		B2173BA8252B7864000FA911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA7252B7864000FA911 /* AppDelegate.swift */; };
 		B2173BAA252B7864000FA911 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2173BA9252B7864000FA911 /* SceneDelegate.swift */; };
@@ -155,7 +155,6 @@
 		A932C114252CFCB7006F2960 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		A94BFC272530793C004D8E26 /* DataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseService.swift; sourceTree = "<group>"; };
 		A95A41B42530D7CE0017955B /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
-		A95A41BA2530DCC30017955B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9681311252D38CB001DCAE9 /* FavouritesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewInput.swift; sourceTree = "<group>"; };
 		A9681316252D3927001DCAE9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		A9681319252D397A001DCAE9 /* FavouritesSearchBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesSearchBarManager.swift; sourceTree = "<group>"; };
@@ -196,6 +195,7 @@
 		A96813AA252E22FC001DCAE9 /* LoginInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorInput.swift; sourceTree = "<group>"; };
 		A96813AD252E2311001DCAE9 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
+		A99F6DB5253146A1004A0A75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9C093DA252F2BFB00514BC1 /* WebPageViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewAssembly.swift; sourceTree = "<group>"; };
 		B2173BA4252B7864000FA911 /* Newsly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2173BA7252B7864000FA911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -696,8 +696,8 @@
 		A96BCC7F252F277700CE2EFC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */,
 				B2990A3B252FA5860078DFF8 /* WebPageViewInput.swift */,
+				A96BCC80252F27A000CE2EFC /* WebPageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -713,8 +713,8 @@
 		B2173B9B252B7864000FA911 = {
 			isa = PBXGroup;
 			children = (
+				A99F6DB5253146A1004A0A75 /* GoogleService-Info.plist */,
 				B2173C3E252BBD8C000FA911 /* Constants.swift */,
-				A95A41BA2530DCC30017955B /* GoogleService-Info.plist */,
 				B2173BA6252B7864000FA911 /* Newsly */,
 				B2173BA5252B7864000FA911 /* Products */,
 				9B19BFE54FC32539C099CAFB /* Pods */,
@@ -1033,7 +1033,7 @@
 				B2173C32252BBC7D000FA911 /* EBGaramond-Medium.ttf in Resources */,
 				B2173C2A252BBC6F000FA911 /* EBGaramond-ExtraBold.ttf in Resources */,
 				B2173C3C252BBC8D000FA911 /* EBGaramond-VariableFont_wght.ttf in Resources */,
-				A95A41BB2530DCC30017955B /* GoogleService-Info.plist in Resources */,
+				A99F6DB6253146A1004A0A75 /* GoogleService-Info.plist in Resources */,
 				B2173BC3252B7E91000FA911 /* EB_Garamond in Resources */,
 				B2173C36252BBC83000FA911 /* EBGaramond-Regular.ttf in Resources */,
 				B2173C38252BBC86000FA911 /* EBGaramond-SemiBold.ttf in Resources */,

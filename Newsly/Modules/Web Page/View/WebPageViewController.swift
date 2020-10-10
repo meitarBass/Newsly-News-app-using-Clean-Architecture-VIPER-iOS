@@ -27,9 +27,11 @@ class WebPageViewController: BaseViewController {
     }()
     
     private lazy var favouriteButton: UIBarButtonItem = {
-        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(favouriteButtonTapped))
+        let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "star.fill"), style: .plain, target: self, action: #selector(favouriteButtonTapped))
         return barButtonItem
     }()
+    
+    let notLikedButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,12 +70,14 @@ class WebPageViewController: BaseViewController {
 
 extension WebPageViewController: WebPageViewInput {
     func changeFavouriteState(state: Bool) {
-        print("favouriteButtonState", state)
+        if state {
+            self.navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        } else {
+            self.navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 0.4117647059, green: 0.4117647059, blue: 0.4117647059, alpha: 1)
+        }
     }
     
     func showWebPage(url: String) {
         self.loadWebView(urlString: url)
     }
-    
-    
 }

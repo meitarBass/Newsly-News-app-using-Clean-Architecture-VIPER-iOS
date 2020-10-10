@@ -8,7 +8,7 @@
 import UIKit
 
 final class SignUpInteractor: SignUpInteractorInput {
-   
+    
     var profileService: ProfileServiceProtocol?
     
     var presenter: SignUpPresenterInput?
@@ -18,6 +18,7 @@ final class SignUpInteractor: SignUpInteractorInput {
         //MARK: Could add completion handler for the sign up
         profileService?.signUp(email: email, password: password, fullName: fullName, image: image)
     }
+    
 }
 
 extension SignUpInteractor: SignUpDelegate {
