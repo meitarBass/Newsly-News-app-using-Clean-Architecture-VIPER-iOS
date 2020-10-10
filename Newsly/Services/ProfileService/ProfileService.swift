@@ -89,6 +89,7 @@ class ProfileService: ProfileServiceProtocol {
     func signOut() {
         do {
             try Auth.auth().signOut()
+            self.appInteratcor?.checkIfUserisAuthenticated()
         } catch let signOutError as NSError {
             self.signUpDelegate?.presentAlert(title: "error", message: signOutError.description, action: ActionAlertModel(actionText: "Cancel", actionHandler: {}))
         }

@@ -47,13 +47,12 @@ class SignUpViewController: BaseViewController {
     private lazy var profileImage: UIImageView = {
         //TODO: -  change home image
         let imageView = UIImageView(frame: .zero)
-        imageView.backgroundColor = .cyan
         imageView.layer.cornerRadius = appearance.imageHeight / 2
         imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
         imageView.addGestureRecognizer(tapGestureRecognizer)
-        imageView.image = UIImage.tabBarItems.categories
+        imageView.image = .profileHolderImage
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()

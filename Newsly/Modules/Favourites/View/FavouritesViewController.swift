@@ -76,6 +76,7 @@ class FavouritesViewController: BaseViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
         imageView.addGestureRecognizer(tapGestureRecognizer)
         imageView.image = UIImage.tabBarItems.categories
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -123,6 +124,7 @@ class FavouritesViewController: BaseViewController {
         super.addSubViews()
         self.view.addSubview(mainScrollView)
         mainScrollView.addSubview(profileView)
+                
         self.profileView.addSubview(profileImage)
         self.profileView.addSubview(labelStack)
         self.profileView.addSubview(searchBar)

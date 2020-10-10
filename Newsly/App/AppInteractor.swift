@@ -49,8 +49,6 @@ class AppInteractor: AppInteractorProtocol {
     }
     
      func checkIfUserisAuthenticated() {
-        //perform check from firebase
-        
         guard let profileService = profileService else { return }
         if profileService.checkIfUserIsAuth() {
             coordinator?.createHomePages(scene: windowScene)
