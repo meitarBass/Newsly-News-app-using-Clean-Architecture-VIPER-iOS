@@ -31,5 +31,5 @@ protocol FavouritesSearchBarManagerDelegate: class {
 }
 
 protocol FavouritesCollectionViewManagerDelegate: class {
-    
+    func cellClicked(article: Article?)
 }

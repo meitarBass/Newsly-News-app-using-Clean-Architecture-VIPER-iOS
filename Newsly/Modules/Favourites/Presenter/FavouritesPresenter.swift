@@ -69,6 +69,10 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
 }
 
 extension FavouritesPresenter: FavouritesCollectionViewManagerDelegate {
+    func cellClicked(article: Article?) {
+        self.router?.createWebView(article: article)
+    }
+    
     
 }
 

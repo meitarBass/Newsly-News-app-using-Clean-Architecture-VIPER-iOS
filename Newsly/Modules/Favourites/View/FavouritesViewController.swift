@@ -49,6 +49,7 @@ class FavouritesViewController: BaseViewController {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.font: UIFont.semiboldItalic16]
         searchBar.barTintColor = .background
         searchBar.searchBarStyle = .minimal
+        searchBar.placeholder = "Search..."
         return searchBar
     }()
     
@@ -110,6 +111,7 @@ class FavouritesViewController: BaseViewController {
     
     override func setUpUI() {
         super.setUpUI()
+        self.addKeyBoardObserver()
         addSubViews()
         makeConstraints()
         

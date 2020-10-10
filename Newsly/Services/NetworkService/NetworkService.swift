@@ -7,7 +7,11 @@
 
 import Foundation
 
-class NetworkService<E: EndPointProtocol> {
+protocol NetworkServiceProtocol {
+
+}
+
+class NetworkService<E: EndPointProtocol> : NetworkServiceProtocol {
     func networkRequest<T: Codable> (from endpoint: E, modelType: T.Type, completion: @escaping (Result<T, Error>) -> ()) {
         guard let url = URL(string: "\(endpoint.completeURL)") else {
             completion(.failure(NSError(domain: "empty", code: 0, userInfo: [:])))

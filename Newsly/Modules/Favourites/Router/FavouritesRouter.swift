@@ -10,6 +10,7 @@ import UIKit
 protocol FavouritesRouterProtocol {
     var view: UIViewController? { get set }
     func routeToImagePicker(delegate: ImagePickerManagerDelegate)
+    func createWebView(article: Article?)
 }
 
 class FavouritesRouter: FavouritesRouterProtocol {
@@ -23,6 +24,11 @@ class FavouritesRouter: FavouritesRouterProtocol {
             imagePickerComtroller.sourceType = .photoLibrary
             view?.navigationController?.present(imagePickerComtroller, animated: true, completion: nil)
         }
+    }
+    
+    func createWebView(article: Article?) {
+        let webView = WebPageViewAssembly.assemble(article: article)
+        view?.navigationController?.pushViewController(webView, animated: true)
     }
     
     weak var view: UIViewController?
