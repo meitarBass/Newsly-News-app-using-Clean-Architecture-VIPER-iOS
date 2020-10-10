@@ -10,7 +10,6 @@ import UIKit
 class FavouritesInteractor: FavouritesInteractorInput {
   
     var presenter: FavouritesPresenterInput?
-    var storageManager: StorageServiceProtocol?
     var profileManager: ProfileServiceProtocol?
     
     
@@ -30,7 +29,7 @@ class FavouritesInteractor: FavouritesInteractorInput {
     }
     
     func loadProfileImage() -> UIImage? {
-        return storageManager?.loadUserImage()
+        return nil
     }
     
     func getUserInfo() -> (name: String?, email: String?) {

@@ -24,7 +24,6 @@ class SignUpAssembly {
         presenter.interactor = interactor
         
         interactor.profileService = profileService
-        interactor.storageService = ServiceLocator.shared.getService()
         interactor.presenter = presenter
         
         profileService?.signUpDelegate = interactor
