@@ -46,7 +46,4 @@ To-do list:
 Project is: _finished_
 
 ## Contact
-
-ebubedimobi Ebubechukwu Dimobi
-@meitarBass
 Created by [@ebubedimobi],[@meitarbass] - feel free to contact me!
