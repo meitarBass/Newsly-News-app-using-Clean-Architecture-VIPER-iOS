@@ -31,7 +31,7 @@ extension SearchControllerManager: UISearchBarDelegate {
         guard let searchText = searchBar.text else { return }
         if searchText.count > 0 {
             let textToSearch = searchText.replacingOccurrences(of: " ", with: "-")
-            print(textToSearch)
+//            print(textToSearch)
             delegate?.searchClicked(name: textToSearch)
         }
     }

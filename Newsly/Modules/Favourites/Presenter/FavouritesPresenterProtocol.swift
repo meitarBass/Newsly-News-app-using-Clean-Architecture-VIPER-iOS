@@ -10,8 +10,6 @@
 import UIKit
 
 protocol FavouritesPresenterProtocol: class {
-    func searchForArticles(by name: String)
-    
     var collectionManager: FavouritesCollectionViewManagerProtocol? { get set }
     var searchBarManager: FavouritesSearchBarManagerProtocol? { get set }
     func addPhotoTapped()
@@ -27,7 +25,7 @@ protocol FavouritesPresenterInput: class {
 
 // SearchBar Manager to Presenter
 protocol FavouritesSearchBarManagerDelegate: class {
-    func searchBarClicked(name: String)
+    func queryArticles(name: String)
 }
 
 protocol FavouritesCollectionViewManagerDelegate: class {

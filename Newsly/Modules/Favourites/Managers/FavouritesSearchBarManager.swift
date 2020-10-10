@@ -28,13 +28,9 @@ extension FavouritesSearchBarManager: FavouritesSearchBarManagerProtocol {
 
 extension FavouritesSearchBarManager: UISearchBarDelegate {
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard let searchText = searchBar.text else { return }
-        if searchText.count > 0 {
-            let textToSearch = searchText.replacingOccurrences(of: " ", with: "-")
-            print(textToSearch)
-            delegate?.searchBarClicked(name: textToSearch)
-        }
+        delegate?.queryArticles(name: searchText)
     }
 }
 

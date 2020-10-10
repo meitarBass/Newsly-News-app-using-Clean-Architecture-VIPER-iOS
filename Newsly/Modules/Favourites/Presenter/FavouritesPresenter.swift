@@ -16,7 +16,7 @@ class FavouritesPresenter {
     var collectionManager: FavouritesCollectionViewManagerProtocol?
     
     var router: FavouritesRouter?
-//    var articles: [Article]?
+    var articles: [Article]?
 }
 
 extension FavouritesPresenter: FavouritesPresenterInput {
@@ -40,6 +40,7 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
             
         interactor?.loadFavouriteArticles(completion: {[weak self] articles in
             if let articles = articles {
+                self?.articles = articles
                 self?.collectionManager?.setUpCells(articles: articles)
             } else {
                 self?.view?.presentAlert(title: "", message: "Error occured", action: ActionAlertModel(actionText: "Ok", actionHandler: {}))
@@ -51,11 +52,6 @@ extension FavouritesPresenter: FavouritesPresenterProtocol {
         })
         
         
-    }
-    
-    func searchForArticles(by name: String) {
-        // TODO: Set the collection View Manager
-       
     }
     
     func addPhotoTapped() {
@@ -77,8 +73,20 @@ extension FavouritesPresenter: FavouritesCollectionViewManagerDelegate {
 }
 
 extension FavouritesPresenter: FavouritesSearchBarManagerDelegate {
-    func searchBarClicked(name: String) {
-//        interactor?.fetchFavouritesArticles()
+    func queryArticles(name: String) {
+        guard let articles = articles else { return }
+        if name.count == 0 {
+            self.collectionManager?.setUpCells(articles: articles)
+        } else {
+            var queriedArticles = [Article]()
+            for article in articles {
+                if (article.title?.lowercased().contains(name.lowercased()) ?? false) ||
+                    (article.source.name?.lowercased().contains(name.lowercased()) ?? false) {
+                        queriedArticles.append(article)
+                }
+            }
+            self.collectionManager?.setUpCells(articles: queriedArticles)
+        }
     }
 }
 
